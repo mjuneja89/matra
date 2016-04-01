@@ -1,0 +1,156 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+*
+{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+}
+
+html
+{
+  height: 100%;
+}
+
+body 
+{
+  overflow-y: scroll;
+  height: 100%;
+}
+
+
+#main {
+  overflow:auto;
+  padding-bottom:100px; 
+}
+
+
+.navigationbar
+{
+  background: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+#wrap
+{
+  min-height: 100%;
+}
+
+#matra
+{
+	font-size: 20pt;
+}
+
+#logo a:link
+{
+  color: #ccc;
+}
+
+
+#logo a:hover
+{
+  color: #ccc;
+}
+
+#contactus a:link 
+{
+  border-radius: 4px;
+  color: #999;
+  border: 2px solid #999;
+}
+
+
+#contactus a:hover 
+{
+  background: #999;
+  color: white;
+  border: 2px solid #999;
+}
+
+
+#contactus a:visited 
+{
+  border-radius: 4px;
+  color: #999;
+  border: 2px solid #999;
+}
+
+.linkcollection
+{
+	margin-left: 10%;
+}
+
+#links a:link
+{
+	color:#999;
+}
+
+
+#links a:hover
+{
+	color:#999;
+}
+
+#links a:visited
+{
+	color:#999;
+}
+
+#links
+{
+  font-size: 11pt;
+}
+
+.footer
+{
+  position: relative;
+  margin-top: -50px; 
+  height: 80px;
+  clear:both;
+  padding-top:20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+}
+
+
+.linklist
+{
+ display: inline-block;
+}
+
+.footerlink a:link {
+  color: #999;
+}
+
+.footerlink a:hover {
+  color: #999;
+}
+
+
+.footerlink a:visited {
+  color: #999;
+}
+
+.socialicon a:link {
+  color: black;
+}
+
+.socialicon a:visited {
+  color: black;
+}

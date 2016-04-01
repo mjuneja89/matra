@@ -1,0 +1,91 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.categorybox
+{
+ display: table;
+ width: 100%;
+ padding: 5px;
+ border: 1px solid transparent;
+ height: 160px;
+ background-color: #999;
+ line-height: 1.4;
+ text-align: center; 
+ margin-top: 3%;
+ color: white;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.photobox
+{
+  height: 160px;
+  width: 100%;
+  border: 1px solid transparent;
+  line-height: 1.4;
+  margin-top: 3%;	
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.fitphoto
+{
+  width: 100%;
+  height: 100%;
+}
+
+.categoryheading
+{
+  text-align: center;
+  margin-top: 2%;
+  color: #999; 	
+}
+
+hr 
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.travelbox
+{
+ width: 100%;
+ padding: 5px;
+ border: 1px solid #999;
+ height: 330px;
+ line-height: 1.4;
+ text-align: center; 
+ margin-top: 5%;
+ color: #999;
+ margin-left: auto;
+ margin-right: auto;   	
+}
+
+.tpic
+{
+  height: 220px;
+}
+
+.tripheading
+{
+  word-wrap: break-word;	
+}
+
+.profilepic
+{
+  height: 40px;
+  width: 40%;
+  border: 1px solid transparent;
+  
+}
+
+.fitphoto1
+{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%; 
+}

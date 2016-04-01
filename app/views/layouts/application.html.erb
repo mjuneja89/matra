@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta http-equiv="Content-Type" content="text/html"; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content= " Architects in Delhi, Matra, Rurban Planners, Architects, Acrchitects in Navjeevan Vihar ">
+    <meta name="author" content="">
+    <link rel="icon href="Add Image">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render partial: 'shared/navbar' %>
+
+<div id="wrap">
+   <div id="main" class="container clear-top">  
+<%= yield %>
+    </div>
+</div>    
+
+<!-- Footer Starts -->
+<footer class="footer">
+  <div class="footercont container" style="text-align:center">
+  <div class="clearfix">
+   <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-inline">
+        <li class="footerlink"><a href="#">contact</a></li>
+        <li class="footerlink"><a href="#">team</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <ul class="sociallist list-inline">
+        <li class="socialicon fb"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+       </ul>
+    </div>
+    <div class="col-sm-4">
+      <p>©2016 matra architects: all rights reserved</p>
+    </div>
+  </div>
+</div>
+ </div>
+</footer>
+
+<!-- Footer Ends -->
+
+
+
+</body>
+</html>
