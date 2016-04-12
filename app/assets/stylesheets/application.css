@@ -17,8 +17,8 @@
 
 *
 {
-   font-family: 'Open Sans', sans-serif;
-   font-weight: 300;
+   font-family: 'Muli', sans-serif;
+   font-weight: 200;
 }
 
 html
@@ -66,6 +66,67 @@ body
 {
   color: #ccc;
 }
+
+.matra-row:before, 
+    .matra-row:after {
+        content:"";
+          display: table ;
+        clear:both;
+    }
+
+.matra-heading
+{
+  float: left; 
+  min-height: 1px; 
+  width: 20%;
+} 
+
+.matra-landscape
+{
+  float: left; 
+  min-height: 1px; 
+  width: 35%;  
+}
+
+.matra-square
+{
+  float: left;
+  min-height: 1px; 
+  width: 25%;  
+}
+
+.matra-portrait
+{
+  float: left;
+  min-height: 1px; 
+  width: 20%;  
+} 
+
+@media all and (max-width:600px) {
+
+.matra-heading
+{
+  width: 100%;
+ } 
+
+.matra-landscape
+{
+  width: 100%;  
+}
+
+.matra-square
+{
+  width: 100%;  
+}
+
+.matra-portrait
+{ 
+  width: 100%;  
+} 
+
+
+}
+
 
 #contactus a:link 
 {
@@ -123,7 +184,6 @@ body
   height: 80px;
   clear:both;
   padding-top:20px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 11pt;
 }
