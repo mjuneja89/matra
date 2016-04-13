@@ -67,6 +67,11 @@ body
   color: #ccc;
 }
 
+ .matra-container{
+        width: 100%; 
+        max-width: 1200px;      
+    }
+
 .matra-row:before, 
     .matra-row:after {
         content:"";
@@ -74,32 +79,51 @@ body
         clear:both;
     }
 
+.matra-row
+{
+  margin-left: -1px;
+  margin-right: -1px;
+}    
+
 .matra-heading
 {
   float: left; 
   min-height: 1px; 
   width: 20%;
+  padding-left:1px;  
+  padding-right:1px;
+  position: relative;
 } 
 
 .matra-landscape
 {
   float: left; 
   min-height: 1px; 
-  width: 35%;  
+  width: 35%;
+  padding-left:1px;  
+  padding-right:1px;
+  position: relative; 
 }
 
 .matra-square
 {
   float: left;
+  padding-left:1px;  
+  padding-right:1px;
   min-height: 1px; 
-  width: 25%;  
+  width: 25%;
+  position: relative;  
 }
+
 
 .matra-portrait
 {
   float: left;
-  min-height: 1px; 
-  width: 20%;  
+  min-height: 1px;
+  padding-left:1px;  
+  padding-right:1px;
+  width: 20%;
+  position: relative;  
 } 
 
 @media all and (max-width:600px) {
@@ -158,18 +182,18 @@ body
 
 #links a:link
 {
-	color:#999;
+	color:#7f7f7f;
 }
 
 
 #links a:hover
 {
-	color:#999;
+	color:#7f7f7f;
 }
 
 #links a:visited
 {
-	color:#999;
+	color:#7f7f7f;
 }
 
 #links
@@ -195,22 +219,14 @@ body
 }
 
 .footerlink a:link {
-  color: #999;
+  color: #7f7f7f;
 }
 
 .footerlink a:hover {
-  color: #999;
+  color: #7f7f7f;
 }
 
 
 .footerlink a:visited {
-  color: #999;
-}
-
-.socialicon a:link {
-  color: black;
-}
-
-.socialicon a:visited {
-  color: black;
+  color: #7f7f7f;
 }
