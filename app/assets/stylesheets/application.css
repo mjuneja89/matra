@@ -124,9 +124,22 @@ body
   padding-right:1px;
   width: 12%;
   position: relative;  
+}
+
+
+.matra-arrow
+{
+  float: left;
+  min-height: 1px;
+  padding-left:1px;  
+  padding-right:1px;
+  width: 16%;
+  position: relative;  
 } 
 
-@media all and (max-width:600px) {
+
+
+@media all and (max-width:767px) {
 
 .matra-heading
 {
@@ -148,6 +161,15 @@ body
   width: 100%;  
 } 
 
+.matra-arrow
+{
+  width: 0%; 
+}
+
+.arrowbox
+{
+display: none;
+}
 
 }
 
