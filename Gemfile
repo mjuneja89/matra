@@ -70,3 +70,9 @@ gem 'mini_magick'
 gem 'coffee-script-source', '1.8.0'
 
 gem 'rails_12factor', group: :production
+
+gem 'ionicons-rails'
+
+
+
+

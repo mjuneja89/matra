@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'ionicons';
 
 .categorybox
 {
@@ -20,7 +21,7 @@
  height: 160px;
  margin-bottom: -20px;
  display: inline-block;
- text-align: center;
+ margin-left: 15px;
 }
 
 .landscape
