@@ -172,38 +172,6 @@ display: none;
 
 }
 
-.fitlandscape
-{
-  width: 100%;
-  height: 100%;
-}
-
-.fitsquare
-{
-  width: 100%;
-  height: 100%;
-}
-
-.fitportrait
-{
-  width: 100%;
-  height: 100%;
-}
-
-@media all and (max-width: 767px) {
-  .fitsquare
-  {
-    width: 74%;
-  }
-
-  .fitportrait
-  {
-    width: 39%;
-  }
-
-}
-
-
 #contactus a:link 
 {
   border-radius: 4px;
