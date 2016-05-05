@@ -2,8 +2,99 @@
 
 <head>	
   <title>matra architects</title>
-</head>
 
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    
+    $(".residence1").hover(function(){
+
+       $(".rcategory").html("s residence")
+       }, 
+       function() {
+       $(".rcategory").html("residence")                   
+       } 	
+    );
+    
+    $(".residence2").hover(function(){
+
+       $(".rcategory").html("wood house")
+       }, 
+       function() {
+       $(".rcategory").html("residence")                   
+       } 	
+    );
+
+    $(".residence3").hover(function(){
+
+       $(".rcategory").html("s residence")
+       }, 
+       function() {
+       $(".rcategory").html("residence")                   
+       } 	
+    );
+
+    $(".pb1").hover(function(){
+
+       $(".pbcategory").html("khatauli")
+       }, 
+       function() {
+       $(".pbcategory").html("public building")                   
+       } 	
+    );
+
+    $(".pb2").hover(function(){
+
+       $(".pbcategory").html("chinmaya")
+       }, 
+       function() {
+       $(".pbcategory").html("public building")                   
+       } 	
+    );
+
+    $(".pb3").hover(function(){
+
+       $(".pbcategory").html("everest")
+       }, 
+       function() {
+       $(".pbcategory").html("public building")                   
+       } 	
+    );
+
+
+    $(".i1").hover(function(){
+
+       $(".icategory").html("teil")
+       }, 
+       function() {
+       $(".icategory").html("interior")                   
+       } 	
+    );
+
+    $(".i2").hover(function(){
+
+       $(".icategory").html("ireo")
+       }, 
+       function() {
+       $(".icategory").html("interior")                   
+       } 	
+    );
+
+
+    $(".i3").hover(function(){
+
+       $(".icategory").html("radisson")
+       }, 
+       function() {
+       $(".icategory").html("interior")                   
+       } 	
+    );1
+
+});
+
+</script>
+
+</head>
 
 <body>
 
@@ -13,25 +104,25 @@
 	
 	<div class="matra-heading">
 		<div class="categorybox">
-			<h3 style="text-align:center; margin-top: 100px; font-weight: 100">residences</h3>
+			<h4 class="rcategory">residence</h4>
 		</div>
 	</div>
 	
 	<div class="matra-landscape">
-		<div class="landscape">
-		   <%= image_tag("sresidence3.jpg", :class => "fitphoto") %>      
+		<div class="landscape residence1">
+		   <%= image_tag("sresidence3.jpg", :class => "fitlandscape") %>      
 		</div>
 	</div>
 	
 	<div class="matra-square">
-		<div class="square">
-		   <%= image_tag("woodhouse.JPG", :class => "fitphoto") %>      
+		<div class="square residence2">
+		   <%= image_tag("woodhouse.JPG", :class => "fitsquare") %>      
 		</div>
 	</div>
 	
 	<div class="matra-portrait">
-		<div class="portrait">
-		   <%= image_tag("sresidence.jpg", :class => "fitphoto") %>      
+		<div class="portrait residence3">
+		   <%= image_tag("sresidence.jpg", :class => "fitportrait") %>      
 		</div>
 	</div>
 
@@ -52,25 +143,25 @@
 
 	<div class="matra-heading">
 		<div class="categorybox">
-			<h3 style="text-align:center; margin-top: 100px; font-weight: 100">institutions</h3>
+			<h4 class="pbcategory">public building</h4>
 		</div>
 	</div>
 	
 	<div class="matra-landscape">
-		<div class="landscape">
-		   <%= image_tag("khatauli.jpg", :class => "fitphoto") %>      
+		<div class="landscape pb1">
+		   <%= image_tag("khatauli.jpg", :class => "fitlandscape") %>      
 		</div>
 	</div>
 	
 	<div class="matra-square">
-		<div class="square">
-		   <%= image_tag("chinmaya.JPG", :class => "fitphoto") %>      
+		<div class="square pb2">
+		   <%= image_tag("chinmaya.JPG", :class => "fitsquare") %>      
 		</div>
 	</div>
 	
-	<div class="matra-portrait">
+	<div class="matra-portrait pb3">
 		<div class="portrait">
-		   <%= image_tag("everest.JPG", :class => "fitphoto") %>      
+		   <%= image_tag("everest.JPG", :class => "fitportrait") %>      
 		</div>
 	</div>
 
@@ -91,25 +182,25 @@
 
 	<div class="matra-heading">
 		<div class="categorybox">
-			<h3 style="text-align:center; margin-top: 100px; font-weight: 100">interiors</h3>
+			<h4 class="icategory">interior</h4>
 		</div>
 	</div>
 	
 	<div class="matra-landscape">
-		<div class="landscape">
-		   <%= image_tag("teil.jpg", :class => "fitphoto") %>      
+		<div class="landscape i1">
+		   <%= image_tag("teil.jpg", :class => "fitlandscape") %>      
 		</div>
 	</div>
 	
 	<div class="matra-square">
-		<div class="square">
-		   <%= image_tag("ireo.jpg", :class => "fitphoto") %>      
+		<div class="square i2">
+		   <%= image_tag("ireo.jpg", :class => "fitsquare") %>      
 		</div>
 	</div>
 	
 	<div class="matra-portrait">
-		<div class="portrait">
-		   <%= image_tag("radisson.jpg", :class => "fitphoto") %>      
+		<div class="portrait i3">
+		   <%= image_tag("radisson.jpg", :class => "fitportrait") %>      
 		</div>
 	</div>
 
