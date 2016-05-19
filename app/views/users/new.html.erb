@@ -1,0 +1,35 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: create user</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+        
+        <h3 style="color: #7f7f7f">create a new matra user</h3>
+
+		<%= form_for(@user, url: users_path) do |f| %>
+          
+          <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
+          <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
+          <%= f.email_field :email, :placeholder => "enter email", :class => "matrainput" %>
+          <%= f.password_field :password, :placeholder => "enter password", :class => "matrainput" %>
+          <%= f.submit "create", :class => "matrabtn" %>
+
+		<% end %>
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

@@ -251,3 +251,105 @@ display: none;
 .footerlink a:visited {
   color: #7f7f7f;
 }
+
+.matrainput
+{
+  height: 3.75rem;
+  border-radius: 3px;
+  border: 1px solid #ccc; 
+  margin-top: 3%;
+  padding: 0 .625rem;
+  width: 50%;
+}
+
+.matrabtn
+{
+  height: 3.75rem;
+  border-radius: 3px;
+  color: white;
+  background-color: #a9a9a9;
+  width: 50%;
+  border: 1px solid transparent; 
+  margin-top: 3%; 
+}
+
+@media all and (max-width:767px) {
+
+.matrainput {
+  width: 80%;
+}
+
+
+.matrabtn {
+  width: 80%;
+}
+
+}
+
+@media all and (max-width:500px) {
+
+.matrainput {
+  width: 90%;
+}
+
+
+.matrabtn {
+  width: 90%;
+}
+
+}
+
+#avatarfield
+{
+  display: none;
+}
+
+#avatarbox
+{
+  width: 50%;
+  height: 300px;
+  border: 1px solid transparent;
+  display: none;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fitpreview
+{
+  width: 100%;
+  height: 100%;
+}
+
+#avatarbtn a:link
+{
+  color: white;
+}
+
+
+#avatarbtn a:hover
+{
+  color: white;
+}
+
+
+#avatarbtn a:visited
+{
+  color: white;
+}
+
+@media all and (max-width:767px) {
+
+#avatarbox {
+  width: 80%;
+}
+
+}
+
+@media all and (max-width:500px) {
+
+#avatarbox {
+  width: 90%;
+}
+
+}
