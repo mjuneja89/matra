@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 	
+  before_action :require_admin
+
 	def new
 		@user = User.new
 	end
@@ -27,7 +29,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:user_id])       
       if @user.update_attributes(user_params)
         @user.save(validate: false)
-        redirect_to "/"
+        redirect_to "/adminview"
       end  
     end
 

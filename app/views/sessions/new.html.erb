@@ -1,0 +1,33 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: login</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+        
+        <h3 style="color: #7f7f7f">login to your matra account</h3>
+
+		<%= form_for(:session, url: login_path) do |f| %>
+          
+          <%= f.email_field :email, :placeholder => "enter email", :class => "matrainput" %>
+          <%= f.password_field :password, :placeholder => "enter password", :class => "matrainput" %>
+          <%= f.submit "create", :class => "matrabtn" %>
+
+		<% end %>
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

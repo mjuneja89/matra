@@ -1,0 +1,99 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: create user</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row" style="text-align: center">
+	      
+        <h3 style="color: #7f7f7f">Hello, <%= current_user.first_name %>!</h3>
+  
+        <h3 style="color: #7f7f7f; margin-top: 3%">administrator view</h3>
+
+        <div class="row" style="margin-top: 4%">
+           
+           <h4>user administration</h4>
+           
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to new_user_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              create user
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to users_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              edit user
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to users_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              delete strip
+             <% end %>
+           </div>
+
+        </div>
+
+         <div class="row" style="margin-top: 4%">
+           
+           <h4>manage strips</h4> 
+            
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to new_strip_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              create strip 
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to strips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              edit strip
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to strips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              delete strip
+             <% end %>
+           </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 4%">
+           
+           <h4>manage projects</h4>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to strips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              create project 
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to strips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              edit project
+             <% end %>
+           </div>
+
+           <div class="col-sm-4" id="adminbtn">
+             <%= link_to strips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              delete project
+             <% end %>
+           </div>
+
+        </div>       
+       
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>

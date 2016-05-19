@@ -1,12 +1,15 @@
 class StripsController < ApplicationController
-	def new
+	
+    before_action :require_admin
+
+    def new
 		@strip = Strip.new
 	end
     
     def create
     	@strip = Strip.new(strip_params)
     	if @strip.save
-    		redirect_to '/'
+    		redirect_to '/adminview'
     	else
     		render 'new'
     	end
@@ -15,7 +18,7 @@ class StripsController < ApplicationController
     private
 
     def strip_params
-    	params.require(:strip).permit(:name)
+    	params.require(:strip).permit(:name, :category)
     end
 
 end
