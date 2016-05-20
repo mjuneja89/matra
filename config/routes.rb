@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   get '/' => 'home#home'
 
   get '/create' => 'users#new'
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   
+  get '/team' => 'team#team'
+
   get '/adminview' => 'admin#adminview'
 
   resources :strips do
