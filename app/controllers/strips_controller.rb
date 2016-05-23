@@ -1,6 +1,10 @@
 class StripsController < ApplicationController
 	
     before_action :require_admin
+    
+    def index
+        @strips = Strip.all
+    end
 
     def new
 		@strip = Strip.new

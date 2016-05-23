@@ -262,6 +262,17 @@ display: none;
   width: 50%;
 }
 
+.matrainput2
+{
+  height: 8rem;
+  border-radius: 3px;
+  border: 1px solid #ccc; 
+  margin-top: 3%;
+  padding: 0 .625rem;
+  padding-top: .625rem;
+  width: 50%;
+}
+
 .matrabtn
 {
   height: 3.75rem;
@@ -280,6 +291,11 @@ display: none;
 }
 
 
+.matrainput2 {
+  width: 80%;
+}
+
+
 .matrabtn {
   width: 80%;
 }
@@ -292,6 +308,10 @@ display: none;
   width: 90%;
 }
 
+
+.matrainput2 {
+  width: 90%;
+}
 
 .matrabtn {
   width: 90%;

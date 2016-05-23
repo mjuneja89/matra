@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520102301) do
+ActiveRecord::Schema.define(version: 20160523181310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "landscapes", force: :cascade do |t|
+    t.string   "photo"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "portraits", force: :cascade do |t|
+    t.string   "photo"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +42,13 @@ ActiveRecord::Schema.define(version: 20160520102301) do
   add_index "projects", ["strip_id"], name: "index_projects_on_strip_id", using: :btree
   add_index "projects", ["user_id", "strip_id"], name: "index_projects_on_user_id_and_strip_id", using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
+
+  create_table "squares", force: :cascade do |t|
+    t.string   "photo"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "strips", force: :cascade do |t|
     t.string   "name"

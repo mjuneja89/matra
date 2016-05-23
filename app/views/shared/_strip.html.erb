@@ -1,0 +1,15 @@
+<div class="col-sm-4" style="text-align: center">
+	<div class="stripbox">
+		<div class="stripname">
+			<h3><%= strip.name %></h3>
+		</div>
+		<div id="stripbuttons">
+			<div class="col-xs-12">
+				<%= link_to "create project", new_strip_project_path(strip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "delete strip", strip_path(strip), :method => :delete, :class => "btn matrabtn" %>
+			</div>
+		</div>
+	</div>
+</div>
