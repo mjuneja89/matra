@@ -75,5 +75,8 @@ gem 'dropzonejs-rails'
 
 gem 'jquery-fileupload-rails'
 
+gem 'kaminari'
+gem 'jquery-infinite-pages'
+
 
 

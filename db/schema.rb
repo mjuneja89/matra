@@ -11,16 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523181310) do
+ActiveRecord::Schema.define(version: 20160601192808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "landscapes", force: :cascade do |t|
     t.string   "photo"
     t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "image_id"
   end
 
   create_table "portraits", force: :cascade do |t|
@@ -28,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160523181310) do
     t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "image_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -37,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160523181310) do
     t.integer  "strip_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "cover"
   end
 
   add_index "projects", ["strip_id"], name: "index_projects_on_strip_id", using: :btree
@@ -48,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160523181310) do
     t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "image_id"
   end
 
   create_table "strips", force: :cascade do |t|

@@ -24,13 +24,11 @@ $(document).ready(function(){
   
   $("#portraitfield").click(); 
 
- });
+ }); 
 
 });
- 
 
-
-  </script>
+</script>
 
 </head>
 
@@ -42,6 +40,10 @@ $(document).ready(function(){
 	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
         
         <h3 style="color: #7f7f7f">create a new project</h3>
+
+        <div id="avatarbox">
+          <img class="fitpreview" />
+        </div>
 
 		<%= form_for(@project, url: strip_projects_path(@strip), :html => { :multipart => true }) do |f| %>
           

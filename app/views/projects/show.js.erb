@@ -1,0 +1,7 @@
+$('#images').html("<%=j render(partial: 'shared/image', collection: @images) %>");
+
+<% if @images.last_page? %>
+  $('#arrowbox').remove();
+<% else %>
+  $('#arrowbox').html("<%=j render(partial: 'shared/arrowright') %>");
+<% end %>

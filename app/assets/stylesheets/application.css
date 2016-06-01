@@ -68,6 +68,7 @@ body
 }
 
  .matra-container{
+        
         width: 100%; 
         max-width: 1200px;      
     }
@@ -83,7 +84,58 @@ body
 {
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.heading-col
+{
+  float: left; 
+  min-height: 1px; 
+  width: 15%;
+  padding-left:2px;  
+  position: relative;
+}
+
+.landscape-col
+{
+  float: left; 
+  min-height: 1px; 
+  width: 27%;
+  position: relative;
+  padding-right:2px;
+  padding-left:2px;  
 }    
+
+
+.square-col
+{
+  float: left;
+  min-height: 1px; 
+  width: 20%;
+  position: relative;
+  padding-right:2px;
+  padding-left:2px;   
+} 
+
+
+.portrait-col
+{
+  float: left;
+  min-height: 1px;
+  width: 11%;
+  position: relative; 
+  padding-right:2px;
+  padding-left:2px;  
+} 
+
+.arrow-col
+{
+  float: left;
+  min-height: 1px;
+  width: 1%;
+  position: relative; 
+  padding-right:2px;
+  padding-left:2px;  
+}
 
 .matra-heading
 {
@@ -138,6 +190,26 @@ body
 
 
 @media all and (max-width:767px) {
+
+.heading-col
+{
+   width: 100%;
+}
+
+.landscape-col
+{
+   width: 100%;
+}
+
+.square-col
+{ 
+   width: 100%;
+}
+
+.portrait-col
+{
+   width: 100%;
+}
 
 .matra-heading
 {

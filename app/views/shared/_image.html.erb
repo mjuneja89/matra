@@ -1,0 +1,29 @@
+  <% if image.square.present? %>       
+       
+       <div class="square-col">
+       	 <div class="square">
+       	 	<%= image_tag image.square.photo_url, :class => "fitimg" %> 
+       	 </div> 
+       </div>
+
+      <% end %> 
+
+      <% if image.landscape.present? %>
+       
+       <div class="landscape-col">
+       	<div class="landscape">   		
+       	 	<%= image_tag image.landscape.photo_url, :class => "fitimg" %>
+       	 </div> 
+       </div>
+
+      <% end %> 
+
+      <% if image.portrait.present? %>
+       
+       <div class="portrait-col">
+       	<div class="portrait">
+       	 	<%= image_tag image.portrait.photo_url, :class => "fitimg" %>
+       	 </div> 
+       </div>
+ 
+      <% end %>
