@@ -8,6 +8,9 @@
 				<%= link_to "create project", new_strip_project_path(strip), :class => "btn matrabtn" %>
 			</div>
 			<div class="col-xs-12">
+				<%= link_to "view projects", strip_projects_path(strip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
 				<%= link_to "delete strip", strip_path(strip), :method => :delete, :class => "btn matrabtn" %>
 			</div>
 		</div>

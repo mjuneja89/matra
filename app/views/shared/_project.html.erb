@@ -1,0 +1,28 @@
+<div class="col-sm-4">
+	<div class="projectbox">
+		<div class="projectframe">
+		   <% if project.images.first.square.present? %> 	
+			<%= image_tag project.images.first.square.photo_url, :class => "fitimg" %>
+		   <% end %>	
+		   <% if project.images.first.landscape.present? %>
+		    <%= image_tag project.images.first.landscape.photo_url, :class => "fitimg" %>
+		   <% end %> 
+		   <% if project.images.first.portrait.present? %>
+            <%= image_tag project.images.first.portrait.photo_url, :class => "fitimg" %>
+		   <% end %>  
+		</div>
+		<div id="namebox">
+			<%= link_to strip_project_path(project.strip, project), style: "text-align: center" do %>
+			  <p><%= project.name %></p>
+            <% end %> 
+		</div>
+		<div id="stripbuttons">
+			<div class="col-xs-12">
+				<%= link_to "edit project", edit_strip_project_path(project.strip, project), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "delete project", strip_project_path(project.strip, project), :method => :delete, :class => "btn matrabtn" %>
+			</div>
+		</div>
+	</div>
+</div>
