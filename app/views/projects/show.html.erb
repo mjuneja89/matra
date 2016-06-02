@@ -12,31 +12,35 @@
 
 <div class="col-sm-8 col-sm-offset-2" style="text-align:center">
   
-  	<% if @images.first.square.present? %>
-  	
-  	<div class="mainsquarebox">
-  	<%= image_tag @images.first.square.photo_url, :class => "fitimg" %>
-    </div>
+ <div id="mainimagebox">
+  
+  <% if @images.first.square.present? %>
     
-    <% end %>
-  	
-  	<% if @images.first.landscape.present? %>
-  	
-  	<div class="mainlandscapebox">
-  	<%= image_tag @images.first.landscape.photo_url, :class => "fitimg" %>
-  	</div>
+  <div class="mainsquarebox">
+    <%= image_tag @images.first.square.photo_url, :class => "fitimg" %>
+  </div>
     
-    <% end %>
-  	
-  	<% if @images.first.portrait.present? %>
-  	
-  	<div class="mainportraitbox">
-  	
-  	<%= image_tag @images.first.portrait.photo_url, :class => "fitimg" %>
+  <% end %>
     
-    </div>
-  	
-  	<% end %>
+  <% if @images.first.landscape.present? %>
+    
+  <div class="mainlandscapebox">
+    <%= image_tag @images.first.landscape.photo_url, :class => "fitimg" %>
+  </div>
+    
+  <% end %>
+    
+  <% if @images.first.portrait.present? %>
+    
+  <div class="mainportraitbox">
+    
+    <%= image_tag @images.first.portrait.photo_url, :class => "fitimg" %>
+    
+  </div>
+    
+  <% end %>
+  
+  </div>
   
   </div>
 

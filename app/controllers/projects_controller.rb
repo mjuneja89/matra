@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
       @images = @project.images.all.page(params[:page]).per(3)
    end
-   
+      
    private
 
    def project_params

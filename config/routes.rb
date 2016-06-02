@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   resources :strips do
     resources :projects 
   end
-
+ 
+ resources :images
+ 
 end

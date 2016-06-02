@@ -1,8 +1,12 @@
-  <% if image.square.present? %>       
+<div id ="image_<%= image.id %>">  
+     
+     <% if image.square.present? %>       
        
        <div class="square-col">
        	 <div class="square">
-       	 	<%= image_tag image.square.photo_url, :class => "fitimg" %> 
+                <%= link_to image_path(image), :remote => true do %>  
+       	 	<%= image_tag image.square.photo_url, :class => "fitimg" %>
+                <% end %>  
        	 </div> 
        </div>
 
@@ -11,8 +15,10 @@
       <% if image.landscape.present? %>
        
        <div class="landscape-col">
-       	<div class="landscape">   		
+       	<div class="landscape">
+               <%= link_to image_path(image), :remote => true do %>   		
        	 	<%= image_tag image.landscape.photo_url, :class => "fitimg" %>
+               <% end %>   
        	 </div> 
        </div>
 
@@ -22,8 +28,11 @@
        
        <div class="portrait-col">
        	<div class="portrait">
+               <%= link_to image_path(image), :remote => true do %>                
        	 	<%= image_tag image.portrait.photo_url, :class => "fitimg" %>
+               <% end %>  
        	 </div> 
        </div>
  
-      <% end %>
+ <% end %>
+</div> 
