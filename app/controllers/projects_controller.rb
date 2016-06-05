@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
    def show
       @strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
-      @images = @project.images.all.page(params[:page]).per(3)
+      @images = @project.images.all.page(params[:page]).per(9)
    end
       
    private
