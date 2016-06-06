@@ -1,0 +1,23 @@
+
+<div class="matra-row" style="margin-top: 4%">
+
+<% if strip.category == "medium" %>
+
+<%= render :partial => 'stripnormal', locals: {strip: strip} %>
+
+<% end %>
+
+<% if strip.category == "narrow" %>
+
+<%= render :partial => 'stripnarrow', locals: {strip: strip} %>
+
+<% end %>
+
+
+<% if strip.category == "broad" %>
+
+<%= render :partial => 'stripbroad', locals: {strip: strip} %>
+
+<% end %>
+
+</div>

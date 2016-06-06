@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 	
 	def home
-	end
-
+    @strips = Strip.all
+  end
+    
 end

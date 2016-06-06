@@ -2,24 +2,114 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.categorybox
+
+.normalheading
 {
- width: 100%;
- color: #7f7f7f;
- height: 180px;
- background-color: #d3d3d3;
- margin-bottom: -20px;
- display: inline-block;
+  float: left; 
+  min-height: 1px; 
+  width: 10%;
+  padding-left:1px;  
+  position: relative;
+} 
+
+.normallandscape
+{
+  float: left; 
+  min-height: 1px; 
+  width: 28%; 
+  padding-right: 4px;
+  position: relative; 
 }
 
-.arrowbox
+.normalsquare
 {
- width: 100%;
- color: #d3d3d3;
- height: 180px;
- margin-bottom: -20px;
- display: inline-block;
- margin-left: 15px;
+  float: left;
+  min-height: 1px; 
+  width: 23%;
+  padding-right: 4px;
+  position: relative;
+}
+
+.normalportrait
+{
+  float: left;
+  padding-right:4px;
+  min-height: 1px; 
+  width: 13%;
+  position: relative;  
+}
+
+.narrowheading
+{
+  float: left; 
+  min-height: 1px; 
+  width: 18%;
+  padding-left:1px;  
+  position: relative;
+} 
+
+.narrowlandscape
+{
+  float: left; 
+  min-height: 1px; 
+  width: 24%; 
+  padding-right:4px;
+  position: relative; 
+}
+
+.narrowsquare
+{
+  float: left;
+  padding-right:4px;
+  min-height: 1px; 
+  width: 18%;
+  position: relative;  
+}
+
+
+.narrowportrait
+{
+  float: left;
+  padding-right:4px;
+  min-height: 1px; 
+  width: 9%;
+  position: relative;  
+}
+
+.broadheading
+{
+  float: left; 
+  min-height: 1px; 
+  width: 8%;
+  padding-left:1px;  
+  position: relative;
+} 
+
+.broadlandscape
+{
+  float: left; 
+  min-height: 1px; 
+  width: 30%; 
+  padding-right:4px;
+  position: relative; 
+}
+
+.broadsquare
+{
+  float: left;
+  padding-right:4px;
+  min-height: 1px; 
+  width: 25%;
+  position: relative;  
+}
+
+.broadportrait
+{
+  float: left;
+  min-height: 1px;  
+  padding-right:4px;
+  width: 15%;
+  position: relative;  
 }
 
 .rcategory
@@ -29,7 +119,6 @@
   font-weight: 100;
   font-size: 22px;
 }
-
 
 .pbcategory
 {
@@ -48,21 +137,145 @@
   font-size: 22px;
 }
 
-.landscape
+
+.namenormal
+{
+  text-align: center;
+  margin-top: 120px;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.namebroad
+{
+  text-align: center;
+  margin-top: 140px;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.namenarrow
+{
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.categorynormal
+{
+ width: 100%;
+ color: #7f7f7f;
+ height: 180px;
+ background-color: #d3d3d3;
+ margin-bottom: -20px;
+ display: inline-block;
+}
+
+.categorynarrow
+{
+ width: 100%;
+ color: #7f7f7f;
+ height: 100px;
+ background-color: #d3d3d3;
+ margin-bottom: -20px;
+ display: inline-block;
+}
+
+
+.categorybroad
+{
+ width: 100%;
+ color: #7f7f7f;
+ height: 200px;
+ background-color: #d3d3d3;
+ margin-bottom: -20px;
+ display: inline-block;
+}
+
+.arrownormal
+{
+ width: 100%;
+ color: #d3d3d3;
+ height: 180px;
+ margin-bottom: -20px;
+ display: inline-block;
+ margin-left: 15px;
+}
+
+.arrowbroad
+{
+ width: 100%;
+ color: #d3d3d3;
+ height: 200px;
+ margin-bottom: -20px;
+ display: inline-block;
+ margin-left: 15px;
+}
+
+.arrownarrow
+{
+ width: 100%;
+ color: #d3d3d3;
+ height: 100px;
+ margin-bottom: -20px;
+ display: inline-block;
+ margin-left: 15px;
+}
+
+.landscapenormal
 {
   height: 180px;
   width: 100%;
 }
 
-.square
+.landscapebroad
+{
+  height: 200px;
+  width: 100%;
+}
+
+.landscapenarrow
+{
+  height: 100px;
+  width: 100%;
+}
+
+
+.squarenormal
 {
   height: 180px;
   width: 100%; 
 }
 
-.portrait
+.squarebroad
+{
+  height: 200px;
+  width: 100%; 
+}
+
+.squarenarrow
+{
+  height: 100px;
+  width: 100%; 
+}
+
+.portraitnormal
 {
   height: 180px;
+  width: 100%;
+}
+
+.portraitbroad
+{
+  height: 200px;
+  width: 100%;
+}
+
+
+.portraitnarrow
+{
+  height: 100px;
   width: 100%;
 }
 
@@ -96,9 +309,6 @@
   }
 
 }
-
-
-
 
 .categoryheading
 {
