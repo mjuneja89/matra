@@ -1,7 +1,141 @@
 <html>
 
 <head>	
+  
   <title>matra architects</title>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+ 
+    <% @strips.each_with_index do |strip, i| %>
+ 
+    <% if @sums[i] == 3 %>
+      $('.narrow_<%= i %>').width('69%');
+    <% end %>
+
+    <% if @sums[i] == 15 %>
+      $('.narrow_<%= i %>').width('24%');
+    <% end %>
+
+    <% if @sums[i] == 6 %>
+      $('.narrow_<%= i %>').width('42%');
+    <% end %>
+
+    <% if @sums[i] == 7 %>
+      $('.narrow_<%= i %>').width('54%');
+    <% end %>
+
+    <% if @sums[i] == 4 %>
+      $('.narrow_<%= i %>').width('60%');
+    <% end %>
+
+    <% if @sums[i] == 11 %>
+      $('.narrow_<%= i %>').width('39%');
+    <% end %>
+
+    <% if @sums[i] == 12 %>
+      $('.narrow_<%= i %>').width('33%');
+    <% end %>
+
+    <% if @sums[i] == 9 %>
+      $('.narrow_<%= i %>').width('36%');
+    <% end %>
+
+    <% if @sums[i] == 5 %>
+      $('.narrow_<%= i %>').width('51%');
+    <% end %>  
+ 
+    <% if @sums[i] == 8 %>
+      $('.narrow_<%= i %>').width('45%');
+    <% end %> 
+
+    <% if @sums[i] == 18 %>
+      $('.normal_<%= i %>').width('57%'); 
+    <% end %>
+    
+    <% if @sums[i] == 30 %>
+      $('.normal_<%= i %>').width('14%'); 
+    <% end %>
+    
+    <% if @sums[i] == 21 %>
+      $('.normal_<%= i %>').width('27%'); 
+    <% end %>
+    
+    <% if @sums[i] == 22 %>
+      $('.normal_<%= i %>').width('42%'); 
+    <% end %>
+    
+    <% if @sums[i] == 19 %>
+      $('.normal_<%= i %>').width('47%'); 
+    <% end %>
+    
+    <% if @sums[i] == 26 %>
+      $('.normal_<%= i %>').width('27%'); 
+    <% end %>
+    
+    <% if @sums[i] == 27 %>
+      $('.normal_<%= i %>').width('17%'); 
+    <% end %>
+    
+    <% if @sums[i] == 24 %>
+      $('.normal_<%= i %>').width('22%'); 
+    <% end %>
+    
+    <% if @sums[i] == 20 %>
+      $('.normal_<%= i %>').width('37%'); 
+    <% end %>
+    
+    <% if @sums[i] == 23 %>
+      $('.normal_<%= i %>').width('32%'); 
+    <% end %>
+
+    <% if @sums[i] == 33 %>
+      $('.broad_<%= i %>').width('51%'); 
+    <% end %>
+    
+    <% if @sums[i] == 45 %>
+      $('.broad_<%= i %>').width('6%'); 
+    <% end %>
+    
+    <% if @sums[i] == 36 %>
+      $('.broad_<%= i %>').width('21%'); 
+    <% end %>
+    
+    <% if @sums[i] == 37 %>
+      $('.broad_<%= i %>').width('36%'); 
+    <% end %>
+    
+    <% if @sums[i] == 34 %>
+      $('.broad_<%= i %>').width('41%'); 
+    <% end %>
+    
+    <% if @sums[i] == 41 %>
+      $('.broad_<%= i %>').width('21%'); 
+    <% end %>
+    
+    <% if @sums[i] == 42 %>
+      $('.broad_<%= i %>').width('11%'); 
+    <% end %>
+    
+    <% if @sums[i] == 39 %>
+      $('.broad_<%= i %>').width('16%'); 
+    <% end %>
+
+    <% if @sums[i] == 35 %>
+      $('.broad_<%= i %>').width('31%'); 
+    <% end %>
+    
+    <% if @sums[i] == 38 %>
+      $('.broad_<%= i %>').width('26%'); 
+    <% end %>
+ 
+  <% end %>
+
+
+});
+
+</script>
 
 </head>
 
@@ -9,10 +143,12 @@
 
 <div class="matra-container">
 
+<% @strips.each_with_index do |strip, i| %>
 
-<%= render :partial => 'strip', collection: @strips %>
+<%= render :partial => 'strip', locals: {strip: strip, i: i} %>
+
+<% end %>
  	
-
 </div>
 
 

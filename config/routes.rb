@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/create' => 'users#new'
   post '/create' => 'users#create'
+  
   resources :users do
   	get '/avatar' => 'users#avatar'
     patch '/updateavatar' => 'users#updateavatar'
@@ -13,15 +14,19 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
-  
+
   get '/team' => 'team#team'
 
   get '/adminview' => 'admin#adminview'
 
   resources :strips do
-    resources :projects 
+    resources :projects do
+      get '/selectcover' => "projects#selectcover"
+    end 
   end
  
- resources :images
+ resources :images do
+    put '/cover' => "images#cover"
+ end
  
 end

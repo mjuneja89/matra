@@ -1,0 +1,42 @@
+<% if image.landscape.present? %>
+  <div class="col-sm-4" style="margin-top: 3%">
+  	<div class="coverbox">
+  		<div class="coverpic">
+  			<%= image_tag image.landscape.photo_url, :class => 'fitlandscape' %>
+  		</div>
+  		<div class="setcover">
+  			<%= link_to image_cover_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :put do %>
+  			   set cover
+  			<% end %> 
+  		</div>
+  	</div>
+  </div>
+<% end %>
+<% if image.portrait.present? %>
+  <div class="col-sm-2" style="margin-top: 3%">
+  	<div class="coverbox">
+  		<div class="coverpic">
+  			<%= image_tag image.portrait.photo_url, :class => 'fitportrait' %>
+  		</div>	
+  		<div class="setcover">
+  			<%= link_to image_cover_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :put do %>
+  			   set cover
+  			<% end %>  
+  		</div>
+  	</div>
+  </div> 
+<% end %>
+<% if image.square.present? %>
+  <div class="col-sm-3" style="margin-top: 3%">
+  	<div class="coverbox">	
+  		<div class="coverpic">
+  			<%= image_tag image.square.photo_url, :class => 'fitsquare' %>
+  		</div>  		
+  		<div class="setcover">
+  			<%= link_to image_cover_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :put do %>
+  			   set cover
+  			<% end %>  
+  		</div>
+  	</div>
+  </div> 
+<% end %>

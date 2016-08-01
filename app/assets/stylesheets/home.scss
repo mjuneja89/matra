@@ -7,7 +7,6 @@
 {
   float: left; 
   min-height: 1px; 
-  width: 10%;
   padding-left:1px;  
   position: relative;
 } 
@@ -42,8 +41,7 @@
 .narrowheading
 {
   float: left; 
-  min-height: 1px; 
-  width: 18%;
+  min-height: 1px;
   padding-left:1px;  
   position: relative;
 } 
@@ -79,8 +77,7 @@
 .broadheading
 {
   float: left; 
-  min-height: 1px; 
-  width: 8%;
+  min-height: 1px;
   padding-left:1px;  
   position: relative;
 } 
@@ -157,7 +154,7 @@
 .namenarrow
 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
   font-weight: 100;
   font-size: 20px;
 }
@@ -165,9 +162,9 @@
 .categorynormal
 {
  width: 100%;
- color: #7f7f7f;
+ color: #3c3c3c;
  height: 180px;
- background-color: #d3d3d3;
+ background-color: #dddddd;
  margin-bottom: -20px;
  display: inline-block;
 }
@@ -175,9 +172,9 @@
 .categorynarrow
 {
  width: 100%;
- color: #7f7f7f;
- height: 100px;
- background-color: #d3d3d3;
+ color: #3c3c3c;
+ height: 120px;
+ background-color: #dddddd;
  margin-bottom: -20px;
  display: inline-block;
 }
@@ -186,9 +183,9 @@
 .categorybroad
 {
  width: 100%;
- color: #7f7f7f;
+ color: #3c3c3c;
  height: 200px;
- background-color: #d3d3d3;
+ background-color: #dddddd;
  margin-bottom: -20px;
  display: inline-block;
 }
@@ -196,7 +193,7 @@
 .arrownormal
 {
  width: 100%;
- color: #d3d3d3;
+ color: #dddddd;
  height: 180px;
  margin-bottom: -20px;
  display: inline-block;
@@ -206,7 +203,7 @@
 .arrowbroad
 {
  width: 100%;
- color: #d3d3d3;
+ color: #dddddd;
  height: 200px;
  margin-bottom: -20px;
  display: inline-block;
@@ -216,8 +213,8 @@
 .arrownarrow
 {
  width: 100%;
- color: #d3d3d3;
- height: 100px;
+ color: #dddddd;
+ height: 120px;
  margin-bottom: -20px;
  display: inline-block;
  margin-left: 15px;
@@ -237,7 +234,7 @@
 
 .landscapenarrow
 {
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 
@@ -256,7 +253,7 @@
 
 .squarenarrow
 {
-  height: 100px;
+  height: 120px;
   width: 100%; 
 }
 
@@ -275,7 +272,7 @@
 
 .portraitnarrow
 {
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 
@@ -313,7 +310,7 @@
 .categoryheading
 {
   text-align: center;
-  color: #7f7f7f; 	
+  color: #3c3c3c; 	
 }
 
 hr 
@@ -321,7 +318,7 @@ hr
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #7f7f7f;
+  border-top: 1px solid #3c3c3c;
 }
 
 .travelbox

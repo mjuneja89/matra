@@ -58,13 +58,13 @@ body
 
 #logo a:link
 {
-  color: #ccc;
+  color: #3c3c3c;
 }
 
 
 #logo a:hover
 {
-  color: #ccc;
+  color: #3c3c3c;
 }
 
  .matra-container{
@@ -80,17 +80,11 @@ body
         clear:both;
     }
 
-.matra-row
-{
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
 .heading-col
 {
   float: left; 
   min-height: 1px; 
-  width: 9%;
+  width: 10%;
   padding-left:1px;  
   position: relative;
 }
@@ -99,7 +93,7 @@ body
 {
   float: left; 
   min-height: 1px; 
-  width: 10%;
+  width: 14%;
   position: relative;
   padding-right:1px; 
 }    
@@ -109,7 +103,7 @@ body
 {
   float: left;
   min-height: 1px; 
-  width: 7%;
+  width: 10%;
   position: relative;
   padding-right:1px;  
 } 
@@ -119,7 +113,7 @@ body
 {
   float: left;
   min-height: 1px;
-  width: 4%;
+  width: 7%;
   position: relative; 
   padding-right:1px; 
 } 
@@ -230,18 +224,18 @@ display: none;
 
 #links a:link
 {
-	color:#7f7f7f;
+	color:#3c3c3c;
 }
 
 
 #links a:hover
 {
-	color:#7f7f7f;
+	color:#3c3c3c;
 }
 
 #links a:visited
 {
-	color:#7f7f7f;
+	color:#3c3c3c;
 }
 
 #links
@@ -268,16 +262,16 @@ display: none;
 }
 
 .footerlink a:link {
-  color: #7f7f7f;
+  color: #3c3c3c;
 }
 
 .footerlink a:hover {
-  color: #7f7f7f;
+  color: #3c3c3c;
 }
 
 
 .footerlink a:visited {
-  color: #7f7f7f;
+  color: #3c3c3c;
 }
 
 .matrainput
@@ -400,4 +394,10 @@ display: none;
   width: 90%;
 }
 
+}
+
+.normalcomplete
+{
+  width: 100%;
+  height: 100%;
 }

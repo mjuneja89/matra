@@ -1,0 +1,27 @@
+<html>
+
+<head>	
+  
+  <title>Set Cover</title>
+
+</head>
+
+<body>
+
+<div class="matra-container" style="margin-top: 3%">
+ 
+ <div class="row">
+
+ <% @images.each do |image| %>
+
+   <%= render :partial => "imagecover", locals: {image: image} %>
+     
+ <% end %>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
