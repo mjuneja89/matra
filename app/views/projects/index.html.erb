@@ -2,7 +2,7 @@
 
 <head>	
   
-  <title>Project Index</title>
+  <title>Search Results</title>
 
 </head>
 
@@ -12,7 +12,15 @@
 
 <div class="row">
 
-<%= render :partial => 'shared/project', collection: @projects %>
+<% if @projects.present? %>
+
+<%= render :partial => 'project', collection: @projects %>
+
+<% else %>
+
+<h4 style="text-align: center">No Relevant Projects Found</h4>
+
+<% end %>
   
 </div>
 

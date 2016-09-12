@@ -1,7 +1,9 @@
 class ProjectsController < ApplicationController
    
    def index
-     @projects = Project.all
+    if params[:search]
+     @projects = Project.search(params[:search]).page(params[:page]).per(12)
+    end
    end
 
    def new      

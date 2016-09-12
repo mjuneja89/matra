@@ -4,6 +4,21 @@
   
   <title><%= @project.name %></title>
 
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$('#displaydesc').click(function(){
+
+$('#descriptionbox').show();
+$('#mainimagebox').hide();
+
+});
+
+});
+
+</script>  
+
 </head>
 
 <body>
@@ -11,6 +26,12 @@
 <div class="container-fluid" style="margin-top: 3%">
 
 <div class="col-xs-12" style="text-align:center">
+
+ <div id="descriptionbox">
+  
+  <h3 class="projectdescription"><%= @project.description %></h3>
+
+ </div>  
   
  <div id="mainimagebox">
   
@@ -51,10 +72,18 @@
   
   <div class="matra-row">
 
+  <div class="arrow-col">
+     <div id="arrowbox1">
+      <%= render :partial => 'shared/arrowleft' %>
+     </div>
+  </div>  
+
    <div class="heading-col marginleft">
    	  <div class="category">
    	  	<h5 class="categorytext"><%= @project.name %></h5>
-        <p class="catdesc">description</p>
+        <div id="displaydesc">
+        <a href="#"><p class="catdesc">description</p></a>
+        </div>
    	  </div> 
    </div>
    
@@ -65,7 +94,7 @@
    <div class="arrow-col">
 	   <div id="arrowbox">
 	   	<%= render :partial => 'shared/arrowright' %>
-       </div>
+     </div>
 	</div>  
 
   </div>

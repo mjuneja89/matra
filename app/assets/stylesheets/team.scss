@@ -2,69 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.userbox
+.name-user
 {
-  width:50%;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-  padding: 5px; 
+  float: left; 
+  min-height: 1px; 
+  width: 20%;
+  padding-left:1px;  
+  position: relative;  
 }
 
-.avatarframe
+.photo-user
 {
-  height: 150px;
+  float: left; 
+  min-height: 1px; 
+  width: 25%;
+  position: relative; 
+}    
+
+.UserNameBox
+{
+  height: 200px;
+  width: 100%;
+  color: #3c3c3c;
+  background-color: #dddddd;
+  margin-bottom: -20px;
+  display: inline-block;
 }
 
-.avatarimg
+.UserPhotoBox
+{ 
+  height: 200px;
+  width: 100%;
+}
+
+.fitavatar
 {
   width: 100%;
   height: 100%;
 }
 
-#namebox
+.UserName
 {
   text-align: center;
-  color: #7f7f7f;
-  font-size: 15px;	
-  padding-top: 5px;
-}
-
-#namebox a:link
-{
-  color: #7f7f7f;
+  margin-top: 140px;
+  font-size: 20px;
 }
 
 
-#namebox a:hover
-{
-  color: #7f7f7f;
-}
-
-
-#namebox a:link
-{
-  color: #7f7f7f;
-}
-
-@media all and (max-width: 768px)
-{
-  .avatarframe
-  {
-    height: 180px;
-  }
-
-  .userbox
-  {
-    width: 60%;
-    margin-top: 4%;  
-  }	
-
-  #namebox 
-  {
-    font-size: 14px;
-  }
-
-}

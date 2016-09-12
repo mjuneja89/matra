@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/team' => 'team#team'
+  get '/travel' => 'travel#travel'
 
   get '/adminview' => 'admin#adminview'
 
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
       get '/selectcover' => "projects#selectcover"
     end 
   end
+
+ get 'search' => 'projects#index'
  
  resources :images do
     put '/cover' => "images#cover"

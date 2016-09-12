@@ -115,7 +115,17 @@
 #arrowbox
 {
  width: 100%;
- color: #d3d3d3;
+ color: #3c3c3c;
+ height: 60px;
+ margin-bottom: -20px;
+ display: inline-block;
+ margin-left: 15px;
+}
+
+#arrowbox1
+{
+ width: 100%;
+ color: #3c3c3c;
  height: 60px;
  margin-bottom: -20px;
  display: inline-block;
@@ -179,7 +189,7 @@
 .categorytext
 {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
   font-weight: 100;
 }
 
@@ -207,4 +217,92 @@
 {
   border: 1px solid #ccc;
   text-align: center;  
+}
+
+.category a:link
+{
+  color: #3c3c3c;
+}
+
+.category a:hover
+{
+  color: #3c3c3c; 
+  text-decoration: none;
+}
+
+#descriptionbox
+{
+  display: none;
+  width: 60%;
+  height: 600px;
+  color: #3c3c3c;
+  background-color: #dddddd;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectdescription
+{ 
+  padding-top: 250px;
+  text-align: center;
+}
+
+#displaydesc a:link
+{
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+
+#displaydesc a:hover
+{
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+
+#displaydesc a:visited
+{
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+.ProjectNameBox
+{
+  height: 200px;
+  width: 100%;
+  color: #3c3c3c;
+  background-color: #dddddd;
+  margin-bottom: -20px;
+  display: inline-block;
+}
+
+.name-project
+{
+  float: left; 
+  min-height: 1px; 
+  width: 20%;
+  padding-left:1px;  
+  position: relative;  
+}
+
+.photo-project
+{
+  float: left; 
+  min-height: 1px; 
+  width: 25%;
+  position: relative; 
+}    
+
+.ProjectPhotoBox
+{ 
+  height: 200px;
+  width: 100%;
+}
+
+.ProjectName
+{
+  text-align: center;
+  margin-top: 140px;
+  font-size: 20px;
 }

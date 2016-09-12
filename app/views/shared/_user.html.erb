@@ -1,12 +1,12 @@
-<div class="col-sm-4">
-	<div class="userbox">
-		<div class="avatarframe">
-			<%= image_tag user.avatar_url, :class => "fitimg" %>
-		</div>
-		<div id="namebox">
-			<%= link_to user_path(user), style: "text-align: center" do %>
-			  <p><%= user.first_name %><%= " " %><%= user.last_name %></p>
-            <% end %> 
-		</div>
+<div class="matra-row" style="margin-top: 3%">
+	<div class="name-user">
+	   <div class="UserNameBox"> 	 
+        <h4 class="UserName"><%= user.first_name %>&nbsp<%= user.last_name%></h4>
+       </div> 
+	</div>
+	<div class="photo-user">
+        <div class="UserPhotoBox">
+        	<%= image_tag user.avatar, :class => "fitavatar" %>
+        </div>  
 	</div>
 </div>

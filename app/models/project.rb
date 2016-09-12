@@ -8,4 +8,11 @@ class Project < ActiveRecord::Base
 	accepts_nested_attributes_for :squares	
 	accepts_nested_attributes_for :portraits
 	accepts_nested_attributes_for :landscapes
+
+ def self.search(search)
+  if search
+      Project.where('name ILIKE ?', "%#{search}%")
+    end
+ end 
+
 end
