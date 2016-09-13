@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/team' => 'team#team'
-  get '/travel' => 'travel#travel'
+  get '/travels' => 'travel#travels'
+  resources :travels
 
   get '/adminview' => 'admin#adminview'
 

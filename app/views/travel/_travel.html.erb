@@ -1,0 +1,25 @@
+<div class="matra-row" style="margin-top: 3%">
+	<div class="name-travel">
+	   <div class="TravelNameBox"> 	 
+        <h4 class="TravelName"><%= travel.name %></h4>
+       </div> 
+	</div>
+	<div class="photo-travel">
+        <div class="TravelPhotoBox">
+        	<%= image_tag travel.travel_photos.picture.first, :class => "fitavatar" %>
+        </div>  
+	</div>
+
+	<div class="photo-travel">
+        <div class="TravelPhotoBox">
+        	<%= image_tag travel.travel_photos.picture.second, :class => "fitavatar" %>
+        </div>  
+	</div>
+    
+	<div class="photo-travel">
+        <div class="TravelPhotoBox">
+        	<%= image_tag travel.travel_photos.picture.third, :class => "fitavatar" %>
+        </div>  
+	</div>
+
+</div>

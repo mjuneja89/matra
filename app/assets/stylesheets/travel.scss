@@ -1,3 +1,49 @@
 // Place all the styles related to the travel controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.name-travel
+{
+  float: left; 
+  min-height: 1px; 
+  width: 20%;
+  padding-left:1px;  
+  position: relative;  
+}
+
+.photo-travel
+{
+  float: left; 
+  min-height: 1px; 
+  width: 25%;
+  position: relative; 
+}    
+
+.TravelNameBox
+{
+  height: 200px;
+  width: 100%;
+  color: #3c3c3c;
+  background-color: #dddddd;
+  margin-bottom: -20px;
+  display: inline-block;
+}
+
+.TravelPhotoBox
+{ 
+  height: 200px;
+  width: 100%;
+}
+
+.fitavatar
+{
+  width: 100%;
+  height: 100%;
+}
+
+.TravelName
+{
+  text-align: center;
+  margin-top: 140px;
+  font-size: 20px;
+}

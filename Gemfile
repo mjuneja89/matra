@@ -78,5 +78,9 @@ gem 'jquery-fileupload-rails'
 gem 'kaminari'
 gem 'jquery-infinite-pages'
 
+gem 'fog'
+gem 'fog-aws'
+
+
 
 
