@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/team' => 'team#team'
+  get '/archive' => 'projects#archive'
   get '/travels' => 'travel#travels'
   resources :travels
 
