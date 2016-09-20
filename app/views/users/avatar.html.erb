@@ -62,7 +62,9 @@ $(document).ready(function(){
           <div id="avatarbtn" style="text-align: center">
             <a href="#" id="chooseavatar" class="btn matrabtn">add profile picture</a>   
           </div>
-          
+
+          <%= f.select(:avatar_category, options_for_select([['avatar size', nil], ['portrait', 'portrait'], ['landscape', 'landscape'], ['square', 'square']]), {}, {class: "matrainput"}) %>
+
           <%= f.submit "update", :class => "matrabtn", :id => "asli", :style => "display: none" %>
 
 		<% end %>
