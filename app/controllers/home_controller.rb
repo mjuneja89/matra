@@ -8,20 +8,20 @@ class HomeController < ApplicationController
         if strip.category == "medium"       
           strip.projects.limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).landscape.present?
-                  j = j + 10
+                  j = j + 13
               end
               if project.images.find_by(:id => project.cover_id).square.present?
-                  j = j + 7
+                  j = j + 9
               end
               if project.images.find_by(:id => project.cover_id).portrait.present?
-                  j = j + 6
+                  j = j + 8
               end
           end
         end
         if strip.category == "narrow"       
           strip.projects.limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).landscape.present?
-                  j = j + 5
+                  j = j + 7
               end
               if project.images.find_by(:id => project.cover_id).square.present?
                   j = j + 2
@@ -34,13 +34,13 @@ class HomeController < ApplicationController
         if strip.category == "broad"       
           strip.projects.limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).landscape.present?
-                  j = j + 15
+                  j = j + 19
               end
               if project.images.find_by(:id => project.cover_id).square.present?
-                  j = j + 12
+                  j = j + 15
               end
               if project.images.find_by(:id => project.cover_id).portrait.present?
-                  j = j + 11
+                  j = j + 14
               end
           end
         end  
