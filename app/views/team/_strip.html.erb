@@ -8,6 +8,12 @@
 
 <% @users.each do |user| %>
    
+   <% if user.role == "admin" %>
+
+   <div></div>
+
+   <% else %> 
+
    <% if user.avatar_category == "portrait" %>
      
      <div class="broadportrait">
@@ -33,6 +39,8 @@
 	 </div> 
 
    <% end %>
+
+  <% end %> 
 
 <% end %>
 
