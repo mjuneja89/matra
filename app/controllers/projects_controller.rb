@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
    def new      
       @strip = Strip.find(params[:strip_id])
-   	@project = Project.new
+   	  @project = Project.new
       @square = @project.squares.build
       @landscape = @project.landscapes.build
       @portrait = @project.portraits.build
@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
 
    def create
       @strip = Strip.find(params[:strip_id])
-   	@project = Project.new(project_params) do |project|
+   	  @project = Project.new(project_params) do |project|
          project.strip = @strip 
       end
    	if @project.save
