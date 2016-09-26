@@ -8,11 +8,7 @@
 
 <% @users.each_with_index do |user, i| %>
    
-   <% if user.role == "admin" %>
-
-   <div></div>
-
-   <% else %> 
+   <% unless user.role == "admin" %>
 
    <% if user.avatar_category == "portrait" %>
      
