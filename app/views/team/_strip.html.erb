@@ -13,24 +13,24 @@
    <% if user.avatar_category == "portrait" %>
      
      <div class="broadportrait">
-	  <div class="portraitbroad">
-	  	<%= image_tag user.avatar_url, :class => "fitsquare", :id => 'user_<%= i %>' %>
+	  <div class="portraitbroad user_<%= i %>">
+	  	<%= image_tag user.avatar_url, :class => "fitsquare" %>
 	  </div>
 	 </div> 	
 
    <% elsif user.avatar_category == "landscape" %>
 
      <div class="broadlandscape">
-	  <div class="landscapebroad">
-	  	 <%= image_tag user.avatar_url, :class => "fitlandscape", :id => 'user_<%= i %>' %>
+	  <div class="landscapebroad user_<%= i %>">
+	  	 <%= image_tag user.avatar_url, :class => "fitlandscape" %>
 	  </div>
 	 </div> 	
 
    <% else %>
 
      <div class="broadsquare">
-	  <div class="squarebroad">
-	  	 <%= image_tag user.avatar_url, :class => "fitsquare", :id => 'user_<%= i %>' %> 
+	  <div class="squarebroad" id="user_<%= i %>">
+	  	 <%= image_tag user.avatar_url, :class => "fitsquare" %> 
 	  </div>
 	 </div> 
 
