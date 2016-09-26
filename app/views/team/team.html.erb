@@ -14,8 +14,7 @@
      
      $("#user_<%= i %> img").hover(
       function(){
-    		$("div.categorybroad").html('<h2 class="nameboldbroad" style="font-family:"Swis721 Blk2 BT W05 Black"
-        "><%= user.first_name %></h2>');
+    		$("div.categorybroad").html('<h2 class="nameboldbroad"><%= user.first_name %></h2>');
       }, 
       function(){
     	$("div.categorybroad").html('<h2 class="namebroad">team</h2>');  
