@@ -20,7 +20,7 @@
 
    <% elsif user.avatar_category == "landscape" %>
 
-     <div class="broadlandscape user_<%= i %>">
+     <div class="broadlandscape">
 	  <div class="landscapebroad">
 	  	 <%= image_tag user.avatar_url, :class => "fitlandscape", :id => "user_<%= i %>" %>
 	  </div>
@@ -29,7 +29,7 @@
    <% else %>
 
      <div class="broadsquare">
-	  <div class="squarebroad user_<%= i %>">
+	  <div class="squarebroad">
 	  	 <%= image_tag user.avatar_url, :class => "fitsquare", :id => "user_<%= i %>" %> 
 	  </div>
 	 </div> 
