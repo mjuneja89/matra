@@ -3,9 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=3049b0dc-9fba-45f2-9d9e-18c99579483d&fontids=5179338");
+
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=72d27b64-aa23-4476-b0e9-6909b43e116d&fontids=5168434,5317088");
     
 @font-face{
         font-family:"Swis721 Th BT W05 Thin";
         src:asset-url("a89e1622-2627-4ff8-a093-75b66fb045ca.eot?#iefix");
         src:asset-url("a89e1622-2627-4ff8-a093-75b66fb045ca.eot?#iefix") format("eot"),asset-url("81c6a4ea-c435-4a7f-885e-d7e091ba72fc.woff2") format("woff2"),asset-url("664b48d8-4148-4cce-bbb7-d65848e57250.woff") format("woff"),asset-url("737b4a38-8c6d-42e9-9464-6aebf41a2d2d.ttf") format("truetype");
+    }
+
+@font-face{
+        font-family:"Swis721 BT WGL4 W05 Roman";
+        src:url("Fonts/5168434/6f2854ed-97b7-4896-ae37-243a3d9112e4.eot?#iefix");
+        src:url("Fonts/5168434/6f2854ed-97b7-4896-ae37-243a3d9112e4.eot?#iefix") format("eot"),url("Fonts/5168434/04e94190-865d-4659-bc77-1c039a4e8001.woff2") format("woff2"),url("Fonts/5168434/50eaf3bd-b355-48c4-8292-a2e850c57262.woff") format("woff"),url("Fonts/5168434/4e24d744-0a2c-43e5-bc9b-6baf052aba25.ttf") format("truetype");
+    }
+ 
+@font-face{
+        font-family:"Swis721 Blk2 BT W05 Black";
+        src:url("Fonts/5317088/d6652754-8d8e-4c6f-804b-9d3ed2e3db01.eot?#iefix");
+        src:url("Fonts/5317088/d6652754-8d8e-4c6f-804b-9d3ed2e3db01.eot?#iefix") format("eot"),url("Fonts/5317088/bf836ba3-1c21-4919-9dba-baa7316e2d8c.woff2") format("woff2"),url("Fonts/5317088/1fa934d1-69e9-4c72-948c-6f34a7c943cb.woff") format("woff"),url("Fonts/5317088/a3ae4385-131a-4452-89c2-18ee77e8ec43.ttf") format("truetype");
     }
