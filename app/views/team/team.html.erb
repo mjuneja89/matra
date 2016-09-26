@@ -8,7 +8,17 @@
   
   $(document).ready(function(){
     
+   <% @users.each_with_index do |user, i| %>
     
+    <% unless user.role != "admin" %>  
+     
+     $(".user_<%= i %>").hover(function(){
+    	$(".categorybroad").html("<h2 class="namebroad">team</h2>")}, function(){
+    		$(".categorybroad").html("<h2 class="namebroad" style="font-family:"Swis721 Blk2 BT W05 Black"
+        "><%= user.first_name %></h2>") 
+     });
+
+    <% end %> 
 
   });
      
