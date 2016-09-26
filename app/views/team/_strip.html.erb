@@ -6,7 +6,7 @@
 	</div>
 </div>
 
-<% @users.each do |user| %>
+<% @users.each_with_index do |user, i| %>
    
    <% if user.role == "admin" %>
 
@@ -16,7 +16,7 @@
 
    <% if user.avatar_category == "portrait" %>
      
-     <div class="broadportrait">
+     <div class="broadportrait user_<%= i %>">
 	  <div class="portraitbroad">
 	  	<%= image_tag user.avatar_url, :class => "fitsquare" %>
 	  </div>
@@ -24,7 +24,7 @@
 
    <% elsif user.avatar_category == "landscape" %>
 
-     <div class="broadlandscape">
+     <div class="broadlandscape user_<%= i %>">
 	  <div class="landscapebroad">
 	  	 <%= image_tag user.avatar_url, :class => "fitlandscape" %>
 	  </div>
@@ -33,7 +33,7 @@
    <% else %>
 
      <div class="broadsquare">
-	  <div class="squarebroad">
+	  <div class="squarebroad user_<%= i %>">
 	  	 <%= image_tag user.avatar_url, :class => "fitsquare" %> 
 	  </div>
 	 </div> 

@@ -12,6 +12,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+
+  <% if content_for?(:head) %>
+    <%= yield(:head) %>
+  <% end %>
+  
 </head>
 <body>
 
