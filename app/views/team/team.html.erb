@@ -10,7 +10,7 @@
     
    <% @users.each_with_index do |user, i| %>
     
-    <% unless user.role != "admin" %>  
+    <% unless user.role == "admin" %>  
      
      $(".user_<%= i %>").hover(function(){
     	$(".categorybroad").html("<h2 class="namebroad">team</h2>")}, function(){
