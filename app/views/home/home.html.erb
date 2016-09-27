@@ -1,6 +1,6 @@
 <html>
 
-<head>	
+<% content_for :head do %>	
   
   <title>matra architects</title>
 
@@ -203,7 +203,62 @@ $(document).ready(function() {
 
 </script>
 
-</head>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+<% @strips.each do |strip| %>
+
+<% strip.projects.each_with_index do |project, i| %>
+
+<% if strip.category == "narrow" %>
+
+$(".narrowphoto_<%= i %> img").hover(
+   
+   function(){
+     $(".div.categorybroad").html('<p>test</p>');
+   },
+   function(){
+     $(".div.categorybroad").html('<h2 class="namebroad"><%= strip.name %></h2>');
+   }
+  );
+
+<% elsif strip.category == "medium" %>
+   
+$(".normalphoto_<%= i %> img").hover(
+   
+   function(){
+     $(".div.categorybroad").html('<p>test</p>');
+   },
+   function(){
+     $(".div.categorybroad").html('<h2 class="namebroad"><%= strip.name %></h2>');
+   }
+  );
+
+<% else %>
+   
+$(".broadphoto_<%= i %> img").hover(
+   
+   function(){
+     $(".div.categorybroad").html('<p>test</p>');
+   },
+   function(){
+     $(".div.categorybroad").html('<h2 class="namebroad"><%= strip.name %></h2>');
+   }
+  );
+
+<% end %>
+
+<% end %>
+
+<% end %>
+
+
+});
+
+</script>
+
+<% end %>
 
 <body>
 

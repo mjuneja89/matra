@@ -5,12 +5,12 @@
 	</div>
 </div>
 
-<% strip.projects.each do |project| %>
+<% strip.projects.each_with_index do |project, i| %>
 
 <% if project.images.find_by(:id => project.cover_id).landscape.present? %>
 
 <div class="broadlandscape">
-	<div class="landscapebroad">
+	<div class="landscapebroad broadphoto_<%= i %>">
 	   <%= link_to strip_project_path(project.strip, project) do %> 	
 		<%= image_tag project.images.find_by(:id => project.cover_id).landscape.photo_url, :class => "fitlandscape" %>
 	   <% end %>      
@@ -22,7 +22,7 @@
 <% if project.images.find_by(:id => project.cover_id).square.present? %>
 
 <div class="broadsquare">
-	<div class="squarebroad">
+	<div class="squarebroad broadphoto_<%= i %>">
 		<%= link_to strip_project_path(project.strip, project) do %>
 		  <%= image_tag project.images.find_by(:id => project.cover_id).square.photo_url, :class => "fitsquare" %>
 		<% end %>      		
@@ -34,7 +34,7 @@
 <% if project.images.find_by(:id => project.cover_id).portrait.present? %>
 
 <div class="broadportrait">
-	<div class="portraitbroad">
+	<div class="portraitbroad broadphoto_<%= i %>">
 		<%= link_to strip_project_path(project.strip, project) do %> 
 		  <%= image_tag project.images.find_by(:id => project.cover_id).portrait.photo_url, :class => "fitportrait" %>
 		<% end %>      
