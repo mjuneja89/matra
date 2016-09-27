@@ -47,7 +47,9 @@ $(document).ready(function(){
 
 		<%= form_for(@project, url: strip_projects_path(@strip), :html => { :multipart => true }) do |f| %>
           
-          <%= f.text_field :name, :placeholder => "enter the project's name", :class => "matrainput" %>
+          <%= f.text_field :first_name, :placeholder => "enter the project's first name", :class => "matrainput" %>
+          <%= f.text_field :last_name, :placeholder => "enter the project's last name", :class => "matrainput" %>
+          <%= f.text_field :location, :placeholder => "enter the project's location", :class => "matrainput" %>
           <%= f.text_area :description, :placeholder => "enter the project's description", :class => "matrainput2" %>
 
           <%= f.fields_for :squares do |i| %>
