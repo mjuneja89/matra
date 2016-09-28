@@ -1,15 +1,15 @@
 <div class="normalheading normal_<%= i %>">
-	<div class="categorynormal">
+	<div class="categorynormal category_<%= i %>">
 		<h2 class="namenormal"><%= strip.name %></h2>
 	</div>
 </div>
 
-<% strip.projects.each_with_index do |project, i| %>
+<% strip.projects.each_with_index do |project, j| %>
 
 <% if project.images.find_by(:id => project.cover_id).landscape.present? %>
 
 <div class="normallandscape">
-	<div class="landscapenormal normalphoto_<%= i %>">
+	<div class="landscapenormal" id="normalphoto_<%= j %>">
 	   <%= link_to strip_project_path(project.strip, project) do %> 	
 		<%= image_tag project.images.find_by(:id => project.cover_id).landscape.photo_url, :class => "fitlandscape" %>
 	   <% end %>      
@@ -22,7 +22,7 @@
    
   <div class="normalsquare"> 
 	
-	<div class="squarenormal normalphoto_<%= i %>">
+	<div class="squarenormal" id="normalphoto_<%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %>
 		  <%= image_tag project.images.find_by(:id => project.cover_id).square.photo_url, :class => "fitsquare" %>
 		<% end %>      
@@ -35,7 +35,7 @@
 <% if project.images.find_by(:id => project.cover_id).portrait.present? %>
 
 <div class="normalportrait">
-	<div class="portraitnormal normalphoto_<%= i %>">
+	<div class="portraitnormal" id="normalphoto_<%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %> 
 		  <%= image_tag project.images.find_by(:id => project.cover_id).portrait.photo_url, :class => "fitportrait" %>
 		<% end %>      

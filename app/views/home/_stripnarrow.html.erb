@@ -1,15 +1,15 @@
 <div class="narrowheading narrow_<%= i %>">
-	<div class="categorynarrow">
+	<div class="categorynarrow category_<%= i %>">
 		<h2 class="namenarrow"><%= strip.name %></h2>
 	</div>
 </div>
 
-<% strip.projects.each_with_index do |project, i| %>
+<% strip.projects.each_with_index do |project, j| %>
 
 <% if project.images.find_by(:id => project.cover_id).landscape.present? %>
 
 <div class="narrowlandscape">
-	<div class="landscapenarrow narrowphoto_<%= i %>">
+	<div class="landscapenarrow" id="narrowphoto_<%= j %>">
 	   <%= link_to strip_project_path(project.strip, project) do %> 	
 		<%= image_tag project.images.find_by(:id => project.cover_id).landscape.photo_url, :class => "fitlandscape" %>
 	   <% end %>      
@@ -21,7 +21,7 @@
 <% if project.images.find_by(:id => project.cover_id).square.present? %>
 
 <div class="narrowsquare">
-	<div class="squarenarrow narrowphoto_<%= i %>">
+	<div class="squarenarrow" id="narrowphoto_<%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %>
 	      <%= image_tag project.images.find_by(:id => project.cover_id).square.photo_url, :class => "fitsquare" %>
 	   <% end %>      
@@ -33,7 +33,7 @@
 <% if project.images.find_by(:id => project.cover_id).portrait.present? %>
 
 <div class="narrowportrait">
-	<div class="portraitnarrow narrowphoto_<%= i %>">
+	<div class="portraitnarrow" id="narrowphoto_<%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %> 	  
 		  <%= image_tag project.images.find_by(:id => project.cover_id).portrait.photo_url, :class => "fitportrait" %>
 		<% end %>      
