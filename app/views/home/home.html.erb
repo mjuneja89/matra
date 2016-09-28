@@ -213,7 +213,7 @@ $(document).ready(function(){
 
 <% if strip.category == "narrow" %>
 
-$("#narrowphoto_<%= a %><%= b %>").hover(
+$("#narrowphoto_<%= a %><%= b %> img").hover(
    
    function(){
      $(".div.category_<%= a %>").html('<p>test</p>');
@@ -225,7 +225,7 @@ $("#narrowphoto_<%= a %><%= b %>").hover(
 
 <% elsif strip.category == "medium" %>
    
-$("#normalphoto_<%= a %><%= b %>").hover(
+$("#normalphoto_<%= a %><%= b %> img").hover(
    
    function(){
      $(".div.category_<%= a %>").html('<p>test</p>');
@@ -237,7 +237,7 @@ $("#normalphoto_<%= a %><%= b %>").hover(
 
 <% else %>
    
-$("#broadphoto_<%= a %><%= b %>").hover(
+$("#broadphoto_<%= a %><%= b %> img").hover(
    
    function(){
      $(".div.category_<%= a %>").html('<p>test</p>');
