@@ -9,7 +9,7 @@
 <% if project.images.find_by(:id => project.cover_id).landscape.present? %>
 
 <div class="normallandscape">
-	<div class="landscapenormal" id="normalphoto_<%= j %>">
+	<div class="landscapenormal" id="normalphoto_<%= i %><%= j %>">
 	   <%= link_to strip_project_path(project.strip, project) do %> 	
 		<%= image_tag project.images.find_by(:id => project.cover_id).landscape.photo_url, :class => "fitlandscape" %>
 	   <% end %>      
@@ -22,7 +22,7 @@
    
   <div class="normalsquare"> 
 	
-	<div class="squarenormal" id="normalphoto_<%= j %>">
+	<div class="squarenormal" id="normalphoto_<%= i %><%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %>
 		  <%= image_tag project.images.find_by(:id => project.cover_id).square.photo_url, :class => "fitsquare" %>
 		<% end %>      
@@ -35,7 +35,7 @@
 <% if project.images.find_by(:id => project.cover_id).portrait.present? %>
 
 <div class="normalportrait">
-	<div class="portraitnormal" id="normalphoto_<%= j %>">
+	<div class="portraitnormal" id="normalphoto_<%= i %><%= j %>">
 		<%= link_to strip_project_path(project.strip, project) do %> 
 		  <%= image_tag project.images.find_by(:id => project.cover_id).portrait.photo_url, :class => "fitportrait" %>
 		<% end %>      
