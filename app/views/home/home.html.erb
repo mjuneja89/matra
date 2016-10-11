@@ -242,10 +242,10 @@ $("#normalphoto_<%= a %><%= b %> a img").hover(
 $("#broadphoto_<%= a %><%= b %> a img").hover(
    
    function(){
-     $("div.category_<%= a %>").html('<h2 class="namebroad"><%= strip.name %></h2>');
+     $("div.category_<%= a %>").html('<h2 class="boldfirstbroad"><%= project.first_name %></h2><h2 class="lastbroad"><%= project.last_name %></h2><h4 class="yearbroad"><%= project.yearcompleted %></h4><h4 class="locationbroad"><%= project.location %></h4>');
    },
    function(){
-     $("div.category_<%= a %>").html('<h2 class="boldfirstbroad"><%= project.first_name %></h2><h2 class="lastbroad"><%= project.last_name %></h2><h4 class="yearbroad"><%= project.yearcompleted %></h4><h4 class="locationbroad"><%= project.location %></h4>');
+     $("div.category_<%= a %>").html('<h2 class="namebroad"><%= strip.name %></h2>');
    }
   );
 
