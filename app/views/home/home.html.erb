@@ -216,7 +216,7 @@ $(document).ready(function(){
 $("#narrowphoto_<%= a %><%= b %> a img").hover(
    
    function(){
-     $("div.category_<%= a %>").html('<p>test</p>');
+     $("div.category_<%= a %>").html('<h2 class="boldfirstnarrow"><%= project.first_name %></h2><h2 class="lastnarrow"><%= project.last_name %></h2><h4 class="yearnarrow"><%= project.yearcompleted %></h4><h4 class="locationnarrow"><%= project.location %></h4>');
    },
    function(){
      $("div.category_<%= a %>").html('<h2 class="namenarrow"><%= strip.name %></h2>');
