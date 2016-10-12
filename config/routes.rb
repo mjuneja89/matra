@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get '/archive' => 'projects#archive'
   get '/travels' => 'travel#travels'
   resources :travels
+  get '/awards' => 'awards#awards'
+  resources :awards
+  get '/publications' => 'publications#publications'
+  resources :publications
 
   get '/adminview' => 'admin#adminview'
 

@@ -1,0 +1,45 @@
+<div class="matra-row" style="margin-top: 4%">
+
+<div class="broadheading" style="width: 14%">
+	<div class="categorybroad">
+		<h2 class="namebroad">awards</h2>
+	</div>
+</div>
+
+<% @awards.each_with_index do |award, i| %>
+   
+   <% if user.avatar_category == "portrait" %>
+     
+     <div class="broadportrait">
+	  <div class="portraitbroad" id="award_<%= i %>">
+	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
+	  </div>
+	 </div> 	
+
+   <% elsif user.avatar_category == "landscape" %>
+
+     <div class="broadlandscape">
+	  <div class="landscapebroad" id="award_<%= i %>">
+	  	 <%= image_tag award.photo_url, :class => "fitlandscape" %>
+	  </div>
+	 </div> 	
+
+   <% else %>
+
+     <div class="broadsquare">
+	  <div class="squarebroad" id="award_<%= i %>">
+	  	 <%= image_tag award.photo_url, :class => "fitsquare" %> 
+	  </div>
+	 </div> 
+
+   <% end %>
+
+<% end %>
+
+<div class="matra-arrow">
+	<div class="arrowbroad">	
+        <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
+    </div>
+</div>
+
+</div>

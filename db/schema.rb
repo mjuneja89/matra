@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011103055) do
+ActiveRecord::Schema.define(version: 20161012083742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "awards", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "photo"
+    t.string   "photo_category"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.integer  "project_id"
@@ -56,6 +65,15 @@ ActiveRecord::Schema.define(version: 20161011103055) do
   add_index "projects", ["user_id", "strip_id"], name: "index_projects_on_user_id_and_strip_id", using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
+  create_table "publications", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "photo"
+    t.string   "photo_category"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "squares", force: :cascade do |t|
     t.string   "photo"
     t.integer  "project_id"
@@ -71,6 +89,13 @@ ActiveRecord::Schema.define(version: 20161011103055) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "category"
+  end
+
+  create_table "travel_photos", force: :cascade do |t|
+    t.integer  "travel_id"
+    t.string   "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "travels", force: :cascade do |t|

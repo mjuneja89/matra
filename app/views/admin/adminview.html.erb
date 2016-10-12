@@ -75,13 +75,31 @@
          <h4>manage navbar</h4>
 
           <div class="col-sm-6" id="adminbtn">
-             <%= link_to travels_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+             <%= link_to new_travel_path, :class => "btn matrabtn", :style => "width: 60%" do %>
               add destination 
              <% end %>
            </div>
 
 
-      </div>        
+          <div class="col-sm-6" id="adminbtn">
+             <%= link_to new_award_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              add award 
+             <% end %>
+          </div>
+
+
+      </div>
+
+          <div class="row" style="margin-top: 2%">
+
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to new_publication_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              add publication 
+             <% end %>
+           </div>
+
+
+         </div>         
        
 </div>
 
