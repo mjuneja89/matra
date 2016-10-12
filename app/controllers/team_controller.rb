@@ -1,7 +1,7 @@
 class TeamController < ApplicationController
   
   def team
-  	@users = User.all.page(params[:page]).per(4)
+  	@users = User.order(:created_at).page(params[:page]).per(4)
   end
   
 end

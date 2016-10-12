@@ -1,16 +1,42 @@
 <html>
 
-<head>	
+<% content_for :head do %>
   
   <title>matra architects: travel</title>
+  
+  <script type="text/javascript">
+  
+  $(document).ready(function(){
+  
+  <% @travels.each_with_index do |travel, i| %>
+    
+    $("#travel_<%= i %> img").hover( 
+      function(){
+        $("div.categorybroad").html('<h2 class="namebroad"><%= travel.name %></h2>');
+      },
+      function(){
+      $("div.categorybroad").html('<h2 class="namebroad">travel</h2>'); 
+      }
+      );
+  
+  <% end %> 
 
-</head>
+  });
+
+  </script>
+
+<% end %>
 
 <body>
 
+
 <div class="container-fluid" style="margin-top: 3%">
   
-  <%= render :partial => 'shared/travel', collection: @travels %>
+  <%= render :partial => 'strip' %>
+  
+  <div style="display: none"> 
+   <%= paginate @travels, :remote => true %>
+  </div> 
   
 </div>
 
