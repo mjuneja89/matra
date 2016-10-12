@@ -8,19 +8,23 @@
 
 <% @publications.each_with_index do |publication, i| %>
    
-   <% if user.avatar_category == "portrait" %>
+   <% if publication.avatar_category == "portrait" %>
      
      <div class="broadportrait">
 	  <div class="portraitbroad" id="publication_<%= i %>">
+	   <%= link_to publication.link do %>
 	  	<%= image_tag publication.photo_url, :class => "fitsquare" %>
+	   <% end %>	
 	  </div>
 	 </div> 	
 
-   <% elsif user.avatar_category == "landscape" %>
+   <% elsif publication.avatar_category == "landscape" %>
 
      <div class="broadlandscape">
 	  <div class="landscapebroad" id="publication_<%= i %>">
+	    <%= link_to publication.link do %> 
 	  	 <%= image_tag publication.photo_url, :class => "fitlandscape" %>
+	  	<% end %> 
 	  </div>
 	 </div> 	
 
@@ -28,7 +32,9 @@
 
      <div class="broadsquare">
 	  <div class="squarebroad" id="publication_<%= i %>">
-	  	 <%= image_tag publication.photo_url, :class => "fitsquare" %> 
+	    <%= link_to publication.link do %>
+	  	 <%= image_tag publication.photo_url, :class => "fitsquare" %>
+	  	<% end %>  
 	  </div>
 	 </div> 
 
