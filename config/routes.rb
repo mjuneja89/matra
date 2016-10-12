@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   resources :awards
   get '/publications' => 'publications#publications'
   resources :publications
+  get 'contact' => 'contact#contact'
 
   get '/adminview' => 'admin#adminview'
 
