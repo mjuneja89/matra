@@ -8,7 +8,7 @@
 
 <% @awards.each_with_index do |award, i| %>
    
-   <% if user.avatar_category == "portrait" %>
+   <% if award.photo_category == "portrait" %>
      
      <div class="broadportrait">
 	  <div class="portraitbroad" id="award_<%= i %>">
@@ -16,7 +16,7 @@
 	  </div>
 	 </div> 	
 
-   <% elsif user.avatar_category == "landscape" %>
+   <% elsif award.photo_category == "landscape" %>
 
      <div class="broadlandscape">
 	  <div class="landscapebroad" id="award_<%= i %>">
