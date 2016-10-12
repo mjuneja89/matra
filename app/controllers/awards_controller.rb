@@ -20,7 +20,7 @@ class AwardsController < ApplicationController
    private
 
    def award_params
-   	 params.require(:award).permit(:first_name, :last_name, :photo, :photo_category)
+   	 params.require(:award).permit(:first_name, :last_name, :link, :photo, :photo_category)
    end
 
 end
