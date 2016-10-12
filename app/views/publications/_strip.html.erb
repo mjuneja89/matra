@@ -8,7 +8,7 @@
 
 <% @publications.each_with_index do |publication, i| %>
    
-   <% if publication.avatar_category == "portrait" %>
+   <% if publication.photo_category == "portrait" %>
      
      <div class="broadportrait">
 	  <div class="portraitbroad" id="publication_<%= i %>">
@@ -18,7 +18,7 @@
 	  </div>
 	 </div> 	
 
-   <% elsif publication.avatar_category == "landscape" %>
+   <% elsif publication.photo_category == "landscape" %>
 
      <div class="broadlandscape">
 	  <div class="landscapebroad" id="publication_<%= i %>">
