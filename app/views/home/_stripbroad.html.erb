@@ -45,7 +45,9 @@
 <% end %>
 
 <div class="matra-arrow">
-	<div class="arrowbroad">	
+	<div class="arrowbroad">
+	  <%= link_to strip_project_path(project.strip, project) do %>   	
         <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
+      <% end %>  
     </div>
 </div>
