@@ -24,7 +24,7 @@ class StripsController < ApplicationController
        @projects = @strip.projects.order(:id)
        image_ids = []
        @strip.projects.each do |project|
-        image_ids << project.images.find_by(:id => project.cover_id).map(&:id)
+        image_ids << project.images.find_by(:id => project.cover_id).id
        end
        @images = Image.where(id: image_ids)
     end 
