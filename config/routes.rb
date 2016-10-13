@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/publications' => 'publications#publications'
   resources :publications
   get 'contact' => 'contact#contact'
+  get 'archive' => 'archives#archive'
 
   get '/adminview' => 'admin#adminview'
 
