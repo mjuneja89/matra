@@ -14,26 +14,26 @@
     
     <div id="mainimagebox">
       
-      <% if @strip.projects.first.images.find_by(:id => projects.first.cover_id).landscape.present? %>
+      <% if @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).landscape.present? %>
         
         <div class="mainlandscapebox">
-        <%= image_tag @strip.projects.first.images.find_by(:id => projects.first.cover_id).landscape.photo_url, :class => "fitimg" %>
+        <%= image_tag @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).landscape.photo_url, :class => "fitimg" %>
         </div>         
 
       <% end %>
       
-      <% if @strip.projects.first.images.find_by(:id => projects.first.cover_id).square.present? %>
+      <% if @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).square.present? %>
          
          <div class="mainsquarebox">
-         <%= image_tag @strip.projects.first.images.find_by(:id => projects.first.cover_id).square.photo_url, :class => "fitimg" %>
+         <%= image_tag @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).square.photo_url, :class => "fitimg" %>
          </div>
 
       <% end %>
 
-      <% if @strip.projects.first.images.find_by(:id => projects.first.cover_id).portrait.present? %>
+      <% if @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).portrait.present? %>
          
          <div class="mainportraitbox">
-          <%= image_tag @strip.projects.first.images.find_by(:id => projects.first.cover_id).portrait.photo_url, :class => "fitimg" %>
+          <%= image_tag @strip.projects.first.images.find_by(:id => @strip.projects.first.cover_id).portrait.photo_url, :class => "fitimg" %>
          </div> 
 
       <% end %>
