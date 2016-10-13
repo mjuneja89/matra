@@ -228,12 +228,11 @@ $("#narrowphoto_<%= a %><%= b %> a img").hover(
    
 $("#normalphoto_<%= a %><%= b %> a img").hover(
    
-   function(){
-     $("div.category_<%= a %>").html('<h2 class="boldfirstnormal"><%= project.first_name %></h2><h2 class="lastnormal"><%= project.last_name %></h2><h4 class="yearnormal"><%= project.yearcompleted %></h4><h4 class="locationnormal"><%= project.location %></h4>');
-   },
-   
   function(){
      $("div.category_<%= a %>").html('<h2 class="namenormal"><%= strip.name %></h2>');
+   },
+   function(){
+     $("div.category_<%= a %>").html('<h2 class="boldfirstnormal"><%= project.first_name %></h2><h2 class="lastnormal"><%= project.last_name %></h2><h4 class="yearnormal"><%= project.yearcompleted %></h4><h4 class="locationnormal"><%= project.location %></h4>');
    }
   
   );
