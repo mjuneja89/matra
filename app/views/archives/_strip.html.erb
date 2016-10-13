@@ -1,0 +1,51 @@
+<div class="matra-row" style="margin-top: 4%">
+
+<div class="broadheading" style="width: 14%">
+	<div class="categorybroad">
+		<h2 class="namebroad">publications</h2>
+	</div>
+</div>
+
+<% @publications.each_with_index do |publication, i| %>
+   
+   <% if publication.photo_category == "portrait" %>
+     
+     <div class="broadportrait">
+	  <div class="portraitbroad" id="publication_<%= i %>">
+	   <%= link_to publication.link do %>
+	  	<%= image_tag publication.photo_url, :class => "fitsquare" %>
+	   <% end %>	
+	  </div>
+	 </div> 	
+
+   <% elsif publication.photo_category == "landscape" %>
+
+     <div class="broadlandscape">
+	  <div class="landscapebroad" id="publication_<%= i %>">
+	    <%= link_to publication.link do %> 
+	  	 <%= image_tag publication.photo_url, :class => "fitlandscape" %>
+	  	<% end %> 
+	  </div>
+	 </div> 	
+
+   <% else %>
+
+     <div class="broadsquare">
+	  <div class="squarebroad" id="publication_<%= i %>">
+	    <%= link_to publication.link do %>
+	  	 <%= image_tag publication.photo_url, :class => "fitsquare" %>
+	  	<% end %>  
+	  </div>
+	 </div> 
+
+   <% end %>
+
+<% end %>
+
+<div class="matra-arrow">
+	<div class="arrowbroad">	
+        <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
+    </div>
+</div>
+
+</div>
