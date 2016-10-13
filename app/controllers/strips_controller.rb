@@ -1,6 +1,6 @@
 class StripsController < ApplicationController
 	
-    before_action :require_admin
+    before_action :require_admin, only: [:index, :new, :create]
     
     def index
         @strips = Strip.all
@@ -18,6 +18,10 @@ class StripsController < ApplicationController
     		render 'new'
     	end
     end
+
+    def show
+       @strip = Strip.find(params[:id])
+    end 
 
     private
 
