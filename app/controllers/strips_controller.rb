@@ -21,6 +21,12 @@ class StripsController < ApplicationController
 
     def show
        @strip = Strip.find(params[:id])
+       @projects = @strip.projects.order(:id)
+       image_ids = []
+       @strip.projects.each do |project|
+        image_ids << project.images.find_by(:id => project.cover_id).map(&:id)
+       end
+       @images = Image.where(id: image_ids)
     end 
 
     private
