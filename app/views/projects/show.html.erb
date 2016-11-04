@@ -2,39 +2,27 @@
 
 <head>	
   
-  <title><%= @project.name %></title>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-
-$('#displaydesc').click(function(){
-
-$('#descriptionbox').show();
-$('#mainimagebox').hide();
-
-});
-
-});
-
-</script>  
+  <title><%= @project.first_name %><%= " " %><%= @project.last_name %></title>
 
 </head>
 
 <body>
 
-<div class="container-fluid" style="margin-top: 3%">
+<div class="matra-container">
 
-<div class="col-xs-12" style="text-align:center">
+<div class="matra-row" style="text-align:center">
+ 
+ <div class="matra-col-3">
+   <div id="descriptionbox">
+   </div>
+ </div> 
+  
+ <div class="matra-col-9">
+  
+  <div class="mainimagebox">
+  
+  <div id="mainimagebox">  
 
- <div id="descriptionbox">
-  
-  <h3 class="projectdescription"><%= @project.description %></h3>
-
- </div>  
-  
- <div id="mainimagebox">
-  
   <% if @images.first.square.present? %>
     
   <div class="mainsquarebox">
@@ -65,20 +53,13 @@ $('#mainimagebox').hide();
   
   </div>
 
-</div>
+  </div>
 
+  </div>
+   
+<div class="matra-row" style="margin-top: 2%">
 
-<div class="matra-container" style="margin-top: 6%">   
-  
-  <div class="matra-row">
-
-  <div class="arrow-col">
-     <div id="arrowbox1">
-      <%= render :partial => 'shared/arrowleft' %>
-     </div>
-  </div>  
-
-   <div class="heading-col marginleft">
+   <div class="heading-col">
    	  <div class="category">
    	  	<h5 class="categorytext"><%= @project.name %></h5>
         <div id="displaydesc">
@@ -98,6 +79,8 @@ $('#mainimagebox').hide();
 	</div>  
 
   </div>
+
+</div>
 
 </div>
 

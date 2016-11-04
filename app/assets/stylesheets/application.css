@@ -69,7 +69,7 @@ body
  .matra-container{
         
         width: 100%; 
-        max-width: 1200px;      
+        max-width: 1440px;      
     }
 
 .matra-row:before, 
@@ -78,6 +78,24 @@ body
           display: table ;
         clear:both;
     }
+
+.matra-col-3
+{
+  float: left;
+  min-height: 1px;
+  width: 25%;
+  padding-left: 1px;
+  position: relative; 
+}
+
+.matra-col-9
+{
+  float: left;
+  min-height: 1px;
+  width: 75%;
+  padding-left: 2px;
+  position: relative;
+}    
 
 .heading-col
 {
@@ -92,7 +110,7 @@ body
 {
   float: left; 
   min-height: 1px; 
-  width: 14%;
+  width: 18%;
   position: relative;
   padding-right:1.2px; 
 }    
@@ -102,7 +120,7 @@ body
 {
   float: left;
   min-height: 1px; 
-  width: 10%;
+  width: 12%;
   position: relative;
   padding-right:1.2px;  
 } 
@@ -112,7 +130,7 @@ body
 {
   float: left;
   min-height: 1px;
-  width: 7%;
+  width: 8%;
   position: relative; 
   padding-right:1.2px; 
 } 

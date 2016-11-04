@@ -77,10 +77,8 @@
 .mainsquarebox
 {
   height: 600px;
-  width: 60%;
+  width: 80%;
   border: 1px solid transparent;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .mainlandscapebox
@@ -88,17 +86,13 @@
   height: 600px;
   width: 100%;
   border: 1px solid transparent;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .mainportraitbox
 {
   height: 600px;
-  width: 40%;
+  width: 60%;
   border: 1px solid transparent;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .marginleft
@@ -160,19 +154,19 @@
 
 .landscape
 {
-  height: 90px;
+  height: 120px;
   width: 100%;
 }
 
 .square
 {
-  height: 90px;
+  height: 120px;
   width: 100%; 
 }
 
 .portrait
 {
-  height: 90px;
+  height: 120px;
   width: 100%;
 }
 
@@ -180,7 +174,7 @@
 {
  width: 100%;
  color: #3c3c3c;
- height: 90px;
+ height: 120px;
  background-color: #dddddd;
  margin-bottom: -20px;
  display: inline-block;
@@ -232,13 +226,10 @@
 
 #descriptionbox
 {
-  display: none;
-  width: 60%;
+  width: 100%;
   height: 600px;
   color: #3c3c3c;
   background-color: #dddddd;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .projectdescription
@@ -304,4 +295,10 @@
 {
   text-align: center;
   margin-top: 140px;
+}
+
+.mainimagebox
+{ 
+  width: 100%;  
+  background-color: #dddddd;
 }
