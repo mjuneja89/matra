@@ -79,6 +79,7 @@
   height: 600px;
   width: 80%;
   border: 1px solid transparent;
+  float: right;
 }
 
 .mainlandscapebox
@@ -93,6 +94,7 @@
   height: 600px;
   width: 60%;
   border: 1px solid transparent;
+  float: right;
 }
 
 .marginleft
@@ -301,4 +303,5 @@
 { 
   width: 100%;  
   background-color: #dddddd;
+  position: absolute;
 }
