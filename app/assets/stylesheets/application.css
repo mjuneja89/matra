@@ -101,20 +101,20 @@ body
         clear:both;
     }
 
-.matra-col-3
+.matra-col-2
 {
   float: left;
   min-height: 1px;
-  width: 300px;
+  width: 200px;
   padding-left: 1px;
   position: relative; 
 }
 
-.matra-col-9
+.matra-col-10
 {
   float: left;
   min-height: 1px;
-  width: 900px;
+  width: 1000px;
   padding-left: 0px;
   position: relative;
 }    
@@ -123,7 +123,7 @@ body
 {
   float: left; 
   min-height: 1px; 
-  width: 144px;
+  width: 200px;
   padding-left:1px;  
   position: relative;
 }
@@ -132,7 +132,7 @@ body
 {
   float: left; 
   min-height: 1px; 
-  width: 216px;
+  width: 250px;
   position: relative;
   padding-right:1.2px; 
 }    
@@ -142,7 +142,7 @@ body
 {
   float: left;
   min-height: 1px; 
-  width: 144px;
+  width: 150px;
   position: relative;
   padding-right:1.2px;  
 } 
@@ -152,7 +152,7 @@ body
 {
   float: left;
   min-height: 1px;
-  width: 96px;
+  width: 100px;
   position: relative; 
   padding-right:1.2px; 
 } 

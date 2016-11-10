@@ -12,12 +12,15 @@
 
 <div class="matra-row" style="text-align:center">
  
- <div class="matra-col-3">
-   <div id="descriptionbox">
+ <div class="matra-col-2">
+   <div id="descriptionbox">   
+    <div style="padding: 15px">
+     <%= simple_format(@project.description) %>
+    </div> 
    </div>
  </div> 
   
- <div class="matra-col-9">
+ <div class="matra-col-10">
   
   <div class="mainimagebox">
   
@@ -75,10 +78,8 @@
    
   <div class="heading-col">
    	  <div class="category">
-   	  	<h5 class="categorytext"><%= @project.name %></h5>
-        <div id="displaydesc">
-        <a href="#"><p class="catdesc">description</p></a>
-        </div>
+   	  	<h3 class="boldfirstname"><%= @project.first_name %></h5>
+        <h3 class="normallastname"><%= @project.last_name %></h5> 
    	  </div> 
    </div>
    

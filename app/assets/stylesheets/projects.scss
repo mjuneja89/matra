@@ -77,7 +77,7 @@
 .mainsquarebox
 {
   height: 600px;
-  width: 80%;
+  width: 70%;
   border: 1px solid transparent;
   float: right;
 }
@@ -92,7 +92,7 @@
 .mainportraitbox
 {
   height: 600px;
-  width: 60%;
+  width: 40%;
   border: 1px solid transparent;
   float: right;
 }
@@ -232,6 +232,7 @@
   height: 600px;
   color: #3c3c3c;
   background-color: #dddddd;
+  text-align: left;
 }
 
 .projectdescription
@@ -305,3 +306,23 @@
   background-color: #dddddd;
   position: absolute;
 }
+
+.boldfirstname
+{ 
+  font-family:"Swis721 Blk2 BT W05 Black";
+  margin-left: 15px;
+  margin-top: 68px;
+}
+
+.normallastname
+{
+  margin-left: 15px;
+  margin-top: -18px;
+}
+
+.ProjectDescription
+{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
