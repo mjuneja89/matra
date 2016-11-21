@@ -14,10 +14,10 @@
      
      $("#user_<%= i %> img").hover( 
       function(){
-        $("div.categorybroad").html('<h2 class="boldheading"><%= user.first_name %></h2><h2 class="lightheading"><%= user.last_name %></h2>');
+        $("div.categorybroad").html('<h3 class="boldfirstname"><%= user.first_name %></h3><h3 class="normallastname"><%= user.last_name %></h3>');
       },
       function(){
-      $("div.categorybroad").html('<h2 class="namebroad">team</h2>');  
+      $("div.category").html('<h3 class="parentcategory">team</h3>');  
       }
       );
 
@@ -33,18 +33,59 @@
 
 <body>
 
-<div class="container-fluid" style="margin-top: 3%">
+<div class="matra-container-nr">
+	
+	<div class="matra-row" style="text-align: center">
+
+	   <div class="matra-col-2">
+	      
+	      <div id="descriptionbox">   
+          <div style="padding: 15px" id="manipulatedescription">
+          </div> 
+          </div>
+       
+       </div>  
+
+       <div class="matra-col-10">
+       	 
+       	 <div class="mainimagebox">
+       	 	<div id="mainimagebox">
+       	 		<div class="mainlandscapebox">
+       	 			<%= image_tag @users.first.avatar_url, :class => "fitimg" %>
+       	 		</div>
+       	 	</div>
+       	 </div>
+
+       </div>   
+
+	</div>
+
+</div>
+
+
+<div class="matra-container-parent" style="margin-top: 2%">
   
-  <%= render :partial => 'strip' %>
-  
-  <div style="display: none"> 
-   <%= paginate @users, :remote => true %>
-  </div> 
+  <div class="matra-row">
+
+    <div class="arrow-col">
+    </div>
+
+  <div class="matra-container-child">  
+    
+   <div class="matra-row">
+
+    <%= render :partial => 'strip' %>
+
+   </div> 
+
+  </div>
+
+    <div class="arrow-col">  	
+    </div>
   
 </div>
 
 </div>
-
 
 </body>
 

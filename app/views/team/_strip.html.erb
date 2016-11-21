@@ -1,8 +1,6 @@
-<div class="matra-row" style="margin-top: 4%">
-
-<div class="broadheading" style="width: 14%">
-	<div class="categorybroad">
-		<h2 class="namebroad">team</h2>
+<div class="heading-col">
+	<div class="category">
+		<h3 class="parentcategory">team</h3>
 	</div>
 </div>
 
@@ -12,24 +10,24 @@
 
    <% if user.avatar_category == "portrait" %>
      
-     <div class="broadportrait">
-	  <div class="portraitbroad" id="user_<%= i %>">
+     <div class="portrait-col">
+	  <div class="portrait" id="user_<%= i %>">
 	  	<%= image_tag user.avatar_url, :class => "fitsquare" %>
 	  </div>
 	 </div> 	
 
    <% elsif user.avatar_category == "landscape" %>
 
-     <div class="broadlandscape">
-	  <div class="landscapebroad" id="user_<%= i %>">
+     <div class="landscape-col">
+	  <div class="landscape" id="user_<%= i %>">
 	  	 <%= image_tag user.avatar_url, :class => "fitlandscape" %>
 	  </div>
 	 </div> 	
 
    <% else %>
 
-     <div class="broadsquare">
-	  <div class="squarebroad" id="user_<%= i %>">
+     <div class="square-col">
+	  <div class="square" id="user_<%= i %>">
 	  	 <%= image_tag user.avatar_url, :class => "fitsquare" %> 
 	  </div>
 	 </div> 
@@ -39,11 +37,3 @@
   <% end %> 
 
 <% end %>
-
-<div class="matra-arrow">
-	<div class="arrowbroad">	
-        <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
-    </div>
-</div>
-
-</div>
