@@ -14,7 +14,7 @@
      
      $("#user_<%= i %> img").hover( 
       function(){
-        $("div.categorybroad").html('<h3 class="boldfirstname"><%= user.first_name %></h3><h3 class="normallastname"><%= user.last_name %></h3>');
+        $("div.category").html('<h3 class="boldfirstname"><%= user.first_name %></h3><h3 class="normallastname"><%= user.last_name %></h3>');
       },
       function(){
       $("div.category").html('<h3 class="parentcategory">team</h3>');  
