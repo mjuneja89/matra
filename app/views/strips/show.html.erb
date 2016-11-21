@@ -8,67 +8,93 @@
 
 <body>
 
-<div class="container-fluid" style="margin-top: 3%">
+<div class="matra-container-nr">
   
-  <div class="col-xs-12" style="text-align: center">
-    
-    <div id="mainimagebox">
-      
-      <% if @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.present? %>
-        
-        <div class="mainlandscapebox">
-        <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.photo_url, :class => "fitimg" %>
-        </div>         
+  <div class="matra-row" style="text-align: center">
 
-      <% end %>
+      <div class="matra-col-2">
+        <div id="descriptionbox">   
+         <div style="padding: 15px">
+          <%= simple_format(@project.description) %>
+         </div> 
+        </div>
+      </div> 
+
+      <div class="matra-col-10">
       
-      <% if @projects.first.images.find_by(:id => @projects.first.cover_id).square.present? %>
+        <div class="mainimagebox">
+
+          <div id="mainimagebox">   
+      
+          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.present? %>
+        
+           <div class="mainlandscapebox">
+             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.photo_url, :class => "fitimg" %>
+            </div>         
+
+           <% end %>
+      
+           <% if @projects.first.images.find_by(:id => @projects.first.cover_id).square.present? %>
          
-         <div class="mainsquarebox">
-         <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).square.photo_url, :class => "fitimg" %>
+            <div class="mainsquarebox">
+             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).square.photo_url, :class => "fitimg" %>
+            </div>
+
+          <% end %>
+
+          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.present? %>
+         
+             <div class="mainportraitbox">
+               <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.photo_url, :class => "fitimg" %>
+             </div> 
+
+          <% end %>
+
          </div>
 
-      <% end %>
+         </div>
 
-      <% if @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.present? %>
-         
-         <div class="mainportraitbox">
-          <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.photo_url, :class => "fitimg" %>
-         </div> 
+        </div>
 
-      <% end %>
+       </div>
 
-    </div>
+       </div> 
 
-  </div>
-
-</div>
-
-<div class="matra-container" style="margin-top: 6%">   
+<div class="matra-container-parent" style="margin-top: 2%">   
   
   <div class="matra-row">
 
-  <div class="arrow-col">
-     <div id="arrowbox1">
+    <div class="arrow-col">
+     <div id="arrowbox2">
       <%= render :partial => 'shared/arrowleft' %>
      </div>
-  </div>  
+    </div>
+  
 
-   <div class="heading-col marginleft">
-   	  <div class="category">
-   	  	<h5 class="categorystrip"><%= @strip.name %></h5>
-   	  </div> 
-   </div>
+<div class="matra-container-child"> 
    
-  <div id="images"> 
-   <%= render :partial => 'shared/image', collection: @images %>
+  <div class="matra-row">
+
+   <div class="heading-col">
+      <div class="category">
+        <h5 class="categorystrip"><%= @strip.name %></h5>
+      </div> 
+   </div>  
+  
+    <div id="images">
+      <%= render :partial => 'shared/image', collection: @images %>
+    </div>
+
   </div> 
-   
-   <div class="arrow-col">
-	   <div id="arrowbox">
+
+</div>      
+
+ 
+ <div class="arrow-col">
+	 <div id="arrowbox">
 	   	<%= render :partial => 'shared/arrowright' %>
-     </div>
-	</div>  
+    </div>
+ </div>  
 
   </div>
 
