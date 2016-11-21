@@ -4,6 +4,30 @@
   
   <title><%= @strip.name %></title>
 
+  <script type="text/javascript">
+   
+   $(document).ready(function(){ 
+
+    <% @images.each do |image| %>
+
+    $('#image_<%= image.id %>').hover(
+        
+        function(){
+           $('div.category').html('<h3 class="boldfirstname"><%= image.project.first_name %></h3><h3 class="normallastname"><%= image.project.last_name %></h3>');
+        },
+
+        function(){
+           $('div.category').html('<h3 class="parentcategory"><%= @strip.name %></h3>');
+        }
+   
+      );
+    
+    <% end %>
+
+   });
+
+  </script>
+
 </head>
 
 <body>
@@ -14,7 +38,8 @@
 
       <div class="matra-col-2">
         <div id="descriptionbox">   
-         <div style="padding: 15px">
+         <div style="padding: 15px" id="manipulatedescription">
+          <%= simple_format(@projects.first.description) %>
          </div> 
         </div>
       </div> 
