@@ -1,6 +1,5 @@
-<% @publications.each_with_index do |publication, i| %>
-   
-   <% if publication.photo_category == "portrait" %>
+  
+  <% if publication.photo_category == "portrait" %>
      
      <div class="portrait-col">
 	  <div class="portrait" id="publication_<%= i %>">
@@ -32,4 +31,3 @@
 
    <% end %>
 
-<% end %>

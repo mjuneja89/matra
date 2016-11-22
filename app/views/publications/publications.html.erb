@@ -91,8 +91,10 @@
 		<h3 class="parentcategory">publications</h3>
 	</div>
     </div> 
-
-    <%= render :partial => 'publication' %>
+    
+    <% @publications.each_with_index do |publication, i| %>
+      <%= render :partial => 'publication' %>
+    <% end %>
 
    </div> 
 
