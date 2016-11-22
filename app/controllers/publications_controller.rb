@@ -17,6 +17,11 @@ class PublicationsController < ApplicationController
    	@publications = Publication.order(created_at: :desc).page(params[:page]).per(4)
    end
 
+   def show
+      @publication = Publication.find(params[:id])
+      respond_to :js
+   end
+
    private
 
    def publication_params
