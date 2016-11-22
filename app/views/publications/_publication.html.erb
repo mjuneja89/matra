@@ -1,33 +1,21 @@
   
   <% if publication.photo_category == "portrait" %>
      
-     <div class="portrait-col">
-	  <div class="portrait" id="publication_<%= i %>">
-	   <%= link_to publication_path(publication), :remote => true do %>
+     <div class="mainportraitbox">
 	  	<%= image_tag publication.photo_url, :class => "fitsquare" %>
-	   <% end %>	
-	  </div>
 	 </div> 	
 
    <% elsif publication.photo_category == "landscape" %>
 
-     <div class="landscape-col">
-	  <div class="landscape" id="publication_<%= i %>">
-	   <%= link_to publication_path(publication), :remote => true do %>
-	  	 <%= image_tag publication.photo_url, :class => "fitlandscape" %>
-	  	<% end %> 
-	  </div>
+     <div class="mainlandscapebox">
+	  	<%= image_tag publication.photo_url, :class => "fitsquare" %>
 	 </div> 	
 
    <% else %>
 
-     <div class="square-col">
-	  <div class="square" id="publication_<%= i %>">
-	   <%= link_to publication_path(publication), :remote => true do %>
-	  	 <%= image_tag publication.photo_url, :class => "fitsquare" %>
-	  	<% end %>  
-	  </div>
-	 </div> 
+     <div class="mainsquarebox">
+	  	<%= image_tag publication.photo_url, :class => "fitsquare" %>
+	 </div> 	
 
    <% end %>
 
