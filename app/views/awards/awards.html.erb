@@ -4,38 +4,11 @@
 	  
   <title>matra architects: awards</title>
 
-  <script type="text/javascript">
-  
-  $(document).ready(function(){
-    
-   <% @awards.each_with_index do |award, i| %>
-      
-     $("#award_<%= i %> img").hover( 
-      function(){
-        $("div.categorybroad").html('<h2 class="boldheading"><%= award.first_name %></h2><h2 class="lightheading"><%= award.last_name %></h2>');
-      },
-      function(){
-      $("div.categorybroad").html('<h2 class="namebroad">awards</h2>');  
-      }
-      );
-
-    <% end %> 
-
-  });
-     
-  </script>
-
 <% end %>
 
 <body>
 
 <div class="container-fluid" style="margin-top: 3%">
-  
-  <%= render :partial => 'strip' %>
-  
-  <div style="display: none"> 
-   <%= paginate @awards, :remote => true %>
-  </div> 
   
 </div>
 
