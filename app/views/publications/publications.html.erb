@@ -93,7 +93,7 @@
     </div> 
     
     <% @publications.each_with_index do |publication, i| %>
-      <%= render :partial => 'publication', locals: {i: i} %>
+      <%= render :partial => 'publication', locals: {publication: publication, i: i} %>
     <% end %>
 
    </div> 
