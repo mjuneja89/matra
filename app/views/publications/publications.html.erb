@@ -92,9 +92,9 @@
 	</div>
     </div> 
     
-    <% @publications.each_with_index do |publication, i| %>
-      <%= render :partial => 'strip', locals: {publication: publication, i: i} %>
-    <% end %>
+    <div id="publications">
+      <%= render :partial => 'shared/publication', collection: @publications %>
+    </div>
 
    </div> 
 
