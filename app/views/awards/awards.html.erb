@@ -92,9 +92,9 @@
 	</div>
     </div> 
     
-    <% @awards.each_with_index do |award, i| %>
-      <%= render :partial => 'strip', locals: {award: award, i: i} %>
-    <% end %>
+    <div id="awards">    
+      <%= render :partial => 'shared/award', collection: @awards %>
+    </div>
 
    </div> 
 

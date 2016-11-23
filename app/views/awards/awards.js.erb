@@ -1,7 +1,7 @@
-$('#publications').html("<%=j render(partial: 'shared/publication', collection: @publications) %>");
+$('#awards').html("<%=j render(partial: 'shared/award', collection: @awards) %>");
 $('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
 
-<% if @publications.last_page? %>
+<% if @awards.last_page? %>
   $('#arrowbox').hide();
 <% else %>
   $('#arrowbox').show();

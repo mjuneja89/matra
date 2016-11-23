@@ -2,7 +2,7 @@
   <% if award.photo_category == "portrait" %>
      
      <div class="portrait-col">
-	  <div class="portrait" id="award_<%= i %>">
+	  <div class="portrait" id="award_<%= award_counter %>">
 	   <%= link_to award_path(award), :remote => true do %>
 	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
 	   <% end %>	
@@ -12,7 +12,7 @@
    <% elsif award.photo_category == "landscape" %>
 
      <div class="landscape-col">
-	  <div class="landscape" id="award_<%= i %>">
+	  <div class="landscape" id="award_<%= award_counter %>">
 	   <%= link_to award_path(award), :remote => true do %>
 	  	 <%= image_tag award.photo_url, :class => "fitlandscape" %>
 	  	<% end %> 
@@ -22,7 +22,7 @@
    <% else %>
 
      <div class="square-col">
-	  <div class="square" id="award_<%= i %>">
+	  <div class="square" id="award_<%= award_counter %>">
 	   <%= link_to award_path(award), :remote => true do %>
 	  	 <%= image_tag award.photo_url, :class => "fitsquare" %>
 	  	<% end %>  
