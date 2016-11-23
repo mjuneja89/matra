@@ -1,0 +1,21 @@
+  
+  <% if award.photo_category == "portrait" %>
+     
+     <div class="mainportraitbox">
+	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% elsif award.photo_category == "landscape" %>
+
+     <div class="mainlandscapebox">
+	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% else %>
+
+     <div class="mainsquarebox">
+	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% end %>
+

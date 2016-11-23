@@ -1,45 +1,33 @@
-<div class="matra-row" style="margin-top: 4%">
-
-<div class="broadheading" style="width: 14%">
-	<div class="categorybroad">
-		<h2 class="namebroad">awards</h2>
-	</div>
-</div>
-
-<% @awards.each_with_index do |award, i| %>
-   
-   <% if award.photo_category == "portrait" %>
+  
+  <% if award.photo_category == "portrait" %>
      
-     <div class="broadportrait">
-	  <div class="portraitbroad" id="award_<%= i %>">
+     <div class="portrait-col">
+	  <div class="portrait" id="award_<%= i %>">
+	   <%= link_to award_path(award), :remote => true do %>
 	  	<%= image_tag award.photo_url, :class => "fitsquare" %>
+	   <% end %>	
 	  </div>
 	 </div> 	
 
    <% elsif award.photo_category == "landscape" %>
 
-     <div class="broadlandscape">
-	  <div class="landscapebroad" id="award_<%= i %>">
+     <div class="landscape-col">
+	  <div class="landscape" id="award_<%= i %>">
+	   <%= link_to award_path(award), :remote => true do %>
 	  	 <%= image_tag award.photo_url, :class => "fitlandscape" %>
+	  	<% end %> 
 	  </div>
 	 </div> 	
 
    <% else %>
 
-     <div class="broadsquare">
-	  <div class="squarebroad" id="award_<%= i %>">
-	  	 <%= image_tag award.photo_url, :class => "fitsquare" %> 
+     <div class="square-col">
+	  <div class="square" id="award_<%= i %>">
+	   <%= link_to award_path(award), :remote => true do %>
+	  	 <%= image_tag award.photo_url, :class => "fitsquare" %>
+	  	<% end %>  
 	  </div>
 	 </div> 
 
    <% end %>
 
-<% end %>
-
-<div class="matra-arrow">
-	<div class="arrowbroad">	
-        <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
-    </div>
-</div>
-
-</div>

@@ -4,11 +4,104 @@
 	  
   <title>matra architects: awards</title>
 
+   <script type="text/javascript">
+  
+  $(document).ready(function(){
+    
+   <% @awards.each_with_index do |award, i| %>
+     
+     $("#award_<%= i %> img").hover( 
+      function(){
+        $("div.category").html('<h3 class="boldfirstname"><%= award.first_name %></h3><h3 class="normallastname"><%= award.last_name %></h3>');
+      },
+      function(){
+      $("div.category").html('<h3 class="parentcategory">award</h3>');  
+      }
+      );
+
+   <% end %> 
+
+  });
+     
+  </script>
+
 <% end %>
 
 <body>
 
-<div class="container-fluid" style="margin-top: 3%">
+<div class="matra-container-nr">
+	
+	<div class="matra-row" style="text-align: center">
+
+	   <div class="matra-col-2">
+	      
+	      <div id="descriptionbox">   
+          <div style="padding: 15px" id="manipulatedescription">
+          </div> 
+          </div>
+       
+       </div>  
+
+       <div class="matra-col-10">
+       	 
+       	 <div class="mainimagebox">
+       	 	<div id="mainimagebox">
+       	 	  <% if @awards.first.photo_category == "landscape" %> 
+       	 		<div class="mainlandscapebox">
+       	 			<%= image_tag @awards.first.photo_url, :class => "fitimg" %>
+       	 		</div>
+       	 	  <% end %>
+
+       	 	  <% if @awards.first.photo_category == "portrait" %> 
+       	 		<div class="mainportraitbox">
+       	 			<%= image_tag @awards.first.photo_url, :class => "fitimg" %>
+       	 		</div>
+       	 	  <% end %>	
+
+
+       	 	  <% if @awards.first.photo_category == "square" %> 
+       	 		<div class="mainsquarebox">
+       	 			<%= image_tag @awards.first.photo_url, :class => "fitimg" %>
+       	 		</div>
+       	 	  <% end %>	
+
+       	 	</div>
+       	 </div>
+
+       </div>   
+
+	</div>
+
+</div>
+
+
+<div class="matra-container-parent" style="margin-top: 2%">
+  
+  <div class="matra-row">
+
+    <div class="arrow-col">
+    </div>
+
+  <div class="matra-container-child">  
+    
+   <div class="matra-row">
+
+    <div class="heading-col">
+	<div class="category">
+		<h3 class="parentcategory">awards</h3>
+	</div>
+    </div> 
+    
+    <% @awards.each_with_index do |award, i| %>
+      <%= render :partial => 'strip', locals: {award: award, i: i} %>
+    <% end %>
+
+   </div> 
+
+  </div>
+
+    <div class="arrow-col">  	
+    </div>
   
 </div>
 

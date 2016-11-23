@@ -13,6 +13,11 @@ class AwardsController < ApplicationController
    	end
    end
 
+   def show
+      @award = Award.find(params[:id])
+      respond_to :js
+   end
+
    def awards
    	@awards = Award.order(created_at: :desc).page(params[:page]).per(4)
    end
