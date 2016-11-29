@@ -1,0 +1,11 @@
+$('#destinations').html("<%=j render(partial: 'shared/destination', collection: @destinations) %>");
+$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+
+<% if @destinations.last_page? %>
+  $('#arrowbox').hide();
+<% else %>
+  $('#arrowbox').show();
+  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+<% end %>
+
+

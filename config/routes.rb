@@ -17,12 +17,13 @@ Rails.application.routes.draw do
 
   get '/team' => 'team#team'
   get '/archive' => 'projects#archive'
-  get '/travels' => 'travel#travels'
   resources :travels
   get '/awards' => 'awards#awards'
   resources :awards
   get '/publications' => 'publications#publications'
   resources :publications
+  get '/travel' => 'destinations#travel'
+  resources :destinations
   get 'contact' => 'contact#contact'
   get 'archive' => 'archives#archive'
   resources :archives

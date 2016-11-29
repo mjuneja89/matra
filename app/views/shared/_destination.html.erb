@@ -1,0 +1,33 @@
+  
+  <% if destination.photo_category == "portrait" %>
+     
+     <div class="portrait-col">
+	  <div class="portrait" id="destination_<%= destination_counter %>">
+	   <%= link_to destination_path(destination), :remote => true do %>
+	  	<%= image_tag destination.photo_url, :class => "fitsquare" %>
+	   <% end %>	
+	  </div>
+	 </div> 	
+
+   <% elsif destination.photo_category == "landscape" %>
+
+     <div class="landscape-col">
+	  <div class="landscape" id="destination_<%= destination_counter %>">
+	   <%= link_to destination_path(destination), :remote => true do %>
+	  	 <%= image_tag destination.photo_url, :class => "fitlandscape" %>
+	  	<% end %> 
+	  </div>
+	 </div> 	
+
+   <% else %>
+
+     <div class="square-col">
+	  <div class="square" id="destination_<%= destination_counter %>">
+	   <%= link_to destination_path(destination), :remote => true do %>
+	  	 <%= image_tag destination.photo_url, :class => "fitsquare" %>
+	  	<% end %>  
+	  </div>
+	 </div> 
+
+   <% end %>
+
