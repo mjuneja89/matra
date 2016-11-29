@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get '/travel' => 'destinations#travel'
   resources :destinations
   get 'contact' => 'contact#contact'
-  get 'archive' => 'archives#archive'
+  get '/archive' => 'archives#archives'
   resources :archives
 
   get '/adminview' => 'admin#adminview'
