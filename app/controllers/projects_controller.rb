@@ -6,10 +6,6 @@ class ProjectsController < ApplicationController
     end
    end
 
-   def archive
-    @projects = Project.all
-   end
-
    def new      
       @strip = Strip.find(params[:strip_id])
    	  @project = Project.new
