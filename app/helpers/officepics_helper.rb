@@ -1,0 +1,2 @@
+module OfficepicsHelper
+end

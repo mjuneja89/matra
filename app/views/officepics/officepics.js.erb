@@ -1,0 +1,11 @@
+$('#publications').html("<%=j render(partial: 'officepic', collection: @officepics) %>");
+$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+
+<% if @officepics.last_page? %>
+  $('#arrowbox').hide();
+<% else %>
+  $('#arrowbox').show();
+  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+<% end %>
+
+

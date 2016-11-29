@@ -1,0 +1,78 @@
+<html>
+
+<% content_for :head do %>
+	  
+  <title>matra architects: contact us</title>
+
+<% end %>
+
+<body>
+
+<div class="matra-container-nr">
+	
+	<div class="matra-row" style="text-align: center">
+
+	   <div class="matra-col-2">
+	      
+	      <div id="descriptionbox">   
+          <div style="padding: 15px" id="manipulatedescription">
+            <p>53, Navjeevan Vihar</p>
+            <p>New Delhi - 110017</p>
+          </div> 
+        </div>
+       
+       </div>  
+
+       <div class="matra-col-10">
+       	 
+       	 <div class="mainimagebox">
+       	 	<div id="mainimagebox">
+       	 		<div class="mainlandscapebox">
+       	 			<%= image_url('matramap.png', :class => "fitimg") %>
+       	 		</div>
+       	 	</div>
+       	 </div>
+
+       </div>   
+
+	</div>
+
+</div>
+
+
+<div class="matra-container-parent" style="margin-top: 2%">
+  
+  <div class="matra-row">
+
+    <div class="arrow-col">
+    </div>
+
+  <div class="matra-container-child">  
+    
+   <div class="matra-row">
+
+    <div class="heading-col">
+	  <div class="category">
+		   <h3 class="boldfirstname">matra</h3>
+       <h3 class="normallastname">office</h3> 
+	  </div>
+    </div> 
+    
+    <div id="publications">
+      <%= render :partial => 'officepic', collection: @officepics %>
+    </div>
+
+   </div> 
+
+  </div>
+
+    <div class="arrow-col">  	
+    </div>
+  
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -23,9 +23,10 @@ Rails.application.routes.draw do
   resources :publications
   get '/travel' => 'destinations#travel'
   resources :destinations
-  get 'contact' => 'contact#contact'
   get '/archive' => 'archives#archives'
   resources :archives
+  get 'contact' => 'officepics#contact'
+  resources :officpics
 
   get '/adminview' => 'admin#adminview'
 
