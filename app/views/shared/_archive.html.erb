@@ -1,0 +1,33 @@
+  
+  <% if archive.photo_category == "portrait" %>
+     
+     <div class="portrait-col">
+	  <div class="portrait" id="archive_<%= archive_counter %>">
+	   <%= link_to archive_path(archive), :remote => true do %>
+	  	<%= image_tag archive.photo_url, :class => "fitsquare" %>
+	   <% end %>	
+	  </div>
+	 </div> 	
+
+   <% elsif archive.photo_category == "landscape" %>
+
+     <div class="landscape-col">
+	  <div class="landscape" id="archive_<%= archive_counter %>">
+	   <%= link_to archive_path(archive), :remote => true do %>
+	  	 <%= image_tag archive.photo_url, :class => "fitlandscape" %>
+	  	<% end %> 
+	  </div>
+	 </div> 	
+
+   <% else %>
+
+     <div class="square-col">
+	  <div class="square" id="archive_<%= archive_counter %>">
+	   <%= link_to archive_path(archive), :remote => true do %>
+	  	 <%= image_tag archive.photo_url, :class => "fitsquare" %>
+	  	<% end %>  
+	  </div>
+	 </div> 
+
+   <% end %>
+

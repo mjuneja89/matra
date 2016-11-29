@@ -1,0 +1,11 @@
+$('#archives').html("<%=j render(partial: 'shared/archive', collection: @archives) %>");
+$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+
+<% if @archives.last_page? %>
+  $('#arrowbox').hide();
+<% else %>
+  $('#arrowbox').show();
+  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+<% end %>
+
+

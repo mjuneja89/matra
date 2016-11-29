@@ -1,0 +1,21 @@
+  
+  <% if archive.photo_category == "portrait" %>
+     
+     <div class="mainportraitbox">
+	  	<%= image_tag archive.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% elsif archive.photo_category == "landscape" %>
+
+     <div class="mainlandscapebox">
+	  	<%= image_tag archive.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% else %>
+
+     <div class="mainsquarebox">
+	  	<%= image_tag archive.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% end %>
+

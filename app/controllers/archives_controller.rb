@@ -17,6 +17,11 @@ class ArchivesController < ApplicationController
    	@archives = Archive.order(created_at: :desc).page(params[:page]).per(4)
    end
 
+   def show
+      @archive = Archive.find(params[:id])
+      respond_to :js
+   end
+
    private
 
    def archive_params
