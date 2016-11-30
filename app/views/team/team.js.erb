@@ -1,0 +1,11 @@
+$('#publications').html("<%=j render(partial: 'user', collection: @users) %>");
+$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+
+<% if @users.last_page? %>
+  $('#arrowbox').hide();
+<% else %>
+  $('#arrowbox').show();
+  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+<% end %>
+
+

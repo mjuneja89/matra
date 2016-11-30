@@ -1,17 +1,9 @@
-<div class="heading-col">
-	<div class="category">
-		<h3 class="parentcategory">team</h3>
-	</div>
-</div>
-
-<% @users.each_with_index do |user, i| %>
-   
-   <% unless user.role == "admin" %>
+<% unless user.role == "admin" %>
 
    <% if user.avatar_category == "portrait" %>
      
      <div class="portrait-col">
-	  <div class="portrait" id="user_<%= i %>">
+	  <div class="portrait" id="user_<%= user_counter %>">
 	  	<%= image_tag user.avatar_url, :class => "fitsquare" %>
 	  </div>
 	 </div> 	
@@ -19,7 +11,7 @@
    <% elsif user.avatar_category == "landscape" %>
 
      <div class="landscape-col">
-	  <div class="landscape" id="user_<%= i %>">
+	  <div class="landscape" id="user_<%= user_counter %>">
 	  	 <%= image_tag user.avatar_url, :class => "fitlandscape" %>
 	  </div>
 	 </div> 	
@@ -27,13 +19,12 @@
    <% else %>
 
      <div class="square-col">
-	  <div class="square" id="user_<%= i %>">
+	  <div class="square" id="user_<%= user_counter %>">
 	  	 <%= image_tag user.avatar_url, :class => "fitsquare" %> 
 	  </div>
 	 </div> 
 
    <% end %>
 
-  <% end %> 
+<% end %> 
 
-<% end %>

@@ -68,20 +68,32 @@
   <div class="matra-row">
 
     <div class="arrow-col">
+        <div id="arrowbox1">
+         <%= render :partial => 'arrowleft' %>
+        </div>
     </div>
 
   <div class="matra-container-child">  
     
    <div class="matra-row">
 
-    <%= render :partial => 'strip' %>
+   <div class="arrow-col">
+      <div id="arrowbox">
+       <%= render :partial => 'arrowright' %>
+      </div>
+   </div>   
+
+    <%= render :partial => 'user', collection: @users %>
 
    </div> 
 
   </div>
 
-    <div class="arrow-col">  	
-    </div>
+ <div class="arrow-col">
+     <div id="arrowbox">
+      <%= render :partial => 'arrowright' %>
+     </div>
+ </div>  
   
 </div>
 
