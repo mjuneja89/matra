@@ -411,6 +411,23 @@ hr
   margin-top: -6px;
 }
 
+.searchfirst
+{
+  text-align: left;
+  font-family:"Swis721 Blk2 BT W05 Black";
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: 140px; 
+}
+
+.searchlast
+{
+  text-align: left;
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: -25px;  
+}
+
 .boldfirstbroad
 {
   text-align: left;
@@ -495,3 +512,30 @@ hr
 {
   color: #3c3c3c;
 }
+
+#searchresult a:link
+{
+  color: #3c3c3c;
+}
+
+
+#searchresult a:hover
+{
+  color: #3c3c3c;
+}
+
+.searchresult
+{
+ width: 650px;
+ color: #3c3c3c;
+ height: 216px;
+ background-color: #dddddd;
+ display: inline-block;
+ margin-top: 1%;
+}
+
+#searchresult a:visited
+{
+  color: #3c3c3c;
+}
+

@@ -1,11 +1,5 @@
 class ProjectsController < ApplicationController
-   
-   def index
-    if params[:search]
-     @projects = Project.search(params[:search]).page(params[:page]).per(12)
-    end
-   end
-
+  
    def new      
       @strip = Strip.find(params[:strip_id])
    	  @project = Project.new

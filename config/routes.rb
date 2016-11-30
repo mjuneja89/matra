@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get '/archive' => 'archives#archives'
   resources :archives
   get 'contact' => 'officepics#contact'
-  resources :officpics
+  resources :officepics
 
   get '/adminview' => 'admin#adminview'
 
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     end 
   end
 
- get 'search' => 'projects#index'
+ get 'search' => 'searches#search'
  
  resources :images do
     put '/cover' => "images#cover"

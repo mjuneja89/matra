@@ -1,0 +1,10 @@
+<div class="searchresult" id="searchresult">
+  
+ <%= link_to strip_project_path(project.strip, project) do %>  
+  <h3 class="boldfirstbroad"><%= project.first_name %></h3>
+  <h3 class="lastbroad"><%= project.last_name %></h3>
+  <h3 class="yearbroad"><%= project.yearcompleted %></h3>
+  <h3 class="locationbroad"><%= project.location %></h3>
+ <% end %>
+
+</div>

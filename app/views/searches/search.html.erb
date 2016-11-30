@@ -1,0 +1,57 @@
+<html>
+
+<% content_for :head do %>
+	  
+  <title>matra architects: search results</title>
+
+<% end %>
+
+<body>
+
+<div class="matra-container-nr">
+	
+	<div class="matra-row" style="text-align: center">
+     
+     <h3>projects</h3>
+      
+      <% if @projects.present? %>
+
+      <%= render :partial => 'project', collection: @projects %>
+
+      <% else %>
+       
+       no relevant projects found
+
+      <% end %>
+
+     <h3 style="margin-top: 2%">awards</h3>
+       
+      <% if @awards.present? %>
+
+      <%= render :partial => 'award', collection: @awards %>
+
+      <% else %>
+
+       no relevant awards found
+
+      <% end %> 
+
+     <h3 style="margin-top: 2%">publications</h3>
+
+      <% if @publications.present? %>
+
+      <%= render :partial => 'publication', collection: @publications %>
+
+      <% else %>
+
+       no relevant publications found 
+
+      <% end %>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>
