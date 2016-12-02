@@ -1,5 +1,10 @@
 class ProjectsController < ApplicationController
-  
+   
+   def index
+    @strip = Strip.find(params[:strip_id])
+    @projects = @strip.projects.all
+   end
+   
    def new      
       @strip = Strip.find(params[:strip_id])
    	  @project = Project.new
