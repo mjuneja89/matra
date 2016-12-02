@@ -15,7 +15,7 @@
  <div class="matra-col-2">
    <div id="descriptionbox">   
     <div style="padding: 15px" id="manipulatedescription">
-     <%= simple_format(@project.description) %>
+     <%= simple_format(@project.description).html_safe %>
     </div> 
    </div>
  </div> 
