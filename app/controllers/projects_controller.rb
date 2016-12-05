@@ -49,6 +49,21 @@ class ProjectsController < ApplicationController
       @images = @project.images.all.page(params[:page]).per(5)
    end
 
+   def edit
+   	  @strip = Strip.find(params[:strip_id])
+      @project = Project.find(params[:id])
+   end
+
+   def update
+   	  @strip = Strip.find(params[:strip_id])
+      @project = Project.find(params[:id])
+      if @project.update_attributes(project_params)
+      	redirect_to adminview_path
+      else
+      	render 'edit'
+      end
+   end
+
    def selectcover
       @strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:project_id])
