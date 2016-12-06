@@ -1,0 +1,25 @@
+<div class="matra-row" style="margin-top: 2%">
+   
+   <div class="ProjectBox">
+      
+      <div class="row">
+        <div class="col-xs-4" style="text-align: center">
+          <h3><%= award.first_name %>&nbsp<%= award.last_name %></h3>
+        </div>
+        <div class="col-xs-4"> 
+          <%= link_to edit_award_path(award), :class => "btn matrabtn", :style => "width: 60%" do %>
+            edit award
+          <% end %>
+        </div>
+        <div class="col-xs-4">
+           <%= link_to award_path(award), :method => "delete", :class => "btn matrabtn", :style => "width: 60%" do %>
+            delete award
+          <% end %> 
+        </div>
+      </div>
+
+   </div>
+
+</div>
+
+

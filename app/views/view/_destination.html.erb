@@ -1,0 +1,25 @@
+<div class="matra-row" style="margin-top: 2%">
+   
+   <div class="ProjectBox">
+      
+      <div class="row">
+        <div class="col-xs-4" style="text-align: center">
+          <h3><%= destination.first_name %>&nbsp<%= destination.last_name %></h3>
+        </div>
+        <div class="col-xs-4"> 
+          <%= link_to edit_destination_path(destination), :class => "btn matrabtn", :style => "width: 60%" do %>
+            edit destination
+          <% end %>
+        </div>
+        <div class="col-xs-4">
+           <%= link_to destination_path(destination), :method => "delete", :class => "btn matrabtn", :style => "width: 60%" do %>
+            delete destination
+          <% end %> 
+        </div>
+      </div>
+
+   </div>
+
+</div>
+
+

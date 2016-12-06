@@ -1,0 +1,19 @@
+<html>
+
+<% content_for :head do %>
+	  
+  <title>matra architects: view officepics</title>
+
+<% end %>
+
+<body>
+
+<div class="container-fluid">
+
+<%= render :partial => 'view/officepic', collection: @officepics %>
+  
+</div>
+ 
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<div class="matra-row" style="margin-top: 2%">
+   
+   <div class="ProjectBox">
+      
+      <div class="row">
+        <div class="col-xs-4" style="text-align: center">
+          <h3><%= publication.first_name %>&nbsp<%= publication.last_name %></h3>
+        </div>
+        <div class="col-xs-4"> 
+          <%= link_to edit_publication_path(publication), :class => "btn matrabtn", :style => "width: 60%" do %>
+            edit publication
+          <% end %>
+        </div>
+        <div class="col-xs-4">
+           <%= link_to publication_path(publication), :method => "delete", :class => "btn matrabtn", :style => "width: 60%" do %>
+            delete publication
+          <% end %> 
+        </div>
+      </div>
+
+   </div>
+
+</div>
+
+

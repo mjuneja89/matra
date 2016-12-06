@@ -82,21 +82,48 @@
 
 
           <div class="col-sm-6" id="adminbtn">
-             <%= link_to new_award_path, :class => "btn matrabtn", :style => "width: 60%" do %>
-              add award 
+             <%= link_to destinations_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view destinations 
              <% end %>
-          </div>
+           </div>
 
 
       </div>
 
           <div class="row" style="margin-top: 2%">
 
+            <div class="col-sm-6" id="adminbtn">
+             <%= link_to new_award_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              add award 
+             <% end %>
+           </div>
+
            <div class="col-sm-6" id="adminbtn">
+             <%= link_to awards_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view awards 
+             <% end %>
+          </div>
+
+         </div>
+
+         <div class="row" style="margin-top: 2%">
+            
+            <div class="col-sm-6" id="adminbtn">
              <%= link_to new_publication_path, :class => "btn matrabtn", :style => "width: 60%" do %>
               add publication 
              <% end %>
            </div>
+
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to publications_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view publications 
+             <% end %>
+           </div>
+
+         </div>
+
+         <div class="row" style="margin-top:  2%">
+
 
            <div class="col-sm-6" id="adminbtn">
              <%= link_to new_archive_path, :class => "btn matrabtn", :style => "width: 60%" do %>
@@ -105,7 +132,31 @@
            </div>
 
 
-         </div>         
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to archives_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view archive  
+             <% end %>
+           </div>
+         	
+         </div>
+
+         
+         <div class="row" style="margin-top: 2%">
+
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to new_officepic_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              add office pic  
+             <% end %>
+           </div>
+
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to officepics_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view officepics  
+             <% end %>
+           </div>
+
+         </div>
+
        
 </div>
 
