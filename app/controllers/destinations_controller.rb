@@ -22,6 +22,26 @@ class DestinationsController < ApplicationController
       respond_to :js
    end
 
+   def edit
+      @destination = Destination.find(params[:id])
+   end
+
+   def update
+      @destination = Destination.find(params[:id])
+      if @destination.update_attributes(destination_params)
+         redirect_to adminview_path
+      else
+         render 'edit'
+      end
+   end
+
+
+   def destroy
+      @destination = Destination.find(params[:id])
+      Destination.destroy(@destination)
+      redirect_to 'adminview_path'
+   end
+
    private
 
    def destination_params

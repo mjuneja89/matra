@@ -1,0 +1,82 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: edit archive</title>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+ 
+     $("#photobtn").click(function(){
+  
+     $("#photofield").click(); 
+
+   });
+
+   });
+
+  </script>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+    var box = $("#avatarbox");
+    var preview = $("#avatarbox img");
+
+    $("#photofield").change(function(event){
+       var input = $(event.currentTarget);
+       var file = input[0].files[0];
+       var reader = new FileReader();
+       reader.onload = function(e){
+           image_base64 = e.target.result;
+           preview.attr("src", image_base64);
+       };
+       reader.readAsDataURL(file);
+       box.show();
+    });   
+  });
+
+ </script>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+        
+        <h3 style="color: #7f7f7f">edit archive</h3>
+
+        <div id="avatarbox">
+          <img class="fitpreview" />
+        </div>
+
+		<%= form_for(@archive, url: archive_path(@archive), method: "put") do |f| %>
+          
+          <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
+          <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
+          <%= f.text_area :description, :placeholder => "enter description", :class => "matrainput" %>
+         
+          <%= f.file_field :photo, :id => "photofield", :style => "display: none;" %>
+
+         <div id="photobtn" style="text-align: center">
+            <a href="#" id="choosephoto" class="btn matrabtn">add photo</a>   
+          </div>
+
+          <%= f.select(:photo_category, options_for_select([['photo size', nil], ['portrait', 'portrait'], ['landscape', 'landscape'], ['square', 'square']]), {}, {class: "matrainput"}) %>
+          
+          <%= f.submit "update", :class => "matrabtn" %>
+
+		<% end %>
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

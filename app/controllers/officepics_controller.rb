@@ -17,6 +17,25 @@ class OfficepicsController < ApplicationController
    	@officepics = Officepic.order(created_at: :desc).page(params[:page]).per(4)
    end
 
+   def edit
+      @officepic = Officepic.find(params[:id])
+   end
+
+   def update
+      @officepic = Officepic.find(params[:id])
+      if @officepic.update_attributes(officepic_params)
+         redirect_to adminview_path
+      else
+         render 'edit'
+      end
+   end
+
+   def destroy
+      @officepic = Officepic.find(params[:id])
+      Officepic.destroy(@officepic)
+      redirect_to 'adminview_path'
+   end
+
    private
 
    def officepic_params

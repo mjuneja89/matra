@@ -17,10 +17,30 @@ class AwardsController < ApplicationController
       @award = Award.find(params[:id])
       respond_to :js
    end
+   
+   def edit
+      @award = Award.find(params[:id])
+   end
+
+   def update
+      @award = Award.find(params[:id])
+      if @award.update_attributes(award_params)
+         redirect_to adminview_path
+      else
+         render 'edit'
+      end
+   end
+
+   def destroy
+      @award = Award.find(params[:id])
+      Award.destroy(@award)
+      redirect_to 'adminview_path'
+   end
 
    def awards
    	@awards = Award.order(created_at: :desc).page(params[:page]).per(4)
    end
+
 
    private
 

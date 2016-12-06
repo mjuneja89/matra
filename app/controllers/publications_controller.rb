@@ -22,6 +22,25 @@ class PublicationsController < ApplicationController
       respond_to :js
    end
 
+   def edit
+      @publication = Publication.find(params[:id])
+   end
+
+   def update
+      @publication = Publication.find(params[:id])
+      if @publication.update_attributes(publication_params)
+         redirect_to adminview_path
+      else
+         render 'edit'
+      end
+   end
+
+   def destroy
+      @publication = Publication.find(params[:id])
+      Publication.destroy(@publication)
+      redirect_to 'adminview_path'
+   end
+
    private
 
    def publication_params

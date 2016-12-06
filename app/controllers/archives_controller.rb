@@ -22,6 +22,25 @@ class ArchivesController < ApplicationController
       respond_to :js
    end
 
+   def edit
+      @archive = Archive.find(params[:id])
+   end
+
+   def update
+      @archive = Archive.find(params[:id])
+      if @archive.update_attributes(archive_params)
+         redirect_to adminview_path
+      else
+         render 'edit'
+      end
+   end
+
+   def destroy
+      @archive = Archive.find(params[:id])
+      Archive.destroy(@archive)
+      redirect_to 'adminview_path'
+   end
+
    private
 
    def archive_params
