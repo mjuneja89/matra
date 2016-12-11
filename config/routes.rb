@@ -39,6 +39,7 @@ Rails.application.routes.draw do
  get 'search' => 'searches#search'
  
  resources :images do
+    get '/doyou' => "images#doyou"
     put '/cover' => "images#cover"
  end
  

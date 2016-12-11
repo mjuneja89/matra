@@ -1,0 +1,43 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: another image</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+     
+     <h3>Do you want to add more images for this project?</h3>
+
+     <div class="row" style="margin-top: 2%; text-align: center;">
+       <div class="col-sm-6">
+         <%= link_to new_image_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              yes
+         <% end %>
+       </div>
+       <div class="col-sm-6">
+         <%= link_to strip_project_selectcover_path(@strip, @project), :class => "btn matrabtn", :style => "width: 60%" do %>
+              no
+         <% end %>
+       </div>
+       <div>
+         
+       </div>
+     </div>   
+
+  </div>
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>

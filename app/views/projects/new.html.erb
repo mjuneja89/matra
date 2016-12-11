@@ -4,32 +4,6 @@
   
   <title>matra architects: create project</title>
 
-  <script type="text/javascript">
-  
-$(document).ready(function(){
- 
- $("#squarebtn").click(function(){
-  
-  $("#squarefield").click(); 
-
- });
-
-  $("#landscapebtn").click(function(){
-  
-  $("#landscapefield").click(); 
-
- });
-
-  $("#portraitbtn").click(function(){
-  
-  $("#portraitfield").click(); 
-
- }); 
-
-});
-
-</script>
-
 </head>
 
 <body>
@@ -52,33 +26,8 @@ $(document).ready(function(){
           <%= f.text_field :location, :placeholder => "enter the project's location", :class => "matrainput" %>
           <%= f.text_field :yearcompleted, :placeholder => "when was the project completed?", :class => "matrainput" %>
           <%= f.text_area :description, :placeholder => "enter the project's description", :class => "matrainput2" %>
-
-          <%= f.fields_for :squares do |i| %>
-            <%= i.file_field :photo, :multiple => true, name: "squares[photo][]", style: "display:none", :id => "squarefield" %>
-          <% end %>
-
-          <div id="squarebtn" style="text-align: center">
-            <a href="#" id="choosesquare" class="btn matrabtn">add squares</a>   
-          </div>
-
-          <%= f.fields_for :landscapes do |i| %>
-            <%= i.file_field :photo, :multiple => true, name: "landscapes[photo][]", style: "display:none", :id => "landscapefield" %>
-          <% end %>
-
-          <div id="landscapebtn" style="text-align: center">
-            <a href="#" id="chooselandscape" class="btn matrabtn">add landscapes</a>   
-          </div>
           
-          <%= f.fields_for :portraits do |i| %>
-            <%= i.file_field :photo, :multiple => true, name: "portraits[photo][]", style: "display:none", :id => "portraitfield" %>
-          <% end %>
-
-
-          <div id="portraitbtn" style="text-align: center">
-            <a href="#" id="chooseportrait" class="btn matrabtn">add portraits</a>   
-          </div>
-  
-          <%= f.submit "create", :class => "matrabtn" %>
+    <%= f.submit "create", :class => "matrabtn" %>
 
 		<% end %>
 	</div>

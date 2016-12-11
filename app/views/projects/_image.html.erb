@@ -1,24 +1,24 @@
-<% if image.square.present? %>
+<% if image.photo_category == "square" %>
     
 <div class="mainsquarebox">
-  <%= image_tag image.square.photo_url, :class => "fitimg" %>
+  <%= image_tag image.photo_url, :class => "fitimg" %>
 </div>
     
 <% end %>
     
-<% if image.landscape.present? %>
+<% if image.photo_category == "landscape" %>
     
 <div class="mainlandscapebox">
-  <%= image_tag image.landscape.photo_url, :class => "fitimg" %>
+  <%= image_tag image.photo_url, :class => "fitimg" %>
 </div>
     
 <% end %>
     
-<% if image.portrait.present? %>
+<% if image.photo_category == "portrait" %>
     
 <div class="mainportraitbox">
     
-  <%= image_tag image.portrait.photo_url, :class => "fitimg" %>
+  <%= image_tag image.photo_url, :class => "fitimg" %>
     
 </div>
     

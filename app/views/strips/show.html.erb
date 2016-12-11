@@ -50,26 +50,26 @@
 
           <div id="mainimagebox">   
       
-          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.present? %>
+          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "landscape" %>
         
            <div class="mainlandscapebox">
-             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).landscape.photo_url, :class => "fitimg" %>
+             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
             </div>         
 
            <% end %>
       
-           <% if @projects.first.images.find_by(:id => @projects.first.cover_id).square.present? %>
+           <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "square" %>
          
             <div class="mainsquarebox">
-             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).square.photo_url, :class => "fitimg" %>
+             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
             </div>
 
           <% end %>
 
-          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.present? %>
+          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "portrait" %>
          
              <div class="mainportraitbox">
-               <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).portrait.photo_url, :class => "fitimg" %>
+               <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
              </div> 
 
           <% end %>

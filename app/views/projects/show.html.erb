@@ -26,27 +26,28 @@
   
   <div id="mainimagebox">  
 
-  <% if @images.first.square.present? %>
+  <% if @images.first.photo_category == "square" %>
     
   <div class="mainsquarebox">
-    <%= image_tag @images.first.square.photo_url, :class => "fitimg" %>
+    <%= image_tag @images.first.photo_url, :class => "fitimg" %>
   </div>
     
   <% end %>
     
-  <% if @images.first.landscape.present? %>
+  <% if @images.first.photo_category == "landscape" %>
     
   <div class="mainlandscapebox">
-    <%= image_tag @images.first.landscape.photo_url, :class => "fitimg" %>
+    <%= image_tag @images.first.photo_url, :class => "fitimg" %>
   </div>
     
   <% end %>
-    
-  <% if @images.first.portrait.present? %>
+  
+  <% if @images.first.photo_category == "portrait" %>
+  
     
   <div class="mainportraitbox">
     
-    <%= image_tag @images.first.portrait.photo_url, :class => "fitimg" %>
+    <%= image_tag @images.first.photo_url, :class => "fitimg" %>
     
   </div>
     

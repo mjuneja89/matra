@@ -8,9 +8,6 @@ class ProjectsController < ApplicationController
    def new      
       @strip = Strip.find(params[:strip_id])
    	  @project = Project.new
-      @square = @project.squares.build
-      @landscape = @project.landscapes.build
-      @portrait = @project.portraits.build
    end
 
    def create
@@ -19,25 +16,8 @@ class ProjectsController < ApplicationController
          project.strip = @strip 
       end
    	if @project.save
-        if params[:squares] 
-         params[:squares]['photo'].each do |p|
-            @image = Image.create!(:project_id => @project.id)
-            @square = @project.squares.create!(:photo => p, :image_id => @image.id)
-         end
-        end
-        if params[:landscapes]
-         params[:landscapes]['photo'].each do |p|
-            @image = Image.create!(:project_id => @project.id)
-            @landscape = @project.landscapes.create!(:photo => p, :image_id => @image.id)
-         end
-        end
-        if params[:portraits]         
-         params[:portraits]['photo'].each do |p|
-            @image = Image.create!(:project_id => @project.id)
-            @portrait = @project.portraits.create!(:photo => p, :image_id => @image.id)
-         end
-        end
-   	   redirect_to strip_project_selectcover_path(@project.strip, @project)  	
+   	  session[:project] = @project.id	
+      redirect_to new_image_path	
    	else
    	   render 'new' 	
    	end    	
@@ -81,7 +61,7 @@ class ProjectsController < ApplicationController
    private
 
    def project_params
-   	params.require(:project).permit(:name, :description,squares_attributes: [:id, :project_id, :photo], landscapes_attributes: [:id, :project_id, :photo], portraits_attributes: [:id, :project_id, :photo])
+   	params.require(:project).permit(:first_name, :last_name, :description, :yearcompleted, :location)
    end 
 
 end
