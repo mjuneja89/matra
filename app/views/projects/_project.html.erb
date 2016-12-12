@@ -17,7 +17,7 @@
           <% end %> 
         </div>
         <div class="col-xs-3">
-          <%= link_to strip_project_path(project.strip, project), :method => "destroy", :class => "btn matrabtn", :style => "width: 60%" do %>
+          <%= link_to strip_project_path(project.strip, project), :method => "destroy", :class => "btn matrabtn", :style => "width: 60%", data: {confirm: "Are you sure?"} do %>
             delete
           <% end %>  
         </div>

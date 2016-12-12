@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+
+   before_action :require_admin, only: [:index, :new, :create, :edit, :update, :destroy]
    
    def index
     @strip = Strip.find(params[:strip_id])
@@ -30,9 +32,16 @@ class ProjectsController < ApplicationController
    end
 
    def edit
-   	  @strip = Strip.find(params[:strip_id])
+   	@strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
    end
+
+   def destroy
+      @strip = Strip.find(params[:strip_id])
+      @project = Project.find(params[:id])
+      Project.destroy(@project)
+      redirect_to "/adminview"
+    end
 
    def update
    	  @strip = Strip.find(params[:strip_id])

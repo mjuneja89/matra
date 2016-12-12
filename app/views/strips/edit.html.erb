@@ -1,0 +1,33 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: edit strip</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+        
+        <h3 style="color: #7f7f7f">edit strip</h3>
+
+		<%= form_for(@strip, url: strip_path(@strip), :method => "put") do |f| %>
+          
+          <%= f.text_field :name, :placeholder => "enter the strip's name", :class => "matrainput" %>
+          <%= f.select(:category, options_for_select([['strip type', nil], ['narrow', 'narrow'], ['medium', 'medium'], ['broad', 'broad']]), {}, {class: "matrainput"}) %>
+          <%= f.submit "update", :class => "matrabtn" %>
+
+		<% end %>
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

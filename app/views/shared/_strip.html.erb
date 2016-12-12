@@ -11,7 +11,10 @@
 				<%= link_to "view projects", strip_projects_path(strip), :class => "btn matrabtn" %>
 			</div>
 			<div class="col-xs-12">
-				<%= link_to "delete strip", strip_path(strip), :method => :delete, :class => "btn matrabtn" %>
+				<%= link_to "edit strip", strip_path(strip), :method => :put, :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "delete strip", strip_path(strip), :method => :delete, :class => "btn matrabtn", data: {confirm: "Are you sure?"} %>
 			</div>
 		</div>
 	</div>

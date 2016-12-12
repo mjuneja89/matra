@@ -1,6 +1,6 @@
 class StripsController < ApplicationController
 	
-    before_action :require_admin, only: [:index, :new, :create]
+    before_action :require_admin, only: [:index, :new, :create, :edit, :update, :destroy]
     
     def index
         @strips = Strip.all
@@ -28,6 +28,25 @@ class StripsController < ApplicationController
        end
        @images = Image.where(id: image_ids).page(params[:page]).per(7)
     end 
+
+    def edit
+       @strip = Strip.find(params[:id]) 
+    end
+
+    def update
+        @strip = Strip.find(params[:id])
+        if @strip.update_attributes(strip_params)
+        	redirect_to adminview_path
+        else
+            render 'edit' 
+        end
+    end
+
+    def destroy
+    	@strip = Strip.find(params[:id])
+        Strip.destroy(@strip)
+        redirect_to "/adminview"
+    end
 
     private
 
