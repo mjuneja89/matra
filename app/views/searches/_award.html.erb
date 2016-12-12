@@ -1,8 +1,77 @@
-<div class="searchresult" id="searchresult">
+<div class="heading-col">
   
- <%= link_to awards_path do %>  
-  <h3 class="searchfirst"><%= award.first_name %></h3>
-  <h3 class="searchlast"><%= award.last_name %></h3>
- <% end %>
+ <div class="category" id="searchresult"> 
+  <%= link_to awards_path do %>  
+   <h3 class="searchfirst"><%= award.first_name %></h3>
+   <h3 class="searchlast"><%= award.last_name %></h3>
+  <% end %>
+ </div> 
 
 </div>
+
+<% if award.photo_category == "landscape" %>
+  
+  <div class="landscape-col">
+
+    <div class="landscape">
+
+      <%= link_to awards_path do %>   		
+       	 <%= image_tag award.photo_url, :class => "fitimg" %>
+      <% end %>   
+   
+    </div>
+
+  </div>
+
+  <div class="searchlandscape-col">
+     <div class="searchlandscape">
+     </div>	
+  </div>
+
+<% end %>
+
+
+<% if award.photo_category == "square" %>
+    
+   <div class="square-col">
+
+    <div class="square">
+
+      <%= link_to awards_path do %>   		
+       	 <%= image_tag award.photo_url, :class => "fitimg" %>
+      <% end %>   
+
+    </div>
+
+  </div>
+
+  <div class="searchsquare-col">
+     <div class="searchsquare">
+     </div>	
+  </div>  
+
+<% end %>
+
+
+<% if award.photo_category == "portrait" %>     
+  
+  <div class="portrait-col">
+
+    <div class="portrait">
+
+      <%= link_to awards_path do %>   		
+       	 <%= image_tag award.photo_url, :class => "fitimg" %>
+      <% end %>      
+   
+    </div>
+
+  </div>
+
+  <div class="searchportrait-col">
+    
+    <div class="searchportrait">
+    </div>
+
+  </div>    
+
+<% end %>	
