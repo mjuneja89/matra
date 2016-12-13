@@ -1,11 +1,15 @@
 class ArchivesController < ApplicationController
 
    def new
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
    	@archive = Archive.new
    end
 
    def create
-   	@archive = Archive.new(archive_params)
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
+   	@archive = Archive.new(archive_params) do |archive|
+         archive.archivestrip = @archivestrip
+      end
    	if @archive.save
    		redirect_to adminview_path
    	else
@@ -13,20 +17,23 @@ class ArchivesController < ApplicationController
    	end
    end
 
-   def archives
+   def index
    	@archives = Archive.order(created_at: :desc).page(params[:page]).per(4)
    end
 
    def show
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
       @archive = Archive.find(params[:id])
       respond_to :js
    end
 
    def edit
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
       @archive = Archive.find(params[:id])
    end
 
    def update
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
       @archive = Archive.find(params[:id])
       if @archive.update_attributes(archive_params)
          redirect_to adminview_path
@@ -36,6 +43,7 @@ class ArchivesController < ApplicationController
    end
 
    def destroy
+      @archivestrip = Archivestrip.find(params[:archivestrip_id])
       @archive = Archive.find(params[:id])
       Archive.destroy(@archive)
       redirect_to 'adminview_path'

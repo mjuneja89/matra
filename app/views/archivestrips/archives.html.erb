@@ -1,0 +1,223 @@
+<html>
+
+<% content_for :head do %>	
+  
+  <title>matra architects: archive</title>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+ 
+    <% @archivestrips.each_with_index do |archivestrip, i| %>
+ 
+    // Narrow //
+
+    <% if @sums[i] == 4 %>
+      $('.narrow_<%= i %>').width('59%');
+    <% end %>
+
+    <% if @sums[i] == 10 %>
+      $('.narrow_<%= i %>').width('46%');
+    <% end %>
+
+    <% if @sums[i] == 16 %>
+      $('.narrow_<%= i %>').width('33%');
+    <% end %>
+
+    <% if @sums[i] == 11 %>
+      $('.narrow_<%= i %>').width('37%');
+    <% end %>
+
+    <% if @sums[i] == 5 %>
+      $('.narrow_<%= i %>').width('50%');
+    <% end %>
+
+    <% if @sums[i] == 6 %>
+      $('.narrow_<%= i %>').width('39%');
+    <% end %>
+
+    <% if @sums[i] == 22 %>
+      $('.narrow_<%= i %>').width('20%');
+    <% end %>
+
+    <% if @sums[i] == 17 %>
+      $('.narrow_<%= i %>').width('24%');
+    <% end %>
+
+    <% if @sums[i] == 12 %>
+      $('.narrow_<%= i %>').width('28%');
+    <% end %>  
+ 
+    <% if @sums[i] == 7 %>
+      $('.narrow_<%= i %>').width('32%');
+    <% end %>
+
+    <% if @sums[i] == 28 %>
+      $('.narrow_<%= i %>').width('7%');
+    <% end %>
+
+    <% if @sums[i] == 23 %>
+      $('.narrow_<%= i %>').width('11%');
+    <% end %>
+
+    <% if @sums[i] == 18 %>
+      $('.narrow_<%= i %>').width('15%');
+    <% end %>
+
+    <% if @sums[i] == 13 %>
+      $('.narrow_<%= i %>').width('18%');
+    <% end %>
+
+    <% if @sums[i] == 8 %>
+      $('.narrow_<%= i %>').width('23%');
+    <% end %> 
+    
+    // Normal //
+
+    <% if @sums[i] == 32 %>
+      $('.normal_<%= i %>').width('47%'); 
+    <% end %>
+    
+    <% if @sums[i] == 37 %>
+      $('.normal_<%= i %>').width('37%'); 
+    <% end %>
+    
+    <% if @sums[i] == 42 %>
+      $('.normal_<%= i %>').width('27%'); 
+    <% end %>
+    
+    <% if @sums[i] == 38 %>
+      $('.normal_<%= i %>').width('31%'); 
+    <% end %>
+    
+    <% if @sums[i] == 33 %>
+      $('.normal_<%= i %>').width('41%'); 
+    <% end %>
+    
+    <% if @sums[i] == 34 %>
+      $('.normal_<%= i %>').width('35%'); 
+    <% end %>
+    
+    <% if @sums[i] == 47 %>
+      $('.normal_<%= i %>').width('17%'); 
+    <% end %>
+    
+    <% if @sums[i] == 43 %>
+      $('.normal_<%= i %>').width('21%'); 
+    <% end %>
+    
+    <% if @sums[i] == 39 %>
+      $('.normal_<%= i %>').width('25%'); 
+    <% end %>
+    
+    <% if @sums[i] == 35 %>
+      $('.normal_<%= i %>').width('29%'); 
+    <% end %>
+
+    <% if @sums[i] == 52 %>
+      $('.normal_<%= i %>').width('7%'); 
+    <% end %>
+
+    <% if @sums[i] == 48 %>
+      $('.normal_<%= i %>').width('11%'); 
+    <% end %>
+
+    <% if @sums[i] == 44 %>
+      $('.normal_<%= i %>').width('15%'); 
+    <% end %>
+
+    <% if @sums[i] == 40 %>
+      $('.normal_<%= i %>').width('19%'); 
+    <% end %>
+
+    <% if @sums[i] == 36 %>
+      $('.normal_<%= i %>').width('23%'); 
+    <% end %>
+    
+    // Broad //
+
+    <% if @sums[i] == 56 %>
+      $('.broad_<%= i %>').width('35%'); 
+    <% end %>
+    
+    <% if @sums[i] == 61 %>
+      $('.broad_<%= i %>').width('27%'); 
+    <% end %>
+    
+    <% if @sums[i] == 66 %>
+      $('.broad_<%= i %>').width('19%'); 
+    <% end %>
+    
+    <% if @sums[i] == 62 %>
+      $('.broad_<%= i %>').width('21%'); 
+    <% end %>
+    
+    <% if @sums[i] == 57 %>
+      $('.broad_<%= i %>').width('29%'); 
+    <% end %>
+    
+    <% if @sums[i] == 58 %>
+      $('.broad_<%= i %>').width('23%'); 
+    <% end %>
+    
+    <% if @sums[i] == 71 %>
+      $('.broad_<%= i %>').width('11%'); 
+    <% end %>
+    
+    <% if @sums[i] == 67 %>
+      $('.broad_<%= i %>').width('13%'); 
+    <% end %>
+
+    <% if @sums[i] == 63 %>
+      $('.broad_<%= i %>').width('15%'); 
+    <% end %>
+    
+    <% if @sums[i] == 59 %>
+      $('.broad_<%= i %>').width('17%'); 
+    <% end %>
+
+    <% if @sums[i] == 76 %>
+      $('.broad_<%= i %>').width('3%'); 
+    <% end %>
+
+    <% if @sums[i] == 72 %>
+      $('.broad_<%= i %>').width('5%'); 
+    <% end %>
+
+    <% if @sums[i] == 68 %>
+      $('.broad_<%= i %>').width('7%'); 
+    <% end %>
+
+    <% if @sums[i] == 64 %>
+      $('.broad_<%= i %>').width('9%'); 
+    <% end %>
+
+    <% if @sums[i] == 60 %>
+      $('.broad_<%= i %>').width('11%'); 
+    <% end %>
+
+  <% end %>
+
+
+});
+
+</script>
+
+<% end %>
+
+<body>
+
+<div class="matra-container">
+
+<% @archivestrips.each_with_index do |archivestrip, i| %>
+
+<%= render :partial => 'archivestrip', locals: {archivestrip: archivestrip, i: i} %>
+
+<% end %>
+ 	
+</div>
+
+
+</body>
+
+</html>

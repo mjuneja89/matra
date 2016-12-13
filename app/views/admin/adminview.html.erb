@@ -54,6 +54,25 @@
 
         <div class="row" style="margin-top: 4%">
            
+           <h4>manage archive strips</h4> 
+            
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to new_archivestrip_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              create strip 
+             <% end %>
+           </div>
+
+           <div class="col-sm-6" id="adminbtn">
+             <%= link_to archivestrips_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+              view strips
+             <% end %>
+           </div>
+
+        </div>
+
+
+        <div class="row" style="margin-top: 4%">
+           
            <h4>manage projects</h4>
 
            <div class="col-sm-6" id="adminbtn">

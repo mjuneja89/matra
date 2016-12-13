@@ -23,8 +23,10 @@ Rails.application.routes.draw do
   resources :publications
   get '/travel' => 'destinations#travel'
   resources :destinations
-  get '/archive' => 'archives#archives'
-  resources :archives
+  get '/archive' => 'archivestrips#archives'
+  resources :archivestrips do
+    resources :archives
+  end  
   get 'contact' => 'officepics#contact'
   resources :officepics
 
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
   resources :strips do
     resources :projects do
       get '/selectcover' => "projects#selectcover"
+      get '/editimages' => "projects#editimages"
     end 
   end
 

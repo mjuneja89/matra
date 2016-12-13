@@ -1,0 +1,37 @@
+<html>
+
+<head>	
+  
+  <title>Edit Images</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 2%">
+ 
+ <div class="row">
+
+ <% @images.each do |image| %>
+
+   <%= render :partial => "editimage", locals: {image: image} %>
+     
+ <% end %>
+
+</div>
+
+<div class="row" style="margin-top: 2%">
+   
+  <div class= "col-sm-6 col-sm-offset-3">  
+   <%= link_to new_image_path, :class => "btn matrabtn", :style => "width: 60%" do %>
+      add image
+   <% end %> 
+  </div> 
+
+</div>
+
+</div>
+
+</body>
+
+</html>

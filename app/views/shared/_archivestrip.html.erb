@@ -1,0 +1,21 @@
+<div class="col-sm-4" style="text-align: center">
+	<div class="stripbox">
+		<div class="stripname">
+			<h3><%= archivestrip.name %></h3>
+		</div>
+		<div id="stripbuttons">
+			<div class="col-xs-12">
+				<%= link_to "create archive", new_archivestrip_archive_path(archivestrip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "view archive", archivestrip_archive_path(archivestrip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "edit archive strip", edit_archivestrip_path(archivestrip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
+				<%= link_to "delete archive strip", archivestrip_path(archivestrip), :method => :delete, :class => "btn matrabtn", data: {confirm: "Are you sure?"} %>
+			</div>
+		</div>
+	</div>
+</div>

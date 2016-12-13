@@ -1,0 +1,22 @@
+<div class="matra-row" style="margin-top: 4%">
+
+<% if archivestrip.category == "medium" %>
+
+<%= render :partial => 'archivestripnormal', locals: {archivestrip: archivestrip, i: i} %>
+
+<% end %>
+
+<% if archivestrip.category == "narrow" %>
+
+<%= render :partial => 'archivestripnarrow', locals: {archivestrip: archivestrip, i: i} %>
+
+<% end %>
+
+
+<% if archivestrip.category == "broad" %>
+
+<%= render :partial => 'archivestripbroad', locals: {archivestrip: archivestrip, i: i} %>
+
+<% end %>
+
+</div>

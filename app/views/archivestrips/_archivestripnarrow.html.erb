@@ -1,0 +1,54 @@
+<div class="narrowheading narrow_<%= i %>">
+	<div class="categorynarrow category_<%= i %>">
+		<h2 class="namenarrow"><%= archivestrip.name %></h2>
+	</div>
+</div>
+
+<% archivestrip.archives.each_with_index do |archive, j| %>
+
+<% if archive.photo_category == "landscape" %>
+
+<div class="narrowlandscape">
+	<div class="landscapenarrow" id="narrowphoto_<%= i %><%= j %>">
+	   <%= link_to archivestrip_path(archivestrip) do %>	
+		<%= image_tag archive.photo_url, :class => "fitlandscape" %>
+	   <% end %>      
+	</div>
+</div>
+
+<% end %>
+
+
+<% if archive.photo_category == "square" %>
+
+<div class="narrowsquare">
+	<div class="squarenarrow" id="narrowphoto_<%= i %><%= j %>">
+		<%= link_to archivestrip_path(archivestrip) do %>
+	      <%= image_tag archive.photo_url, :class => "fitsquare" %>
+	   <% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% if archive.photo_category == "portrait" %>
+
+<div class="narrowportrait">
+	<div class="portraitnarrow" id="narrowphoto_<%= i %><%= j %>">
+		<%= link_to archivestrip_path(archivestrip) do %> 	  
+		  <%= image_tag archive.photo_url, :class => "fitportrait" %>
+		<% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% end %>
+
+<div class="matra-arrow">
+	<div class="arrownarrow" id="arrowlink">
+	   <%= link_to archivestrip_path(archivestrip) do %>	
+        <h4 style="margin-top: 30px"><i class="fa fa-angle-right"></i></h4>
+       <% end %> 
+    </div>
+</div>

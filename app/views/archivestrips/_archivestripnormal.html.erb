@@ -1,0 +1,55 @@
+<div class="normalheading normal_<%= i %>">
+	<div class="categorynormal category_<%= i %>">
+		<h2 class="namenormal"><%= archivestrip.name %></h2>
+	</div>
+</div>
+
+<% archivestrip.archives.each_with_index do |archive, j| %>
+
+<% if archive.photo_category == "landscape" %>
+
+<div class="normallandscape">
+	<div class="landscapenormal" id="normalphoto_<%= i %><%= j %>">
+	     <%= link_to archivestrip_path(archivestrip) do %>	 	
+		<%= image_tag archive.photo_url, :class => "fitlandscape" %>
+	   <% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% if archive.photo_category == "square" %>
+   
+  <div class="normalsquare"> 
+	
+	<div class="squarenormal" id="normalphoto_<%= i %><%= j %>">  
+	    <%= link_to archivestrip_path(archivestrip) do %>	
+		  <%= image_tag archive.photo_url, :class => "fitsquare" %>
+		<% end %>      
+	</div>
+
+  </div>
+
+<% end %>
+
+<% if archive.photo_category == "portrait" %>
+
+<div class="normalportrait">
+	<div class="portraitnormal" id="normalphoto_<%= i %><%= j %>">
+		  <%= link_to archivestrip_path(archivestrip) do %>	 
+		  <%= image_tag archive.images.photo_url, :class => "fitportrait" %>
+		<% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% end %>
+
+<div class="matra-arrow">
+	<div class="arrownormal" id="arrowlink">
+	    <%= link_to archivestrip_path(archivestrip) do %> 	
+        <h4 style="margin-top: 60px"><i class="fa fa-angle-right"></i></h4>
+        <% end %>
+    </div>
+</div>

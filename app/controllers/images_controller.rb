@@ -17,6 +17,13 @@ class ImagesController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(session[:project])      
+    @image = Image.find(params[:id])
+    Image.destroy(@image)
+    redirect_to strip_project_editimages_path(@project.strip, @project)
+  end
+
   def show
   	@image = Image.find(params[:id])
   	respond_to :js

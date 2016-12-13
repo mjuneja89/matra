@@ -1,0 +1,53 @@
+<div class="broadheading broad_<%= i %>">
+	<div class="categorybroad category_<%= i %>">
+		<h2 class="namebroad"><%= archivestrip.name %></h2>
+	</div>
+</div>
+
+<% archivestrip.archives.each_with_index do |archive, j| %>
+
+<% if archive.photo_category == "landscape" %>
+
+<div class="broadlandscape">
+	<div class="landscapebroad" id="broadphoto_<%= i %><%= j %>">
+	   <%= link_to archivestrip_path(archivestrip) do %> 	
+		<%= image_tag archive.photo_url, :class => "fitlandscape" %>
+	   <% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% if archive.photo_category == "square" %>
+
+<div class="broadsquare">
+	<div class="squarebroad" id="broadphoto_<%= i %><%= j %>">
+		<%= link_to archivestrip_path(archivestrip) do %>
+		  <%= image_tag archive.photo_url, :class => "fitsquare" %>
+		<% end %>      		
+	</div>
+</div>
+
+<% end %>
+
+<% if archive.photo_category == "portrait" %>
+
+<div class="broadportrait">
+	<div class="portraitbroad" id="broadphoto_<%= i %><%= j %>">
+		<%= link_to archivestrip_path(archivestrip) do %> 
+		  <%= image_tag archive.photo_url, :class => "fitportrait" %>
+		<% end %>      
+	</div>
+</div>
+
+<% end %>
+
+<% end %>
+
+<div class="matra-arrow">
+	<div class="arrowbroad" id="arrowlink">
+	  <%= link_to archivestrip_path(archivestrip) do %>   	
+        <h4 style="margin-top: 80px"><i class="fa fa-angle-right"></i></h4>
+      <% end %>  
+    </div>
+</div>

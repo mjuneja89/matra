@@ -36,6 +36,13 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
    end
 
+   def editimages
+      @strip = Strip.find(params[:strip_id])
+      @project = Project.find(params[:project_id])
+      @images = @project.images.all
+      session[:project] = @project.id
+   end
+
    def destroy
       @strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
@@ -44,7 +51,7 @@ class ProjectsController < ApplicationController
     end
 
    def update
-   	  @strip = Strip.find(params[:strip_id])
+   	@strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
       if @project.update_attributes(project_params)
       	redirect_to adminview_path
