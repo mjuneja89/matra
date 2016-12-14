@@ -14,7 +14,7 @@ class DestinationsController < ApplicationController
    end
 
    def travel
-   	@destinations = Destination.order(created_at: :desc).page(params[:page]).per(4)
+   	@destinations = Destination.order(created_at: :desc).page(params[:page]).per(6)
    end
 
    def show

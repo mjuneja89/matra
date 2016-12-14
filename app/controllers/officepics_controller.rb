@@ -14,7 +14,7 @@ class OfficepicsController < ApplicationController
    end
 
    def contact
-   	@officepics = Officepic.order(created_at: :desc).page(params[:page]).per(4)
+   	@officepics = Officepic.order(created_at: :desc).page(params[:page]).per(6)
    end
 
    def edit

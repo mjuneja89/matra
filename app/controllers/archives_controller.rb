@@ -18,7 +18,7 @@ class ArchivesController < ApplicationController
    end
 
    def index
-   	@archives = Archive.order(created_at: :desc).page(params[:page]).per(4)
+   	@archives = Archive.order(created_at: :desc).page(params[:page]).per(6)
    end
 
    def show
