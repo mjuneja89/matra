@@ -4,8 +4,8 @@
        
        <div class="square-col">
        	 <div class="square">
-                <%= link_to strip_project_path(), :remote => true do %>  
-       	 	<%= image_tag image.photo_url, :class => "fitimg" %>
+                <%= link_to strip_project_path(image.project.strip, image.project) do %>  
+       	 	         <%= image_tag image.photo_url, :class => "fitimg" %>
                 <% end %>  
        	 </div> 
        </div>
@@ -16,8 +16,8 @@
        
        <div class="landscape-col">
        	<div class="landscape">
-               <%= link_to image_path(image), :remote => true do %>   		
-       	 	<%= image_tag image.photo_url, :class => "fitimg" %>
+               <%= link_to strip_project_path(image.project.strip, image.project) do %>  
+                 <%= image_tag image.photo_url, :class => "fitimg" %>
                <% end %>   
        	 </div> 
        </div>
@@ -28,8 +28,8 @@
        
        <div class="portrait-col">
        	<div class="portrait">
-               <%= link_to image_path(image), :remote => true do %>                
-       	 	<%= image_tag image.photo_url, :class => "fitimg" %>
+               <%= link_to strip_project_path(image.project.strip, image.project) do %>  
+                   <%= image_tag image.photo_url, :class => "fitimg" %>
                <% end %>  
        	 </div> 
        </div>

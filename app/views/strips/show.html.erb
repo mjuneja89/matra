@@ -50,26 +50,26 @@
 
           <div id="mainimagebox">   
       
-          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "landscape" %>
+          <% if @strip.cover_category == "landscape" %>
         
            <div class="mainlandscapebox">
-             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
+             <%= image_tag @strip.cover_url, :class => "fitimg" %>
             </div>         
 
            <% end %>
       
-           <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "square" %>
-         
+           <% if @strip.cover_category == "square" %>
+        
             <div class="mainsquarebox">
-             <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
+             <%= image_tag @strip.cover_url, :class => "fitimg" %>
             </div>
 
           <% end %>
 
-          <% if @projects.first.images.find_by(:id => @projects.first.cover_id).photo_category == "portrait" %>
-         
+           <% if @strip.cover_category == "portrait" %>
+
              <div class="mainportraitbox">
-               <%= image_tag @projects.first.images.find_by(:id => @projects.first.cover_id).photo_url, :class => "fitimg" %>
+               <%= image_tag @strip.cover_url, :class => "fitimg" %>
              </div> 
 
           <% end %>
@@ -106,7 +106,7 @@
    </div>  
   
     <div id="images">
-      <%= render :partial => 'shared/image', collection: @images %>
+      <%= render :partial => 'image', collection: @images %>
     </div>
 
   </div> 

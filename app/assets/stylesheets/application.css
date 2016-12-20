@@ -55,6 +55,11 @@ body
 	font-size: 20pt;
 }
 
+#logo
+{
+  margin-left: -30px;
+}
+
 #logo a:link
 {
   color: #3c3c3c;

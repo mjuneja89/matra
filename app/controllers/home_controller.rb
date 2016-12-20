@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 	
  def home
-    @strips = Strip.all
+    @strips = Strip.order(:order_id)
     @sums = Array.new
     @strips.each_with_index do |strip, i|
         j = 0

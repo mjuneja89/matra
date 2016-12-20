@@ -4,6 +4,42 @@
   
   <title>matra architects: create strip</title>
 
+   <script type="text/javascript">
+    
+    $(document).ready(function(){
+ 
+     $("#photobtn").click(function(){
+  
+     $("#photofield").click(); 
+
+   });
+
+   });
+
+  </script>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+    var box = $("#avatarbox");
+    var preview = $("#avatarbox img");
+
+    $("#photofield").change(function(event){
+       var input = $(event.currentTarget);
+       var file = input[0].files[0];
+       var reader = new FileReader();
+       reader.onload = function(e){
+           image_base64 = e.target.result;
+           preview.attr("src", image_base64);
+       };
+       reader.readAsDataURL(file);
+       box.show();
+    });   
+  });
+
+ </script>
+
+
 </head>
 
 <body>
@@ -18,7 +54,17 @@
 		<%= form_for(@strip, url: strips_path) do |f| %>
           
           <%= f.text_field :name, :placeholder => "enter the strip's name", :class => "matrainput" %>
+          <%= f.number_field :order_id, :placeholder => "enter the strip's priority", :class => "matrainput" %>
           <%= f.select(:category, options_for_select([['strip type', nil], ['narrow', 'narrow'], ['medium', 'medium'], ['broad', 'broad']]), {}, {class: "matrainput"}) %>
+         
+          <%= f.file_field :cover, :id => "photofield", :style => "display: none;" %>
+
+         <div id="photobtn" style="text-align: center">
+            <a href="#" id="choosephoto" class="btn matrabtn">add cover</a>   
+          </div>
+
+         <%= f.select(:cover_category, options_for_select([['photo size', nil], ['portrait', 'portrait'], ['landscape', 'landscape'], ['square', 'square']]), {}, {class: "matrainput"}) %>
+                             
           <%= f.submit "create", :class => "matrabtn" %>
 
 		<% end %>
