@@ -77,7 +77,7 @@
 .mainsquarebox
 {
   height: 500px;
-  width: 62.5%;
+  width: 500px;
   border: 1px solid transparent;
   float: right;
 }
@@ -85,14 +85,14 @@
 .mainlandscapebox
 {
   height: 500px;
-  width: 100%;
+  width: 1000px;
   border: 1px solid transparent;
 }
 
 .mainportraitbox
 {
   height: 500px;
-  width: 41.667%;
+  width: 350px;
   border: 1px solid transparent;
   float: right;
 }
@@ -165,19 +165,19 @@
 
 .landscape
 {
-  height: 120px;
+  height: 125px;
   width: 100%;
 }
 
 .square
 {
-  height: 120px;
+  height: 125px;
   width: 100%; 
 }
 
 .portrait
 {
-  height: 120px;
+  height: 125px;
   width: 100%;
 }
 
@@ -185,7 +185,7 @@
 {
  width: 100%;
  color: #3c3c3c;
- height: 120px;
+ height: 125px;
  background-color: #dddddd;
  margin-bottom: -20px;
  display: inline-block;

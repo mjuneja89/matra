@@ -147,7 +147,7 @@ body
 {
   float: left;
   min-height: 1px; 
-  width: 150px;
+  width: 125px;
   position: relative;
   padding-right:1.2px;  
 } 
@@ -157,7 +157,7 @@ body
 {
   float: left;
   min-height: 1px;
-  width: 100px;
+  width: 87.5px;
   position: relative; 
   padding-right:1.2px; 
 } 
@@ -167,7 +167,7 @@ body
   float: left;
   min-height: 1px;
   width: 50px;
-  height: 120px;
+  height: 125px;
   position: relative; 
   padding-right:1px; 
 }
