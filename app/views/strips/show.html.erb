@@ -13,7 +13,7 @@
     $('#image_<%= image.id %>').hover(
         
         function(){
-           $('div.category').html('<h3 class="boldfirstname"><%= image.project.first_name %></h3><h3 class="normallastname"><%= image.project.last_name %></h3>');
+           $('div.category').html('<h3 class="firstnameshow"><%= image.project.first_name %></h3><h3 class="lastnameshow"><%= image.project.last_name %></h3><p class="yearshow"><%= image.project.yearcompleted %></p><p class="locationshow"><%= image.project.location %></p>');
         },
 
         function(){
@@ -39,7 +39,14 @@
       <div class="matra-col-2">
         <div id="descriptionbox">   
          <div style="padding: 15px" id="manipulatedescription">
-          <%= simple_format(@projects.first.description) %>
+          <p><%= @strip.name %></p>
+          <div id="projectlinks">
+          <% @strip.projects.each do |project| %>
+            <%= link_to strip_project_path(project.strip, project) do %>
+              <p><%= project.first_name %>&nbsp<%= project.last_name %></p>
+            <% end %> 
+          <% end %>
+          </div>
          </div> 
         </div>
       </div> 
