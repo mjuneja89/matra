@@ -39,7 +39,7 @@
       <div class="matra-col-2">
         <div id="descriptionbox">   
          <div style="padding: 15px" id="manipulatedescription">
-          <p><%= @strip.name %></p>
+          <p><strong><%= @strip.name %></strong></p>
           <div id="projectlinks">
           <% @strip.projects.each do |project| %>
             <%= link_to strip_project_path(project.strip, project) do %>
