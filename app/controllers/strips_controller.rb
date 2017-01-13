@@ -3,7 +3,7 @@ class StripsController < ApplicationController
     before_action :require_admin, only: [:index, :new, :create, :edit, :update, :destroy]
     
     def index
-        @strips = Strip.all
+        @strips = Strip.order(:order_id)
     end
 
     def new
@@ -26,7 +26,7 @@ class StripsController < ApplicationController
        @strip.projects.each do |project|
         image_ids << project.images.find_by(:id => project.cover_id).id
        end
-       @images = Image.where(id: image_ids).page(params[:page]).per(6)
+       @images = Image.where(id: image_ids).page(params[:page]).per(7)
     end 
 
     def edit
@@ -51,7 +51,7 @@ class StripsController < ApplicationController
     private
 
     def strip_params
-    	params.require(:strip).permit(:name, :category)
+    	params.require(:strip).permit(:name, :category, :cover, :order_id)
     end
 
 end

@@ -14,7 +14,7 @@ class PublicationsController < ApplicationController
    end
 
    def publications
-   	@publications = Publication.order(created_at: :desc).page(params[:page]).per(6)
+   	@publications = Publication.order(created_at: :desc).page(params[:page]).per(7)
    end
 
    def show

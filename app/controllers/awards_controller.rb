@@ -38,7 +38,7 @@ class AwardsController < ApplicationController
    end
 
    def awards
-   	@awards = Award.order(created_at: :desc).page(params[:page]).per(6)
+   	@awards = Award.order(created_at: :desc).page(params[:page]).per(7)
    end
 
 
