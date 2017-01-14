@@ -1,0 +1,34 @@
+<html>
+
+<head>	
+  
+  <title>matra architects: edit priority</title>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="margin-top: 3%">
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="text-align: center">
+        
+        <h3 style="color: #7f7f7f">edit strip</h3>
+
+		<%= form_for(@strip, url: strip_updatepriority_path(@strip), :method => "patch") do |f| %>
+          
+          <%= f.number_field :order_id, :placeholder => "enter the strip's priority", :class => "matrainput" %>
+        
+          <%= f.submit "update", :class => "matrabtn" %>
+
+		<% end %>
+	
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

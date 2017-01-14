@@ -42,6 +42,17 @@ class StripsController < ApplicationController
         end
     end
 
+    def editpriority
+        @strip = Strip.find(params[:strip_id])
+    end
+
+    def updatepriority
+        @strip = Strip.find(params[:strip_id])
+        if @strip.update_attributes(strip_params)
+            redirect_to adminview_path
+        end 
+    end
+
     def destroy
     	@strip = Strip.find(params[:id])
         Strip.destroy(@strip)

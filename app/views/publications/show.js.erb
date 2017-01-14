@@ -1,2 +1,3 @@
 $('#mainimagebox').fadeIn();
 $('#mainimagebox').html("<%=j render(partial: 'publication', locals: {publication: @publication}) %>");
+$('#manipulatedescription').html("<%= j simple_format(@publication.description) %>");

@@ -14,6 +14,9 @@
 				<%= link_to "edit strip", edit_strip_path(strip), :class => "btn matrabtn" %>
 			</div>
 			<div class="col-xs-12">
+				<%= link_to "edit priority", strip_editpriority_path(strip), :class => "btn matrabtn" %>
+			</div>
+			<div class="col-xs-12">
 				<%= link_to "delete strip", strip_path(strip), :method => :delete, :class => "btn matrabtn", data: {confirm: "Are you sure?"} %>
 			</div>
 		</div>

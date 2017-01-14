@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get '/adminview' => 'admin#adminview'
 
   resources :strips do
+    get '/editpriority' => "strips#editpriority"
+    patch '/updatepriority' => "strips#updatepriority"
     resources :projects do
       get '/selectcover' => "projects#selectcover"
       get '/editimages' => "projects#editimages"
