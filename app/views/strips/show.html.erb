@@ -32,14 +32,16 @@
 
 <body>
 
-<div class="matra-container-nr">
+<%= render partial: 'shared/navbar1' %>
+
+<div class="matra-container-nr" style="margin-top: -15px">
   
   <div class="matra-row" style="text-align: center">
 
       <div class="matra-col-2">
         <div id="descriptionbox">   
          <div style="padding: 15px" id="manipulatedescription">
-          <p><strong><%= @strip.name %></strong></p>
+          <p class="StripName"><%= @strip.name %></p>
           <div id="projectlinks">
           <% @strip.projects.each do |project| %>
             <%= link_to strip_project_path(project.strip, project) do %>
@@ -91,7 +93,7 @@
 
        </div> 
 
-<div class="matra-container-parent" style="margin-top: 2%">   
+<div class="matra-container-parent" style="margin-top: 0.5%">   
   
   <div class="matra-row">
 
