@@ -4,7 +4,7 @@
 	</div>
 </div>
 
-<% strip.projects.each_with_index do |project, j| %>
+<% strip.projects.limit(4).each_with_index do |project, j| %>
 
 <% if project.images.find_by(:id => project.cover_id).photo_category == "landscape" %>
 
