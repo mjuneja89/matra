@@ -26,7 +26,7 @@ class StripsController < ApplicationController
        @strip.projects.each do |project|
         image_ids << project.images.find_by(:id => project.cover_id).id
        end
-       @images = Image.where(id: image_ids).page(params[:page]).per(8)
+       @images = Image.where(id: image_ids).page(params[:page]).per(7)
     end 
 
     def edit
