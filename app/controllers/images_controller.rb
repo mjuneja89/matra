@@ -43,10 +43,21 @@ class ImagesController < ApplicationController
   	redirect_to '/adminview'
   end
 
+  def editpriority
+    @image = Image.find(params[:image_id])
+  end
+
+  def updatepriority
+    @image = Image.find(params[:image_id])
+    if @image.update_attributes(image_params)
+      redirect_to adminview_path
+    end 
+  end
+
   private
 
   def image_params
-    params.require(:image).permit(:photo, :photo_category)
+    params.require(:image).permit(:photo, :photo_category, :order_id)
   end
 
 end

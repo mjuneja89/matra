@@ -46,6 +46,8 @@ Rails.application.routes.draw do
  resources :images do
     get '/doyou' => "images#doyou"
     put '/cover' => "images#cover"
+    get '/editpriority' => "images#editpriority"
+    patch '/updatepriority' => "images#updatepriority"
  end
  
 end

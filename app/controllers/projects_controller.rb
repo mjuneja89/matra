@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
    def show
       @strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
-      @images = @project.images.all.page(params[:page]).per(7)
+      @images = @project.images.order(:order_id).page(params[:page]).per(7)
    end
 
    def edit
@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
    def editimages
       @strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:project_id])
-      @images = @project.images.all
+      @images = @project.images.order(:order_id)
       session[:project] = @project.id
    end
 

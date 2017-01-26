@@ -1,5 +1,5 @@
 <% if image.photo_category == "landscape" %>
-  <div class="col-sm-4">
+  <div class="col-landscape">
   	<div class="coverbox">
   		<div class="coverpic">
   			<%= image_tag image.photo_url, :class => 'fitlandscape' %>
@@ -8,12 +8,15 @@
   			<%= link_to image_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
   			   delete
   			<% end %> 
-  		</div>
+        <%= link_to image_editpriority_path(image), :class => "btn matrabtn", :style => "width: 60%" do %>
+           edit priority
+       <% end %>   
+    	</div>
   	</div>
   </div>
 <% end %>
 <% if image.photo_category == "portrait" %>
-  <div class="col-sm-2">
+  <div class="col-portrait">
   	<div class="coverbox">
   		<div class="coverpic">
   			<%= image_tag image.photo_url, :class => 'fitportrait' %>
@@ -21,13 +24,16 @@
   		<div class="setcover">
   		  <%= link_to image_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
       	   delete
-  			<% end %>  
+  			<% end %> 
+       <%= link_to image_editpriority_path(image), :class => "btn matrabtn", :style => "width: 60%" do %>
+           edit priority
+       <% end %>  
   		</div>
   	</div>
   </div> 
 <% end %>
 <% if image.photo_category == "square" %>
-  <div class="col-sm-3">
+  <div class="col-square">
   	<div class="coverbox">	
   		<div class="coverpic">
   			<%= image_tag image.photo_url, :class => 'fitsquare' %>
@@ -36,6 +42,9 @@
   		  <%= link_to image_path(image), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
       	   delete
   			<% end %>  
+        <%= link_to image_editpriority_path(image), :class => "btn matrabtn", :style => "width: 60%" do %>
+           edit priority
+       <% end %>  
   		</div>
   	</div>
   </div> 
