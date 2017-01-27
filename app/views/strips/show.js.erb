@@ -1,11 +1,11 @@
 $('#images').html("<%=j render(partial: 'image', collection: @images) %>");
-$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+$('#arrowbox1').html("<%=j render(partial: 'shared/arrowleft') %>");
 
 <% if @images.last_page? %>
   $('#arrowbox').hide();
 <% else %>
   $('#arrowbox').show();
-  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+  $('#arrowbox').html("<%=j render(partial: 'shared/arrowright') %>");
 <% end %>
 
 

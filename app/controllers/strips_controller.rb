@@ -62,7 +62,7 @@ class StripsController < ApplicationController
     private
 
     def strip_params
-    	params.require(:strip).permit(:name, :category, :cover, :order_id)
+    	params.require(:strip).permit(:name, :category, :cover, :cover_category, :order_id)
     end
 
 end

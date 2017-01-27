@@ -49,8 +49,9 @@ class ImagesController < ApplicationController
 
   def updatepriority
     @image = Image.find(params[:image_id])
+    @project = @image.project
     if @image.update_attributes(image_params)
-      redirect_to adminview_path
+      redirect_to strip_project_editimages_path(@project.strip, @project)
     end 
   end
 

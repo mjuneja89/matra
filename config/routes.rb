@@ -41,7 +41,7 @@ Rails.application.routes.draw do
     end 
   end
 
- get 'search' => 'searches#search'
+ get 'matrasearch' => 'searches#search'
  
  resources :images do
     get '/doyou' => "images#doyou"
