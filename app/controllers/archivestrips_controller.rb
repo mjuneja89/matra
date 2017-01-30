@@ -3,7 +3,7 @@ class ArchivestripsController < ApplicationController
     before_action :require_admin, only: [:index, :new, :create, :edit, :update, :destroy]
     
     def index
-        @archivestrips = Archivestrip.all
+        @archivestrips = Archivestrip.order(:order_id)
     end
 
     def archives
@@ -94,7 +94,7 @@ class ArchivestripsController < ApplicationController
     private
 
     def archivestrip_params
-    	params.require(:strip).permit(:name, :category)
+    	params.require(:archivestrip).permit(:name, :category, :cover, :cover_category, :order_id)
     end
 
 

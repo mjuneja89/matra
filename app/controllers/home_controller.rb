@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @strips.each_with_index do |strip, i|
         j = 0
         if strip.category == "medium"       
-          strip.projects.limit(4).each do |project|
+          strip.projects.order(:order_id).limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).photo_category == "landscape"
                   j = j + 13
               end
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
           end
         end
         if strip.category == "narrow"       
-          strip.projects.limit(4).each do |project|
+          strip.projects.order(:order_id).limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).photo_category == "landscape"
                   j = j + 7
               end
@@ -32,7 +32,7 @@ class HomeController < ApplicationController
           end
         end
         if strip.category == "broad"       
-          strip.projects.limit(4).each do |project|
+          strip.projects.order(:order_id).limit(4).each do |project|
               if project.images.find_by(:id => project.cover_id).photo_category == "landscape"
                   j = j + 19
               end

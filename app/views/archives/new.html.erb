@@ -56,10 +56,12 @@
           <img class="fitpreview" />
         </div>
 
-		<%= form_for(@archive, url: archives_path) do |f| %>
+		<%= form_for(@archive, url: archivestrip_archives_path(@archivestrip)) do |f| %>
           
           <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
           <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
+          <%= f.text_field :text_area, :placeholder => "enter description", :class => "matrainput" %>
+
           <%= f.file_field :photo, :id => "photofield", :style => "display: none;" %>
 
          <div id="photobtn" style="text-align: center">
