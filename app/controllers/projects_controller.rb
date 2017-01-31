@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
    
    def index
     @strip = Strip.find(params[:strip_id])
-    @projects = @strip.projects.all
+    @projects = @strip.projects.order(:order_id)
    end
    
    def new      
@@ -54,7 +54,7 @@ class ProjectsController < ApplicationController
    	@strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
       if @project.update_attributes(project_params)
-      	redirect_to adminview_path
+      	redirect_to strip_projects_path(@strip)
       else
       	render 'edit'
       end
