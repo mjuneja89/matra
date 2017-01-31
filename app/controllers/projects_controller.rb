@@ -71,6 +71,7 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:project_id])
       @image = Image.find(params[:cover])
       @project.cover = @image
+      @image.order_id = @project.order_id
       redirect_to '/adminpanel'
    end
 

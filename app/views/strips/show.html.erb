@@ -43,7 +43,7 @@
          <div style="padding: 15px" id="manipulatedescription">
           <p class="StripName"><%= @strip.name %></p>
           <div id="projectlinks">
-          <% @strip.projects.each do |project| %>
+          <% @strip.projects.order(:order_id).each do |project| %>
             <%= link_to strip_project_path(project.strip, project) do %>
               <p><%= project.first_name %>&nbsp<%= project.last_name %></p>
             <% end %> 

@@ -1,25 +1,42 @@
-<div class="matra-row" style="margin-top: 2%">
-   
-   <div class="ProjectBox">
-      
-      <div class="row">
-        <div class="col-xs-4" style="text-align: center">
-          <h3><%= officepic.first_name %>&nbsp<%= officepic.last_name %></h3>
-        </div>
-        <div class="col-xs-4"> 
-          <%= link_to edit_officepic_path(officepic), :class => "btn matrabtn", :style => "width: 60%" do %>
-            edit officepic
-          <% end %>
-        </div>
-        <div class="col-xs-4">
-           <%= link_to officepic_path(officepic), :method => "delete", :class => "btn matrabtn", :style => "width: 60%" do %>
-            delete officepic
-          <% end %> 
-        </div>
+<% if officepic.photo_category == "landscape" %>
+  <div class="col-landscape">
+    <div class="coverbox">
+      <div class="coverpic">
+        <%= officepic_tag officepic.photo_url, :class => 'fitlandscape' %>
       </div>
-
-   </div>
-
-</div>
-
-
+      <div class="setcover">
+        <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %> 
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if officepic.photo_category == "portrait" %>
+  <div class="col-portrait">
+    <div class="coverbox">
+      <div class="coverpic">
+        <%= officepic_tag officepic.photo_url, :class => 'fitportrait' %>
+      </div>  
+      <div class="setcover">
+        <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %> 
+      </div>
+    </div>
+  </div> 
+<% end %>
+<% if officepic.photo_category == "square" %>
+  <div class="col-square">
+    <div class="coverbox">  
+      <div class="coverpic">
+        <%= officepic_tag officepic.photo_url, :class => 'fitsquare' %>
+      </div>      
+      <div class="setcover">
+        <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %>  
+      </div>
+    </div>
+  </div> 
+<% end %>
