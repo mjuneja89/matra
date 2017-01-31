@@ -4,6 +4,10 @@ class OfficepicsController < ApplicationController
    	@officepic = Officepic.new
    end
 
+   def index
+      @officepics = Officepic.all
+   end
+
    def create
    	@officepic = Officepic.new(officepic_params)
    	if @officepic.save
