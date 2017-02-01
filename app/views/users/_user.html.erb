@@ -1,0 +1,51 @@
+<% if user.avatar_category == "landscape" %>
+  <div class="col-landscape">
+    <div class="coverbox">
+      <div class="coverpic">
+        <%= image_tag user.avatar_url, :class => 'fitlandscape' %>
+      </div>
+      <div class="setcover">
+        <%= link_to user_path(user), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %>
+        <%= link_to edit_user_path(user), :class => "btn matrabtn" do %>
+           edit
+        <% end %>  
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if user.avatar_category == "portrait" %>
+  <div class="col-portrait">
+    <div class="coverbox">
+      <div class="coverpic">
+        <%= image_tag user.avatar_url, :class => 'fitportrait' %>
+      </div>  
+      <div class="setcover">
+        <%= link_to user_path(user), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %> 
+        <%= link_to edit_user_path(user), :class => "btn matrabtn" do %>
+           edit
+        <% end %> 
+      </div>
+    </div>
+  </div> 
+<% end %>
+<% if user.avatar_category == "square" %>
+  <div class="col-square">
+    <div class="coverbox">  
+      <div class="coverpic">
+        <%= image_tag user.avatar_url, :class => 'fitsquare' %>
+      </div>      
+      <div class="setcover">
+        <%= link_to user_path(user), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
+           delete
+        <% end %>  
+        <%= link_to edit_user_path(user), :class => "btn matrabtn" do %>
+           edit
+        <% end %> 
+      </div>
+    </div>
+  </div> 
+<% end %>

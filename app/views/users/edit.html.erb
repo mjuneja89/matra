@@ -4,8 +4,6 @@
   
   <title>matra architects: edit user</title>
 
-</head>
-
 <body>
 
 <%= render partial: 'shared/navbar' %>
@@ -21,9 +19,7 @@
           
           <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
           <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
-          <%= f.email_field :email, :placeholder => "enter email", :class => "matrainput" %>
-          <%= f.password_field :password, :placeholder => "enter password", :class => "matrainput" %>
-          <%= f.text_area :descriptions, :placeholder => "enter qualifications", :class => "matrainput" %>
+          <%= f.text_area :description, :placeholder => "enter description", :class => "matrainput" %>
   
           <%= f.submit "create", :class => "matrabtn" %>
 

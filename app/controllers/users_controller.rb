@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 	def new
 		@user = User.new
 	end
+
+  def index
+    @users = User.all
+  end
     
     def create
     	@user = User.new(user_params)
@@ -28,7 +32,7 @@ class UsersController < ApplicationController
     def update
        @user = User.find(params[:id])
        if @user.update_attributes(user_params)
-        redirect_to adminview_path
+        redirect_to user_avatar_path(@user)
       else
         render 'edit'
       end

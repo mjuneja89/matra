@@ -2,7 +2,7 @@
   <div class="col-landscape">
     <div class="coverbox">
       <div class="coverpic">
-        <%= officepic_tag officepic.photo_url, :class => 'fitlandscape' %>
+        <%= image_tag officepic.photo_url, :class => 'fitlandscape' %>
       </div>
       <div class="setcover">
         <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
@@ -16,7 +16,7 @@
   <div class="col-portrait">
     <div class="coverbox">
       <div class="coverpic">
-        <%= officepic_tag officepic.photo_url, :class => 'fitportrait' %>
+        <%= image_tag officepic.photo_url, :class => 'fitportrait' %>
       </div>  
       <div class="setcover">
         <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>
@@ -30,7 +30,7 @@
   <div class="col-square">
     <div class="coverbox">  
       <div class="coverpic">
-        <%= officepic_tag officepic.photo_url, :class => 'fitsquare' %>
+        <%= image_tag officepic.photo_url, :class => 'fitsquare' %>
       </div>      
       <div class="setcover">
         <%= link_to officepic_path(officepic), :class => "btn matrabtn", :style => "margin-bottom: 2%", method: :delete do %>

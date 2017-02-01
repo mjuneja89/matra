@@ -197,7 +197,7 @@ $(document).ready(function(){
 
 <% @strips.each_with_index do |strip, a| %>
 
-<% strip.projects.each_with_index do |project, b| %>
+<% strip.projects.order(:order_id).each_with_index do |project, b| %>
 
 <% if strip.category == "narrow" %>
 
