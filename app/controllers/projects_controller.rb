@@ -53,7 +53,9 @@ class ProjectsController < ApplicationController
    def update
    	@strip = Strip.find(params[:strip_id])
       @project = Project.find(params[:id])
+      @image =  @project.images.find_by(id: @project.cover_id)
       if @project.update_attributes(project_params)
+         @image.update_attribute(:priority_id, @project.order_id) 
       	redirect_to strip_projects_path(@strip)
       else
       	render 'edit'
@@ -71,7 +73,6 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:project_id])
       @image = Image.find(params[:cover])
       @project.cover = @image
-      @image.order_id = @project.order_id
       redirect_to '/adminpanel'
    end
 

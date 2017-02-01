@@ -69,7 +69,7 @@ class ArchivestripsController < ApplicationController
 
     def show
        @archivestrip = Archivestrip.find(params[:id])
-       @archives = @archivestrip.archives.order(:id)
+       @archives = @archivestrip.archives.order(:id).page(params[:page]).per(7)
     end 
 
     def edit

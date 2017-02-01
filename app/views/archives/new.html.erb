@@ -60,7 +60,9 @@
           
           <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
           <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
-          <%= f.text_field :text_area, :placeholder => "enter description", :class => "matrainput" %>
+          <%= f.text_area :description, :placeholder => "enter description", :class => "matrainput" %>
+          <%= f.text_field :yearcompleted, :placeholder => "enter year completed", :class => "matrainput" %>
+          <%= f.text_field :location, :placeholder => "enter location", :class => "matrainput" %>
 
           <%= f.file_field :photo, :id => "photofield", :style => "display: none;" %>
 

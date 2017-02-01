@@ -10,13 +10,16 @@
     
    <% @archives.each_with_index do |archive, i| %>
      
-     $("#archive_<%= i %> img").hover( 
-      function(){
-        $("div.category").html('<h3 class="boldfirstname"><%= archive.first_name %></h3><h3 class="normallastname"><%= archive.last_name %></h3>');
-      },
-      function(){
-      $("div.category").html('<h3 class="parentcategory">archives</h3>');  
-      }
+     $('#archive_<%= i %>').hover(
+        
+        function(){
+           $('div.category').html('<h3 class="firstnameshow"><%= archive.first_name %></h3><h3 class="lastnameshow"><%= archive.last_name %></h3><p class="yearshow"><%= archive.yearcompleted %></p><p class="locationshow"><%= archive.location %></p>');
+        },
+
+        function(){
+           $('div.category').html('<h3 class="parentcategory"><%= @archivestrip.name %></h3>');
+        }
+   
       );
 
    <% end %> 
@@ -92,11 +95,11 @@
     
    <div class="matra-row">
 
-    <div class="heading-col">
-	<div class="category">
-		<h3 class="parentcategory">archives</h3>
-	</div>
-    </div> 
+     <div class="heading-col">
+      <div class="category">
+        <h3 class="parentcategory"><%= @archivestrip.name %></h3>
+      </div> 
+   </div>  
     
     <div id="archives">
       <%= render :partial => 'shared/archive', collection: @archives %>
