@@ -6,12 +6,12 @@
 
   <script type="text/javascript">
   
-  $(document).ready(function(){
+  $(document).ready(function()
+
+    {
     
    <% @users.each_with_index do |user, i| %>
     
-    <% unless user.role == "admin" %>  
-     
      $("#user_<%= i %> img").hover( 
       function(){
         $("div.category").html('<h3 class="boldfirstname"><%= user.first_name %></h3><h3 class="normallastname"><%= user.last_name %></h3>');
@@ -21,14 +21,19 @@
       }
       );
 
-    <% end %> 
-
    <% end %> 
 
+  });
+     
+  </script>
 
-   <% @users.each_with_index do |user, i| %>
+  <script type="text/javascript">
+  
+    $(document).ready(function()
     
-    <% unless user.role == "admin" %>  
+    {
+
+     <% @users.each_with_index do |user, i| %>
 
      $("#user_<%= i %> img").hover( 
       function(){
@@ -39,12 +44,10 @@
       }
       );
 
-    <% end %> 
-
    <% end %> 
 
   });
-     
+    
   </script>
 
 <% end %>
