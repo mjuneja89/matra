@@ -8,4 +8,18 @@ $('#arrowbox1').html("<%=j render(partial: 'shared/arrowleft') %>");
   $('#arrowbox').html("<%=j render(partial: 'shared/arrowright') %>");
 <% end %>
 
+<% @images.each do |image| %>
+
+   $('#image_<%= image.id %>').hover(
+     function(){
+           $('div.category').html('<h3 class="firstnameshow"><%= image.project.first_name %></h3><h3 class="lastnameshow"><%= image.project.last_name %></h3><p class="yearshow"><%= image.project.yearcompleted %></p><p class="locationshow"><%= image.project.location %></p>');
+        },
+
+        function(){
+           $('div.category').html('<h3 class="parentcategory"><%= @strip.name %></h3>');
+        }  
+      );
+    
+<% end %>
+
 

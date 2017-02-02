@@ -21,6 +21,15 @@
       }
       );
 
+     $("#user_<%= i %> img").hover( 
+      function(){
+        $("div#manipulatedescription").html('<%= user.description %>');
+      },
+      function(){
+      $("div#manipulatedescription").html('<p></p>');  
+      }
+      );
+
     <% end %> 
 
    <% end %> 
@@ -43,7 +52,6 @@
 	      
 	      <div id="descriptionbox">   
           <div style="padding: 15px" id="manipulatedescription">
-             <%= @users.second.description %>
           </div> 
           </div>
        
@@ -54,7 +62,7 @@
        	 <div class="mainimagebox">
        	 	<div id="mainimagebox">
        	 		<div class="mainlandscapebox">
-       	 			<%= image_tag @users.second.avatar_url, :class => "fitimg" %>
+       	 			<%= image_tag "team.jpg", :class => "fitimg" %>
        	 		</div>
        	 	</div>
        	 </div>
@@ -85,8 +93,10 @@
        <h3 class="parentcategory">team</h3>
      </div>
     </div>  
-
+    
+    <div id="teamarea">
     <%= render :partial => 'user', collection: @users %>
+    </div>
 
    </div> 
 
