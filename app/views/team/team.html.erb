@@ -21,6 +21,15 @@
       }
       );
 
+    <% end %> 
+
+   <% end %> 
+
+
+   <% @users.each_with_index do |user, i| %>
+    
+    <% unless user.role == "admin" %>  
+
      $("#user_<%= i %> img").hover( 
       function(){
         $("div#manipulatedescription").html('<%= user.description %>');
