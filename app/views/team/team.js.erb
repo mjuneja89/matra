@@ -9,3 +9,28 @@ $('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
 <% end %>
 
 
+ <% @users.each_with_index do |user, i| %>
+    
+     $("#user_<%= i %> img").hover( 
+      function(){
+        $("div.category").html('<h3 class="boldfirstname"><%= user.first_name %></h3><h3 class="normallastname"><%= user.last_name %></h3>');
+      },
+      function(){
+      $("div.category").html('<h3 class="parentcategory">team</h3>');  
+      }
+      );
+
+ <% end %> 
+
+ <% @users.each_with_index do |user, i| %>
+
+     $("#user_<%= i %> img").hover( 
+      function(){
+        $("div#manipulatedescription").html('<%= (user.description).html_safe %>');
+      },
+      function(){
+      $("div#manipulatedescription").html('<p></p>');  
+      }
+      );
+
+ <% end %> 

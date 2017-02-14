@@ -20,8 +20,10 @@
           <%= f.text_field :first_name, :placeholder => "enter first name", :class => "matrainput" %>
           <%= f.text_field :last_name, :placeholder => "enter last name", :class => "matrainput" %>
           <%= f.text_area :description, :placeholder => "enter description", :class => "matrainput" %>
-  
-          <%= f.submit "create", :class => "matrabtn" %>
+          <%= f.number_field :order_id, :placeholder => "enter the user's priority", :class => "matrainput" %>
+ 
+
+    <%= f.submit "create", :class => "matrabtn" %>
 
 		<% end %>
 	</div>

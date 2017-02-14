@@ -17,9 +17,9 @@ Rails.application.routes.draw do
 
   get '/team' => 'team#team'
   resources :travels
-  get '/awards' => 'awards#awards'
+  get '/award' => 'awards#awards'
   resources :awards
-  get '/publications' => 'publications#publications'
+  get '/publication' => 'publications#publications'
   resources :publications
   get '/travel' => 'destinations#travel'
   resources :destinations

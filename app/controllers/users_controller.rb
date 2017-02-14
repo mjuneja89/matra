@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     def destroy
        @user = User.find(params[:id])
        User.delete(@user)
-       redirect_to '/' 
+       redirect_to users_path 
     end
 
     def edit

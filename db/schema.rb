@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201152442) do
+ActiveRecord::Schema.define(version: 20170213072152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,6 +169,7 @@ ActiveRecord::Schema.define(version: 20170201152442) do
     t.string   "designation"
     t.string   "avatar_category"
     t.text     "description"
+    t.integer  "order_id"
   end
 
   add_foreign_key "projects", "strips"

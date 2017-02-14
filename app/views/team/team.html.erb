@@ -37,7 +37,7 @@
 
      $("#user_<%= i %> img").hover( 
       function(){
-        $("div#manipulatedescription").html('<%= user.description %>');
+        $("div#manipulatedescription").html('<%= (user.description).html_safe %>');
       },
       function(){
       $("div#manipulatedescription").html('<p></p>');  
