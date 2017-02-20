@@ -1,6 +1,7 @@
 class StripsController < ApplicationController
 	
     before_action :require_admin, only: [:index, :new, :create, :edit, :update, :destroy]
+    caches_page :show
     
     def index
         @strips = Strip.order(:order_id)

@@ -81,6 +81,7 @@ gem 'jquery-infinite-pages'
 gem 'fog'
 gem 'fog-aws'
 
+gem 'actionpack-page_caching'
 
-
+gem 'rails-observers'
 

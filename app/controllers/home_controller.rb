@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+
+ caches_page :home
 	
  def home
     @strips = Strip.order(:order_id)
