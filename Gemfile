@@ -85,3 +85,5 @@ gem 'actionpack-page_caching'
 
 gem 'rails-observers'
 
+gem 'carrierwave-video'
+

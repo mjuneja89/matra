@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   resources :awards
   get '/publication' => 'publications#publications'
   resources :publications
+  get '/video' => 'videos#videos'
+  resources :videos
   get '/travel' => 'destinations#travel'
   resources :destinations
   get '/archive' => 'archivestrips#archives'

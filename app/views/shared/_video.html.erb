@@ -1,0 +1,21 @@
+  
+  <% if video.photo_category == "portrait" %>
+     
+     <div class="mainportraitbox">
+	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% elsif video.photo_category == "landscape" %>
+
+     <div class="mainlandscapebox">
+	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% else %>
+
+     <div class="mainsquarebox">
+	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
+	 </div> 	
+
+   <% end %>
+

@@ -1,0 +1,11 @@
+$('#videos').html("<%=j render(partial: 'shared/video', collection: @videos) %>");
+$('#arrowbox1').html("<%=j render(partial: 'arrowleft') %>");
+
+<% if @videos.last_page? %>
+  $('#arrowbox').hide();
+<% else %>
+  $('#arrowbox').show();
+  $('#arrowbox').html("<%=j render(partial: 'arrowright') %>");
+<% end %>
+
+

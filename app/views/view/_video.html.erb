@@ -1,0 +1,25 @@
+<div class="matra-row" style="margin-top: 2%">
+   
+   <div class="ProjectBox">
+      
+      <div class="row">
+        <div class="col-xs-4" style="text-align: center">
+          <h3><%= video.first_name %>&nbsp<%= video.last_name %></h3>
+        </div>
+        <div class="col-xs-4"> 
+          <%= link_to edit_video_path(video), :class => "btn matrabtn", :style => "width: 60%" do %>
+            edit video
+          <% end %>
+        </div>
+        <div class="col-xs-4">
+           <%= link_to video_path(video), :method => "delete", :class => "btn matrabtn", :style => "width: 60%" do %>
+            delete video
+          <% end %> 
+        </div>
+      </div>
+
+   </div>
+
+</div>
+
+

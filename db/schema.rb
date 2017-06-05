@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213072152) do
+ActiveRecord::Schema.define(version: 20170604142125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -170,6 +170,18 @@ ActiveRecord::Schema.define(version: 20170213072152) do
     t.string   "avatar_category"
     t.text     "description"
     t.integer  "order_id"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "title"
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "category"
+    t.string   "photo"
+    t.string   "photo_category"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_foreign_key "projects", "strips"
