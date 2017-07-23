@@ -4,6 +4,10 @@ class VideosController < ApplicationController
    	@video = Video.new
    end
 
+   def index
+      @videos = Video.all
+   end
+
    def create
    	@video = Video.new(video_params)
    	if @video.save

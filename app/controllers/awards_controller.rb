@@ -4,6 +4,10 @@ class AwardsController < ApplicationController
    	@award = Award.new
    end
 
+   def index
+      @awards = Award.all
+   end
+
    def create
    	@award = Award.new(award_params)
    	if @award.save

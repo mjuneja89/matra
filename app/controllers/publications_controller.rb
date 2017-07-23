@@ -4,6 +4,10 @@ class PublicationsController < ApplicationController
    	@publication = Publication.new
    end
 
+   def index
+      @publications = Publication.all
+   end
+
    def create
    	@publication = Publication.new(publication_params)
    	if @publication.save

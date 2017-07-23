@@ -1,21 +1,32 @@
-  
-  <% if video.photo_category == "portrait" %>
+<% if video.photo_category == "portrait" %>
      
-     <div class="mainportraitbox">
-	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
-	 </div> 	
+     <div class="portrait-col">
+    <div class="portrait" id="video_<%= video_counter %>">
+     <%= link_to video_path(video), :remote => true do %>
+      <%= image_tag video.photo_url, :class => "fitsquare" %>
+     <% end %>  
+    </div>
+   </div>   
 
    <% elsif video.photo_category == "landscape" %>
 
-     <div class="mainlandscapebox">
-	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
-	 </div> 	
+     <div class="landscape-col">
+    <div class="landscape" id="video_<%= video_counter %>">
+     <%= link_to video_path(video), :remote => true do %>
+       <%= image_tag video.photo_url, :class => "fitlandscape" %>
+      <% end %> 
+    </div>
+   </div>   
 
    <% else %>
 
-     <div class="mainsquarebox">
-	  	<%= image_tag video.photo_url, :class => "fitsquare" %>
-	 </div> 	
+     <div class="square-col">
+    <div class="square" id="video_<%= video_counter %>">
+     <%= link_to video_path(video), :remote => true do %>
+       <%= image_tag video.photo_url, :class => "fitsquare" %>
+      <% end %>  
+    </div>
+   </div> 
 
-   <% end %>
+<% end %>
 
